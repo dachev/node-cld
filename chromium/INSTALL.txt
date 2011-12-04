@@ -1,0 +1,77 @@
+NOTE: I have only tested this under Linux (Fedora 13)!
+
+
+
+TO BUILD C++ LIBRARY (libcld.a):
+
+It would be nice to have a Makefile (patches welcome!), and to also
+build a dynamic library, but for now I made a simple shell script to
+build everything:
+
+  source ./build.sh
+
+On Windows, open a command prompt and run this instead:
+
+  ./build.win.cmd
+
+If it succeeds it should print something like this:
+
+  Compile...
+
+  Make libcld.a
+
+  Compile example.cc
+
+  Done!
+
+Then, run the trivial example program:
+
+  ./example
+
+And you should see this output:
+
+  LANG=ENGLISH
+  LANG=HINDI
+
+
+
+
+
+TO BUILD PYTHON BINDINGS:
+
+After building libcld.a (above), just run this:
+
+  python -u setup.py build
+
+NOTE: on OS X Snow Leopard, I had to do this first:
+
+  export ARCHFLAGS="-arch x86_64"
+
+otherwise distutils tries to build for PPC arch as well, and then
+base/build_config.h is unhappy.
+
+You should see output something like this (varies by platform):
+
+  running build
+  running build_ext
+  building 'cld' extension
+  gcc -pthread -fno-strict-aliasing -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I. -I/usr/include/python2.6 -c pycldmodule.cc -o build/temp.linux-x86_64-2.6/pycldmodule.o
+  pycldmodule.cc: In function ‘void initcld()’:
+  pycldmodule.cc:41: warning: deprecated conversion from string constant to ‘char*’
+  g++ -pthread -shared build/temp.linux-x86_64-2.6/pycldmodule.o -L. -L/usr/lib64 -lcld -lpython2.6 -o build/lib.linux-x86_64-2.6/cld.so
+
+Then, install the libary:
+
+  sudo python -u setup.py install
+
+Finally, run the unit test to make sure all is good:
+
+  python -u test.py
+
+It should produce output like this:
+
+  ................................................................
+  ----------------------------------------------------------------------
+  Ran 65 tests in 0.002s
+
+  OK

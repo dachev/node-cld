@@ -1,0 +1,24 @@
+makefile
+
+dynamic lib
+
+test on py 3.x
+
+build py extension on windows
+
+is there a unit test that also covers extended langs?
+
+add test case for binary data, empty string, etc.
+
+hmm why only null generated ./encodings/compact_lang_det/generated/compact_lang_det_generated_cjkbis_0.cc?  others have null (_0) and non-null versions?
+
+make thread stress test
+
+remove dead files
+
+memory leak...?
+
+am i sure no unicode normalization was done...?  what about NFC normalization for the UChar* API (in cld_unicodetext.cc)?
+
+return list of all detectable langs
+  - hmm should be lang + script?
