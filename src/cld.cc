@@ -133,8 +133,8 @@ namespace cld {
     v8::HandleScope scope;
     v8::Local<v8::Object> obj = v8::Object::New();
     
-    obj->Set(v8::String::New("name"), v8::String::New("Bulgarian")),
-    obj->Set(v8::String::New("code"), v8::String::New("BG")),
+    obj->Set(v8::String::New("name"), v8::String::New("Bulgarian"));
+    obj->Set(v8::String::New("code"), v8::String::New("BG"));
     obj->Set(v8::String::New("percent"), v8::Integer::New(11));
     obj->Set(v8::String::New("score"), v8::Integer::New(95));
     
