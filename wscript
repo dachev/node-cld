@@ -1,4 +1,5 @@
 import os
+import Utils
 
 srcdir = "."
 blddir = "build"
@@ -30,3 +31,6 @@ def build(bld):
   obj.add_objects = 'chromium'
   obj.source = "src/cld.cc"
   obj.target = "cld"
+
+def test(t):
+  Utils.exec_command('make test')
