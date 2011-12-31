@@ -131,14 +131,78 @@ namespace cld {
   v8::Handle<v8::Value>
   Cld::Detect(const v8::Arguments& args) {
     v8::HandleScope scope;
-    v8::Local<v8::Object> obj = v8::Object::New();
     
-    obj->Set(v8::String::New("name"), v8::String::New("Bulgarian"));
-    obj->Set(v8::String::New("code"), v8::String::New("BG"));
-    obj->Set(v8::String::New("percent"), v8::Integer::New(11));
-    obj->Set(v8::String::New("score"), v8::Integer::New(95));
+    v8::Local<v8::Object> results = v8::Object::New();
+    results->Set(v8::String::New("name"), v8::String::New(ExtLanguageName(UNKNOWN_LANGUAGE)));
+    results->Set(v8::String::New("code"), v8::String::New(ExtLanguageCode(UNKNOWN_LANGUAGE)));
+    results->Set(v8::String::New("reliable"), v8::Boolean::New(false));
+    results->Set(v8::String::New("details"), v8::Array::New());
     
-    return scope.Close(obj);
+    if (args.Length() < 1 || args[0]->IsString() == false) {
+      return scope.Close(results);
+    }
+    v8::String::Utf8Value text(args[0]->ToString());
+    
+    char *bytes                   = *text;
+    int numBytes                  = text.length();
+    bool isPlainText              = true;
+    bool pickSummaryLanguage      = false;
+    bool removeWeakMatches        = true;
+    bool includeExtendedLanguages = true;
+    
+    const char* hintTopLevelDomain = NULL; // "id" boosts Indonesian;
+    const char* hintLanguageCode   = NULL; // ITALIAN boosts it
+    const char* hintEncoding       = NULL; // SJS boosts Japanese
+    
+    Encoding hintEncodingEnum = UNKNOWN_ENCODING;
+    Language hintLanguageEnum = UNKNOWN_LANGUAGE;
+    Language language3[3];
+    int percent3[3];
+    double normalized_score3[3];
+    int textBytesFound;
+    bool isReliable;
+    
+    if (args.Length() > 1 && args[1]->IsObject()) {
+      // TODO: allow passing options
+    }
+    
+    Language sumLang = CompactLangDet::DetectLanguage(0,
+                         bytes, numBytes,
+                         isPlainText,
+                         includeExtendedLanguages,
+                         pickSummaryLanguage,
+                         removeWeakMatches,
+                         hintTopLevelDomain,
+                         hintEncodingEnum,
+                         hintLanguageEnum,
+                         language3,
+                         percent3,
+                         normalized_score3,
+                         &textBytesFound,
+                         &isReliable);
+    
+    v8::Local<v8::Array> details = v8::Local<v8::Array>(v8::Array::New());
+    for(int idx = 0; idx < 3; idx++) {
+      Language lang = language3[idx];
+      if (lang == UNKNOWN_LANGUAGE) {
+        break;
+      }
+      
+      v8::Local<v8::Object> detail = v8::Object::New();
+      detail->Set(v8::String::New("name"), v8::String::New(ExtLanguageName(lang)));
+      detail->Set(v8::String::New("code"), v8::String::New(ExtLanguageCode(lang)));
+      detail->Set(v8::String::New("percent"), v8::Number::New(percent3[idx]));
+      detail->Set(v8::String::New("score"), v8::Number::New(normalized_score3[idx]));
+      
+      details->Set(v8::Integer::New(idx), detail);
+    }
+    
+    results->Set(v8::String::New("name"), v8::String::New(ExtLanguageName(sumLang)));
+    results->Set(v8::String::New("code"), v8::String::New(ExtLanguageCode(sumLang)));
+    results->Set(v8::String::New("reliable"), v8::Boolean::New(isReliable));
+    results->Set(v8::String::New("details"), details);
+    
+    return scope.Close(results);
  }
 
   extern "C" void init (v8::Handle<v8::Object> target) {
