@@ -2,7 +2,7 @@
 # CLD
       
 
-A straight port of the CLD (Compact Language Detector) library embedded in Google's Chromium browser. The library detects the language from provided UTF8 text. It's implemented in C++, with very basic Node bindings. Original work by [Mike McCandless](http://code.google.com/p/chromium-compact-language-detector/)
+A straight port of the CLD (Compact Language Detector) library embedded in Google's Chromium browser. The library detects the language from provided Javascript string. It's implemented in C++, with very basic Node bindings. Original work by [Mike McCandless](http://code.google.com/p/chromium-compact-language-detector/)
 
 ## Installation
 
@@ -20,7 +20,7 @@ A straight port of the CLD (Compact Language Detector) library embedded in Googl
 
 
 ## License
-Copyright 2010, Blagovest Dachev.
+Copyright 2011, Blagovest Dachev.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
