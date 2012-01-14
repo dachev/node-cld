@@ -1,8 +1,15 @@
 #!/usr/bin/env node
 
-var cld    = require('../build/default/cld');
+var cld    = null;
 var data   = require('./data');
 var assert = require('assert');
+
+try {
+    cld = require('./build/default/cld');
+} catch(e) {
+    // node v0.5.5+
+    cld = require('./build/Release/cld');
+}
 
 function runOne(expectedLangName, text, shouldBeReliable) {
   var detectionResult = cld.detect(text);
