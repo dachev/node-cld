@@ -26,7 +26,7 @@ def build(bld):
   bld.recurse('chromium')
   
   obj = bld.new_task_gen("cxx", "shlib", "node_addon")
-  obj.cxxflags = ["-Wall"]
+  obj.cxxflags = ["-DCLD_WINDOWS", "-Wall"]
   obj.includes = '. chromium'
   obj.add_objects = 'chromium'
   obj.source = "src/cld.cc"
