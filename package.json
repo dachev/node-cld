@@ -2,8 +2,8 @@
     "name": "cld",
     "description": "A straight port of the CLD (Compact Language Detector) library embedded in Google's Chromium browser. The library detects the language from provided UTF8 text. It's implemented in C++, with very basic Node bindings.",
     "keywords": ["language", "detect", "language detection"],
-    "version": "0.0.4",
-    "main": "./build/default/cld",
+    "version": "0.0.5",
+    "main": "./index",
     "dependencies": {
     },
     "author": {
