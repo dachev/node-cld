@@ -20,7 +20,7 @@ def configure(conf):
 
 def build(bld):
   obj = bld.new_task_gen("cxx")
-  obj.cxxflags = ["-DCLD_WINDOWS", "-Wall"]
+  obj.cxxflags = ["-fPIC", "-Wall", "-DCLD_WINDOWS"]
   obj.target = "chromium"
   obj.includes = ['.'] + listdirs('base') + listdirs('encodings') + listdirs('languages')
   obj.source = """
