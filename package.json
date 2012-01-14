@@ -22,5 +22,6 @@
     "licenses": [{
         "type": "GPLv3",
         "url": "http://www.gnu.org/licenses/gpl-3.0.txt"}
-    ]
+    ],
+    "engines" : { "node" : ">=0.4.0" }
 }
