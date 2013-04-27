@@ -11,10 +11,6 @@
         "email" : "blago@dachev.com",
         "url"   : "http://www.dachev.com"
     },
-    "scripts": {
-      "install": "make build",
-      "test": "make test"
-    },
     "repository" : {
         "type" : "git",
         "url"  : "git://github.com/dachev/cld.git"
