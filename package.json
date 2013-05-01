@@ -4,7 +4,9 @@
     "keywords": ["language", "detect", "language detection"],
     "version": "0.0.6",
     "main": "./index",
-    "dependencies": {
+    "dependencies": {},
+    "scripts": {
+        "test": "test/runner.js"
     },
     "author": {
         "name"  : "Blagovest Dachev",
