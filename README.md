@@ -48,7 +48,7 @@ Pass a LANGUAGES key or value as a hint
 
 ### encodingHint
 
-Pass a ENCODINGS value as a hint
+Pass an ENCODINGS value as a hint
 
 ### tldHint
 
