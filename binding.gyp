@@ -3,16 +3,13 @@
     {
       "target_name": "cld",
       "dependencies": [
-        "chromium/chromium.gyp:chromium"
+        "cld/binding.gyp:cld"
       ],
       "include_dirs": [
-        ".",
-        "chromium"
+        "cld/public"
       ],
-      "sources": [ "src/cld.cc" ],
-      "defines": [
-        "CLD_WINDOWS"
-      ]
+      "sources": ["src/constants.cc", "src/cld.cc"],
+      "defines": []
     }
   ]
 }

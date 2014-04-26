@@ -1,10 +1,10 @@
-#ifndef CLD_H
-#define CLD_H
+#ifndef NODE_CLD_H
+#define NODE_CLD_H
 
 #include <v8.h>
 #include <node.h>
 
-namespace cld {
+namespace NodeCld {
   class Cld {
     public:
       static void Init(v8::Handle<v8::Object> target);

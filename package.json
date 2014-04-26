@@ -1,25 +1,37 @@
 {
-    "name": "cld",
-    "description": "A straight port of the CLD (Compact Language Detector) library embedded in Google's Chromium browser. The library detects the language from provided UTF8 text. It's implemented in C++, with very basic Node bindings.",
-    "keywords": ["language", "detect", "language detection"],
-    "version": "0.0.6",
-    "main": "./index",
-    "dependencies": {},
-    "scripts": {
-        "test": "test/runner.js"
-    },
-    "author": {
-        "name"  : "Blagovest Dachev",
-        "email" : "blago@dachev.com",
-        "url"   : "http://www.dachev.com"
-    },
-    "repository" : {
-        "type" : "git",
-        "url"  : "git://github.com/dachev/cld.git"
-    },
-    "licenses": [{
-        "type": "GPLv3",
-        "url": "http://www.gnu.org/licenses/gpl-3.0.txt"}
-    ],
-    "engines" : { "node" : ">=0.4.0" }
+  "name": "cld",
+  "description": "Robust language detector for Javascript. Based on the CLD2 (Compact Language Detector) library from Google. Highly optimized for space and speed. Runs about 10x faster than other libraries. Detects over a 160 languages. Full test coverage.",
+  "keywords": [
+    "language",
+    "detect",
+    "language detection",
+    "cld",
+    "cld2"
+  ],
+  "version": "2.0.0",
+  "main": "./index",
+  "dependencies": {
+    "underscore": "^1.6.0"
+  },
+  "scripts": {
+    "test": "test/runner.js"
+  },
+  "author": {
+    "name": "Blagovest Dachev",
+    "email": "blago@dachev.com",
+    "url": "http://www.dachev.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dachev/cld.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "engines": {
+    "node": ">=0.10.0"
+  }
 }

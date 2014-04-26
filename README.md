@@ -9,27 +9,26 @@ A straight port of the CLD (Compact Language Detector) library embedded in Googl
     $ npm install cld
 ```
 
-## Usage
+## Usage examples
 
 ``` javascript
-    var cld = require('cld');
+    require('cld').detect('This is a language recognition example', function(err, result) {
+      console.log(result);
+    });
 
-    cld.detect(text);
+    var text    = 'Това е пример за разпознаване на Български език';
+    var options = {isHTML:false, languageHint:'BULGARIAN', encodingHint:'ISO_8859_5', tldHint:'bg', httpHint:'bg'};
+
+    require('cld').detect('Това е тест', options, function(err, result) {
+      console.log(result);
+    });
 ```
 
 
-## License
+## Options
+
+## Copyright
 Copyright 2011, Blagovest Dachev.
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+## License
+Apache 2
