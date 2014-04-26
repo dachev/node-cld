@@ -10,14 +10,14 @@ Language detection for Javascript. Based on the CLD2 (Compact Language Detector)
 ```
 
 ## Usage examples
-### Quick
+### Simple
 ``` javascript
     require('cld').detect('This is a language recognition example', function(err, result) {
       console.log(result);
     });
 ```
 
-### With options
+### Advanced
 ``` javascript
     var text    = 'Това е пример за разпознаване на Български език';
     var options = {
