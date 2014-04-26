@@ -17,7 +17,13 @@ Language detection for Javascript. Based on the CLD2 (Compact Language Detector)
     });
 
     var text    = 'Това е пример за разпознаване на Български език';
-    var options = {isHTML:false, languageHint:'BULGARIAN', encodingHint:'ISO_8859_5', tldHint:'bg', httpHint:'bg'};
+    var options = {
+      isHTML       : false,
+      languageHint : 'BULGARIAN',
+      encodingHint : 'ISO_8859_5',
+      tldHint      : 'bg',
+      httpHint     : 'bg'
+    };
 
     require('cld').detect(text, options, function(err, result) {
       console.log(result);
