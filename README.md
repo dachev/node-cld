@@ -1,7 +1,7 @@
 # CLD
 [![Build Status](https://secure.travis-ci.org/dachev/cld.png)](http://travis-ci.org/#!/dachev/cld)
 
-A straight port of the CLD (Compact Language Detector) library embedded in Google's Chromium browser. The library detects the language from provided Javascript string. It's implemented in C++, with very basic Node bindings. Original work by [Mike McCandless](http://code.google.com/p/chromium-compact-language-detector/)
+Robust language detector for Javascript. Based on the CLD2 (Compact Language Detector) library from Google. Highly optimized for space and speed. Runs about 10x faster than other libraries. Detects over a 160 languages. Full test coverage.
 
 ## Installation
 
