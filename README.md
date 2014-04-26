@@ -1,7 +1,7 @@
 # CLD
 [![Build Status](https://secure.travis-ci.org/dachev/cld.png)](http://travis-ci.org/#!/dachev/cld)
 
-Robust language detector for Javascript. Based on the CLD2 (Compact Language Detector) library from Google. Highly optimized for space and speed. Runs about 10x faster than other libraries. Detects over a 160 languages. Full test coverage.
+Language detection for Javascript. Based on the CLD2 (Compact Language Detector) library from Google. Highly optimized for space and speed. Runs about 10x faster than other libraries. Detects over a 160 languages. Full test coverage.
 
 ## Installation
 
