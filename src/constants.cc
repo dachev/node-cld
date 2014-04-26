@@ -1,4 +1,4 @@
-#include <string>
+#include <strings.h>
 #include <vector>
 #include "constants.h"
 
