@@ -44,11 +44,11 @@ Set to true if the string contains HTML tags
 
 ### languageHint
 
-Pass a cld.LANGUAGES key or value as a hint
+Pass a LANGUAGES key or value as a hint
 
 ### encodingHint
 
-Pass a cld.ENCODINGS value as a hint
+Pass a ENCODINGS value as a hint
 
 ### tldHint
 
