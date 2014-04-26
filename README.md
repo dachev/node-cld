@@ -19,7 +19,7 @@ A straight port of the CLD (Compact Language Detector) library embedded in Googl
     var text    = 'Това е пример за разпознаване на Български език';
     var options = {isHTML:false, languageHint:'BULGARIAN', encodingHint:'ISO_8859_5', tldHint:'bg', httpHint:'bg'};
 
-    require('cld').detect('Това е тест', options, function(err, result) {
+    require('cld').detect(text, options, function(err, result) {
       console.log(result);
     });
 ```
