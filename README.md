@@ -5,8 +5,8 @@ Language detection for Javascript. Based on the CLD2 (Compact Language Detector)
 
 ## Installation
 
-``` bash
-    $ npm install cld
+```bash
+$ npm install cld
 ```
 
 ## Examples
