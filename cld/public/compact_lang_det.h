@@ -63,6 +63,7 @@
 #ifndef I18N_ENCODINGS_CLD2_PUBLIC_COMPACT_LANG_DET_H_
 #define I18N_ENCODINGS_CLD2_PUBLIC_COMPACT_LANG_DET_H_
 
+#include <stdio.h>
 #include <vector>
 #include "../internal/lang_script.h"  // For Language
 
