@@ -9,7 +9,7 @@ Language detection for Javascript. Based on the CLD2 (Compact Language Detector)
     $ npm install cld
 ```
 
-## Usage examples
+## Examples
 ### Simple
 ```js
 require('cld').detect('This is a language recognition example', function(err, result) {
