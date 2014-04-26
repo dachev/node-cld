@@ -3,7 +3,7 @@
 [![Dependencies](https://david-dm.org/dachev/cld.png)](https://david-dm.org/dachev/cld.png)
 [![devDependencies](https://david-dm.org/dachev/cld.svg)](https://david-dm.org/dachev/cld.svg)
 
-Language detection for Javascript. Based on the CLD2 (Compact Language Detector) library from Google. Highly optimized for space and speed. Runs about 10x faster than other libraries. Detects over a 160 languages. Full test coverage.
+Language detection for Javascript. Based on the CLD2 (Compact Language Detector) library from Google. Highly optimized for space and speed. Runs about 10x faster than other libraries. Detects over 160 languages. Full test coverage.
 
 ## Installation
 
