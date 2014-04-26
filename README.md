@@ -56,7 +56,7 @@ Pass top level domain as a hint
 
 ### httpHint
 
-Pass a Content-Encoding value as a hint
+Pass an HTTP "Content-Encoding" value as a hint
 
 ## Copyright
 Copyright 2011, Blagovest Dachev.
