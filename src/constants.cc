@@ -1,3 +1,4 @@
+#include <cstring>
 #include <strings.h>
 #include <vector>
 #include "constants.h"
