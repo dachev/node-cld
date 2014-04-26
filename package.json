@@ -1,6 +1,6 @@
 {
   "name": "cld",
-  "description": "Robust language detector for Javascript. Based on the CLD2 (Compact Language Detector) library from Google. Highly optimized for space and speed. Runs about 10x faster than other libraries. Detects over a 160 languages. Full test coverage.",
+  "description": "Language detection for Javascript. Based on the CLD2 (Compact Language Detector) library from Google. Highly optimized for space and speed. Runs about 10x faster than other libraries. Detects over 160 languages. Full test coverage.",
   "keywords": [
     "language",
     "detect",
