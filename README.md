@@ -1,6 +1,13 @@
 # node-cld
-[![Build Status](https://secure.travis-ci.org/dachev/cld.png)](http://travis-ci.org/#!/dachev/node-cld.png)
-[![Dependencies](https://david-dm.org/dachev/cld.png)](https://david-dm.org/dachev/node-cld.png)
+[![Build Status](https://secure.travis-ci.org/dachev/node-cld.png)](http://travis-ci.org/#!/dachev/node-cld)
+[![Dependencies](https://david-dm.org/dachev/node-cld.png)](https://david-dm.org/dachev/node-cld)
+[![NPM version](https://badge.fury.io/js/cld.svg)](http://badge.fury.io/js/cld)
+
+```js
+var express = require('express');
+var app = express();
+
+app.get('/', function(req, res){
 
 Language detection for Javascript. Based on the CLD2 (Compact Language Detector) library from Google. Highly optimized for space and speed. Runs about 10x faster than other libraries. Detects over 160 languages. Full test coverage.
 
