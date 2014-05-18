@@ -1,7 +1,6 @@
-# CLD
-[![Build Status](https://secure.travis-ci.org/dachev/cld.png)](http://travis-ci.org/#!/dachev/cld)
-[![Dependencies](https://david-dm.org/dachev/cld.png)](https://david-dm.org/dachev/cld.png)
-[![devDependencies](https://david-dm.org/dachev/cld.svg)](https://david-dm.org/dachev/cld.svg)
+# node-cld
+[![Build Status](https://secure.travis-ci.org/dachev/cld.png)](http://travis-ci.org/#!/dachev/node-cld.png)
+[![Dependencies](https://david-dm.org/dachev/cld.png)](https://david-dm.org/dachev/node-cld.png)
 
 Language detection for Javascript. Based on the CLD2 (Compact Language Detector) library from Google. Highly optimized for space and speed. Runs about 10x faster than other libraries. Detects over 160 languages. Full test coverage.
 
@@ -59,7 +58,7 @@ Pass top level domain as a hint
 Pass an HTTP "Content-Encoding" value as a hint
 
 ## Copyright
-Copyright 2011, Blagovest Dachev.
+Copyright 2011-2014, Blagovest Dachev.
 
 ## License
 Apache 2
