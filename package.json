@@ -8,10 +8,11 @@
     "cld",
     "cld2"
   ],
-  "version": "2.0.0",
+  "version": "2.1.0",
   "main": "./index",
   "dependencies": {
-    "underscore": "^1.6.0"
+    "underscore": "^1.6.0",
+    "nan": "^1.2.0"
   },
   "scripts": {
     "test": "test/runner.js"
@@ -21,6 +22,9 @@
     "email": "blago@dachev.com",
     "url": "http://www.dachev.com"
   },
+  "contributors": [
+    "Lovell Fuller <npm@lovell.info>"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/dachev/cld.git"

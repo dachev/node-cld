@@ -6,10 +6,12 @@
         "cld/binding.gyp:cld"
       ],
       "include_dirs": [
-        "cld/public"
+        "cld/public",
+        "<!(node -e \"require('nan')\")"
       ],
       "sources": ["src/constants.cc", "src/cld.cc"],
-      "defines": []
+      "defines": [],
+      "cflags_cc": ["-Wall"]
     }
   ]
 }

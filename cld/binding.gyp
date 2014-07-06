@@ -32,7 +32,8 @@
         "internal/cld2_generated_distinctocta0122.cc",
         "internal/cld_generated_score_quad_octa_0122.cc"
       ],
-      "defines": []
+      "defines": [],
+      "cflags_cc": ["-w"]
     }
   ]
 }
