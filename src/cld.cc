@@ -113,7 +113,6 @@ namespace NodeCld {
       NodeCldDetected rawLanguage = rawDetected->at(i);
       detected->Set(static_cast<uint32_t>(i), NanNew<v8::String>(rawLanguage.name));
     }
-    //NanAssignPersistent(detected, NanNew<v8::Array>());
     target->Set(NanNew<v8::String>("DETECTED_LANGUAGES"), detected);
 
     // set all languages
@@ -123,7 +122,6 @@ namespace NodeCld {
       NodeCldLanguage rawLanguage = rawLanguages->at(i);
       languages->Set(NanNew<v8::String>(rawLanguage.name), NanNew<v8::String>(rawLanguage.code));
     }
-    //NanAssignPersistent(languages, NanNew<v8::Object>());
     target->Set(NanNew<v8::String>("LANGUAGES"), languages);
 
     // set encodings
@@ -133,7 +131,6 @@ namespace NodeCld {
       NodeCldEncoding rawEncoding = rawEncodings->at(i);
       encodings->Set(static_cast<uint32_t>(i), NanNew<v8::String>(rawEncoding.name));
     }
-    //NanAssignPersistent(encodings, NanNew<v8::Array>());
     target->Set(NanNew<v8::String>("ENCODINGS"), encodings);
 
     NODE_SET_METHOD(target, "detect", Detect);
