@@ -33,7 +33,10 @@
         "internal/cld_generated_score_quad_octa_0122.cc"
       ],
       "defines": [],
-      "cflags_cc": ["-w"]
+      "cflags_cc": ["-w"],
+      "xcode_settings": {
+        "OTHER_CFLAGS": ["-w"]
+      }
     }
   ]
 }
