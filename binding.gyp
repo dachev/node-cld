@@ -11,7 +11,10 @@
       ],
       "sources": ["src/constants.cc", "src/cld.cc"],
       "defines": [],
-      "cflags_cc": ["-Wall"]
+      "cflags_cc": ["-Wall"],
+      "xcode_settings": {
+        "OTHER_CFLAGS": ["-Wall"]
+      }
     }
   ]
 }
