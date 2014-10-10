@@ -3,10 +3,10 @@
     {
       "target_name": "cld",
       "dependencies": [
-        "cld/binding.gyp:cld"
+        "deps/cld/binding.gyp:cld"
       ],
       "include_dirs": [
-        "cld/public",
+        "deps/cld/public",
         "<!(node -e \"require('nan')\")"
       ],
       "sources": ["src/constants.cc", "src/cld.cc"],
