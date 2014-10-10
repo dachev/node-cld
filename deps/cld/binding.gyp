@@ -1,7 +1,7 @@
 {
   "targets": [
     {
-      "target_name": "cld",
+      "target_name": "cld-c",
       "type": "static_library",
       "include_dirs": [
         "internal",

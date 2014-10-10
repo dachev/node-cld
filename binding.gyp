@@ -3,7 +3,7 @@
     {
       "target_name": "cld",
       "dependencies": [
-        "deps/cld/binding.gyp:cld"
+        "deps/cld/binding.gyp:cld-c"
       ],
       "include_dirs": [
         "deps/cld/public",
