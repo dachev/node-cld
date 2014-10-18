@@ -11,15 +11,24 @@ namespace NodeCld
   struct NodeCldLanguage {
     const char *name;
     const char *code;
+
+	NodeCldLanguage(const char *name, const char *code) :
+    name(name), code(code) {}
   };
 
   struct NodeCldDetected {
     const char *name;
+
+	NodeCldDetected(const char *name) :
+    name(name) {}
   };
 
   struct NodeCldEncoding {
     const char *name;
     CLD2::Encoding encoding;
+
+	NodeCldEncoding(const char *name, CLD2::Encoding encoding) :
+    name(name), encoding(encoding) {}
   };
 
   class Constants {
