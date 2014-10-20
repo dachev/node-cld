@@ -15,7 +15,7 @@
     "nan": "^1.2.0"
   },
   "scripts": {
-    "test": "test/runner.js"
+    "test": "node test/runner.js"
   },
   "author": {
     "name": "Blagovest Dachev",
