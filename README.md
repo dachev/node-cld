@@ -3,7 +3,11 @@
 [![Dependencies](https://david-dm.org/dachev/node-cld.png)](https://david-dm.org/dachev/node-cld)
 [![NPM version](https://badge.fury.io/js/cld.svg)](http://badge.fury.io/js/cld)
 
-Language detection for Javascript. Based on the CLD2 (Compact Language Detector) library from Google. Highly optimized for space and speed. Runs about 10x faster than other libraries. Detects over 160 languages. Full test coverage.
+Language detection for Javascript. Based on the CLD2 (Compact Language Detector) library from Google.
+
+Highly optimized for space and speed. Runs about 10x faster than other libraries. Detects over 160 languages. Full test coverage.
+
+Runs on Linux, OS X, and Windows.
 
 ## Installation
 
