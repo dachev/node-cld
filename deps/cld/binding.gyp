@@ -35,7 +35,7 @@
       "defines": [],
       "cflags_cc": ["-w"],
       "xcode_settings": {
-        "OTHER_CFLAGS": ["-w"]
+        "OTHER_CFLAGS": ["-w","-Wno-c++11-narrowing"]
       }
     }
   ]
