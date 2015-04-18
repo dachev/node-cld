@@ -61,7 +61,7 @@ Pass top level domain as a hint
 Pass an HTTP "Content-Encoding" value as a hint
 
 ## Copyright
-Copyright 2011-2014, Blagovest Dachev.
+Copyright 2011-2015, Blagovest Dachev.
 
 ## License
 Apache 2
