@@ -33,9 +33,11 @@
         "internal/cld_generated_score_quad_octa_0122.cc"
       ],
       "defines": [],
-      "cflags_cc": ["-w"],
+      "cflags_cc": ["-w", "-std=gnu++98"],
+      "cflags_cc!": ["-std=gnu++0x"],
       "xcode_settings": {
-        "OTHER_CFLAGS": ["-w","-Wno-c++11-narrowing"]
+        "OTHER_CFLAGS": ["-w"],
+        'CLANG_CXX_LANGUAGE_STANDARD': 'c++98'
       }
     }
   ]
