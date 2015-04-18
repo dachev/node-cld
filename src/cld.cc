@@ -77,9 +77,10 @@ namespace NodeCld {
       languages->Set(NanNew<v8::Integer>(idx), item);
     }
 
+    unsigned int chunkIdx = 0;
     v8::Local<v8::Array> chunks = v8::Local<v8::Array>(NanNew<v8::Array>());
-    for(unsigned int idx = 0; idx < resultChunkVector.size(); idx++) {
-      CLD2::ResultChunk chunk = resultChunkVector.at(idx);
+    for(unsigned int resultIdx = 0; resultIdx < resultChunkVector.size(); resultIdx++) {
+      CLD2::ResultChunk chunk = resultChunkVector.at(resultIdx);
       CLD2::Language lang = static_cast<CLD2::Language>(chunk.lang1);
 
       if (lang == CLD2::UNKNOWN_LANGUAGE) {
@@ -92,7 +93,8 @@ namespace NodeCld {
       item->Set(NanNew<v8::String>("offset"), NanNew<v8::Number>(chunk.offset));
       item->Set(NanNew<v8::String>("bytes"), NanNew<v8::Number>(chunk.bytes));
 
-      chunks->Set(NanNew<v8::Integer>(idx), item);
+      chunks->Set(NanNew<v8::Integer>(chunkIdx), item);
+      chunkIdx++;
     }
 
     results->Set(NanNew<v8::String>("reliable"), NanNew<v8::Boolean>(isReliable));
