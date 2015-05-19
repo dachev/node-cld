@@ -26,6 +26,7 @@
 #include <fstream>
 #include <sys/mman.h>
 
+#include "cld2_dynamic_compat.h"
 #include "../public/compact_lang_det.h"
 #include "../public/encodings.h"
 #include "unittest_data.h"
@@ -144,26 +145,46 @@ static const TestPair kTestPair[] = {
   {YIDDISH, kTeststr_yi_Hebr},
 
   // Added 2013.08.31 so-Latn ig-Latn ha-Latn yo-Latn zu-Latn
-  {SOMALI,  kTeststr_so_Latn},
-  {IGBO,  kTeststr_ig_Latn},
-  {HAUSA,  kTeststr_ha_Latn},
-  {YORUBA,  kTeststr_yo_Latn},
-  {ZULU,  kTeststr_zu_Latn},
+  // Deleted 2014.10.15 so-Latn ig-Latn ha-Latn yo-Latn zu-Latn
+  //{SOMALI,  kTeststr_so_Latn},
+  //{IGBO,  kTeststr_ig_Latn},
+  //{HAUSA,  kTeststr_ha_Latn},
+  //{YORUBA,  kTeststr_yo_Latn},
+  //{ZULU,  kTeststr_zu_Latn},
+
   // Added 2014.01.22 bs-Latn
   {BOSNIAN,  kTeststr_bs_Latn},
 
-// 2 statistically-close languages
+  // Added 2014.10.15
+  {KAZAKH,  kTeststr_kk_Cyrl},
+  {KURDISH,  kTeststr_ku_Latn},         // aka kmr
+  {KYRGYZ,  kTeststr_ky_Cyrl},
+  {MALAGASY,  kTeststr_mg_Latn},
+  {MALAYALAM,  kTeststr_ml_Mlym},
+  {BURMESE,  kTeststr_my_Mymr},
+  {NYANJA,  kTeststr_ny_Latn},
+  {SINHALESE,  kTeststr_si_Sinh},     // aka SINHALA
+  {SESOTHO,  kTeststr_st_Latn},
+  {SUNDANESE,  kTeststr_su_Latn},
+  {TAJIK,  kTeststr_tg_Cyrl},
+  {UZBEK,  kTeststr_uz_Latn},
+  {UZBEK,  kTeststr_uz_Cyrl},
+
+  // 2 statistically-close languages
   {INDONESIAN, kTeststr_id_close},
   {MALAY, kTeststr_ms_close},
 
 // Simple intermixed French/English text
   {FRENCH, kTeststr_fr_en_Latn},
 
+// Simple English with bad UTF-8
+  {UNKNOWN_LANGUAGE, kTeststr_en_Latn_bad_UTF8},
+
 // Cross-check the main quadgram table build date
 // Change the expected language each time it is rebuilt
-  //{WELSH, kTeststr_version},   // 2013.07.15
-  {AZERBAIJANI, kTeststr_version},   // 2014.01.31
-
+  // {WELSH, kTeststr_version},         // 2013.07.15
+  // {AZERBAIJANI, kTeststr_version},   // 2014.01.31
+  {TURKISH, kTeststr_version},          // 2014.10.16
 
   {UNKNOWN_LANGUAGE, NULL},     // Must be last
 };
@@ -182,8 +203,9 @@ bool OneTest(int flags, bool get_vector,
   ResultChunkVector resultchunkvector;
   int text_bytes;
   bool is_reliable;
+  int valid_prefix_bytes;
 
-  Language lang_detected = ExtDetectLanguageSummary(
+  Language lang_detected = ExtDetectLanguageSummaryCheckUTF8(
                           buffer,
                           buffer_length,
                           is_plain_text,
@@ -194,10 +216,17 @@ bool OneTest(int flags, bool get_vector,
                           normalized_score3,
                           get_vector ? &resultchunkvector : NULL,
                           &text_bytes,
-                          &is_reliable);
+                          &is_reliable,
+                          &valid_prefix_bytes);
 // expose DumpExtLang DumpLanguages
+  bool good_utf8 = (valid_prefix_bytes == buffer_length);
+  if (!good_utf8) {
+    fprintf(stderr, "*** Bad UTF-8 after %d bytes<br>\n", valid_prefix_bytes);
+    fprintf(stdout, "*** Bad UTF-8 after %d bytes\n", valid_prefix_bytes);
+  }
 
   bool ok = (lang_detected == lang_expected);
+  ok &= good_utf8;
 
   if (!ok) {
     if ((flags & kCLDFlagHtml) != 0) {
@@ -257,15 +286,20 @@ void FinishHtmlOut(int flags) {
 
 #ifdef CLD2_DYNAMIC_MODE
 int RunTests (int flags, bool get_vector, const char* data_file) {
-#else
+#else // CLD2_DYNAMIC_MODE is not defined
 int RunTests (int flags, bool get_vector) {
-#endif
+#endif // ifdef CLD2_DYNAMIC_MODE
   fprintf(stdout, "CLD2 version: %s\n", CLD2::DetectLanguageVersion());
   InitHtmlOut(flags);
   bool any_fail = false;
-  
+
 #ifdef CLD2_DYNAMIC_MODE
+#ifndef _WIN32
   fprintf(stdout, "[DYNAMIC] Test running in dynamic data mode!\n");
+  if (!CLD2::isDataDynamic()) {
+    fprintf(stderr, "[DYNAMIC] *** Error: CLD2::isDataDynamic() returned false in a dynamic build!\n");
+    any_fail = true;
+  }
   bool dataLoaded = CLD2::isDataLoaded();
   if (dataLoaded) {
     fprintf(stderr, "[DYNAMIC] *** Error: CLD2::isDataLoaded() returned true prior to loading data from file!\n");
@@ -281,7 +315,17 @@ int RunTests (int flags, bool get_vector) {
     any_fail = true;
   }
   fprintf(stdout, "[DYNAMIC] Data loaded, file-based tests commencing\n");
-#endif  
+#endif // ifndef _WIN32
+#else // CLD2_DYNAMIC_MODE is not defined
+  if (CLD2::isDataDynamic()) {
+    fprintf(stderr, "*** Error: CLD2::isDataDynamic() returned true in a non-dynamic build!\n");
+    any_fail = true;
+  }
+  if (!CLD2::isDataLoaded()) {
+    fprintf(stderr, "*** Error: CLD2::isDataLoaded() returned false in non-dynamic build!\n");
+    any_fail = true;
+  }
+#endif // ifdef CLD2_DYNAMIC_MODE
 
   int i = 0;
   while (kTestPair[i].text != NULL) {
@@ -289,11 +333,16 @@ int RunTests (int flags, bool get_vector) {
     const char* buffer = kTestPair[i].text;
     int buffer_length = strlen(buffer);
     bool ok = OneTest(flags, get_vector, lang_expected, buffer, buffer_length);
+    if (kTestPair[i].text == kTeststr_en_Latn_bad_UTF8) {
+      // We expect this one to fail, so flip the value of ok
+      ok = !ok;
+    }
     any_fail |= (!ok);
     ++i;
   }
 
 #ifdef CLD2_DYNAMIC_MODE
+#ifndef _WIN32
   fprintf(stdout, "[DYNAMIC] File-based tests complete, attempting to unload file data\n");
   CLD2::unloadData();
   dataLoaded = CLD2::isDataLoaded();
@@ -312,10 +361,10 @@ int RunTests (int flags, bool get_vector) {
   const int actualSize = ftell(inFile);
   fclose(inFile);
 
-  int inFileHandle = open(data_file, O_RDONLY);
+  int inFileHandle = OPEN(data_file, O_RDONLY);
   void* mapped = mmap(NULL, actualSize,
     PROT_READ, MAP_PRIVATE, inFileHandle, 0);
-  close(inFileHandle);
+  CLOSE(inFileHandle);
 
   fprintf(stdout, "[DYNAMIC] mmap'ed successfully, attempting data load.\n");
   CLD2::loadDataFromRawAddress(mapped, actualSize);
@@ -333,6 +382,10 @@ int RunTests (int flags, bool get_vector) {
     const char* buffer = kTestPair[i].text;
     int buffer_length = strlen(buffer);
     bool ok = OneTest(flags, get_vector, lang_expected, buffer, buffer_length);
+    if (kTestPair[i].text == kTeststr_en_Latn_bad_UTF8) {
+      // We expect this one to fail, so flip the value of ok
+      ok = !ok;
+    }
     any_fail |= (!ok);
     ++i;
   }
@@ -347,8 +400,16 @@ int RunTests (int flags, bool get_vector) {
   fprintf(stdout, "[DYNAMIC] Attempting translation after unloading map data\n");
   any_fail |= !OneTest(flags, get_vector, UNKNOWN_LANGUAGE, kTeststr_en, strlen(kTeststr_en));
 
-  fprintf(stdout, "[DYNAMIC] All dynamic-mode tests complete\n");  
-#endif  
+  fprintf(stdout, "[DYNAMIC] All dynamic-mode tests complete\n");
+#endif // ifndef _WIN32
+#else // CLD2_DYNAMIC_MODE is not defined
+  // These functions should do nothing, and shouldn't cause a crash. A warning is output to STDERR.
+  fprintf(stderr, "Checking that non-dynamic implementations of dynamic data methods are no-ops (ignore the warnings).\n");
+  CLD2::loadDataFromFile("this file doesn't exist");
+  CLD2::loadDataFromRawAddress(NULL, -1);
+  CLD2::unloadData();
+  fprintf(stderr, "Done checking non-dynamic implementations of dynamic data methods, care about warnings again.\n");
+#endif
 
   if (any_fail) {
     fprintf(stderr, "FAIL\n");
@@ -359,7 +420,7 @@ int RunTests (int flags, bool get_vector) {
   }
 
   FinishHtmlOut(flags);
-  return 0;
+  return any_fail ? 1 : 0;
 }
 
 }       // End namespace CLD2

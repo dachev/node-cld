@@ -43,17 +43,17 @@ static const Encoding UNKNOWN_ENCODING = 0;
 
 
 #ifndef CLD2_DYNAMIC_MODE
-  // Linker supplies the right tables; see ScoringTables compact_lang_det_impl.cc
-  // These are here JUST for printing versions
-  extern const UTF8PropObj cld_generated_CjkUni_obj;
-  extern const CLD2TableSummary kCjkDeltaBi_obj;
-  extern const CLD2TableSummary kDistinctBiTable_obj;
-  extern const CLD2TableSummary kQuad_obj;
-  extern const CLD2TableSummary kDeltaOcta_obj;
-  extern const CLD2TableSummary kDistinctOcta_obj;
-  extern const CLD2TableSummary kOcta2_obj;
-  extern const short kAvgDeltaOctaScore[];
-#endif 
+// Linker supplies the right tables; see ScoringTables compact_lang_det_impl.cc
+// These are here JUST for printing versions
+extern const UTF8PropObj cld_generated_CjkUni_obj;
+extern const CLD2TableSummary kCjkDeltaBi_obj;
+extern const CLD2TableSummary kDistinctBiTable_obj;
+extern const CLD2TableSummary kQuad_obj;
+extern const CLD2TableSummary kDeltaOcta_obj;
+extern const CLD2TableSummary kDistinctOcta_obj;
+extern const CLD2TableSummary kOcta2_obj;
+extern const short kAvgDeltaOctaScore[];
+#endif
 
 bool FLAGS_cld_version = false;
 bool FLAGS_cld_html = true;
@@ -224,9 +224,11 @@ int main(int argc, char** argv) {
 #endif
     exit(0);
   }     // End FLAGS_cld_version
+
   int flags = 0;
   bool get_vector = false;
   const char* data_file = NULL;
+  bool do_line = false;
   const char* fname = NULL;
   for (int i = 1; i < argc; ++i) {
     if (argv[i][0] != '-') {fname = argv[i];}
@@ -235,25 +237,31 @@ int main(int argc, char** argv) {
     if (strcmp(argv[i], "--cr") == 0) {flags |= kCLDFlagCr;}
     if (strcmp(argv[i], "--verbose") == 0) {flags |= kCLDFlagVerbose;}
     if (strcmp(argv[i], "--echo") == 0) {flags |= kCLDFlagEcho;}
+    if (strcmp(argv[i], "--besteffort") == 0) {flags |= kCLDFlagBestEffort;}
     if (strcmp(argv[i], "--vector") == 0) {get_vector = true;}
+    if (strcmp(argv[i], "--line") == 0) {do_line = true;}
     if (strcmp(argv[i], "--data-file") == 0) { data_file = argv[++i];}
   }
 
-#ifdef CLD2_DYNAMIC_MODE
-  if (data_file == NULL) {
-    fprintf(stderr, "When running in dynamic mode, you must specify --data-file [FILE]\n");
-    return -1;
-  }
-  fprintf(stdout, "Loading data from: %s\n", data_file);
-  CLD2::loadDataFromFile(data_file);
-  fprintf(stdout, "Data loaded, test commencing\n");
+#ifdef CLD2_DYNAMIC_MODE        
+  if (data_file == NULL) {      
+    fprintf(stderr, "When running in dynamic mode, you must specify --data-file [FILE]\n");     
+    return -1;      
+  }     
+  fprintf(stdout, "Loading data from: %s\n", data_file);        
+  CLD2::loadDataFromFile(data_file);        
+  fprintf(stdout, "Data loaded, test commencing\n");        
 #endif
 
   FILE* fin;
   if (fname == NULL) {
     fin = stdin;
   } else {
-    fin = fopen(fname, "rb");
+    if (do_line) {
+      fin = fopen(fname, "r");
+    } else {
+      fin = fopen(fname, "rb");
+    }
     if (fin == NULL) {
       fprintf(stderr, "%s did not open\n", fname);
       exit(0);
@@ -272,6 +280,51 @@ int main(int argc, char** argv) {
   char* buffer = new char[10000000];  // Max 10MB of input for this test program
   struct timeval news, newe;
 
+  // Full-blown flag-bit and hints interface
+  bool allow_extended_lang = true;
+  Language plus_one = UNKNOWN_LANGUAGE;
+  bool ignore_7bit = false;
+
+  if (do_line) {
+    while (Readline(fin, buffer)) {
+      if (IsComment(buffer)) {continue;}
+
+      // Detect language one line at a time
+      Language summary_lang = UNKNOWN_LANGUAGE;
+
+      Language language3[3];
+      int percent3[3];
+      double normalized_score3[3];
+      ResultChunkVector resultchunkvector;
+      bool is_plain_text = FLAGS_plain;
+      int text_bytes;
+
+      CLDHints cldhints = {NULL, tldhint, enchint, langhint};
+
+      summary_lang = CLD2::DetectLanguageSummaryV2(
+                          buffer,
+                          strlen(buffer),
+                          is_plain_text,
+                          &cldhints,
+                          allow_extended_lang,
+                          flags,
+                          plus_one,
+                          language3,
+                          percent3,
+                          normalized_score3,
+                          get_vector ? &resultchunkvector : NULL,
+                          &text_bytes,
+                          &is_reliable);
+      printf("%s%s %d%% %s\n",
+         LanguageName(language3[0]),
+         is_reliable ? "" : "*",
+         percent3[0],
+         buffer);
+    }
+    fclose(fin);
+    delete[] buffer;
+    return 0;
+  }
 
   if ((flags & kCLDFlagHtml) != 0) {
     // Begin HTML file
@@ -287,16 +340,11 @@ int main(int argc, char** argv) {
     fprintf(stderr, "file = %s<br>\n", fname ? fname : "stdin");
   }
 
-  // Full-blown flag-bit and hints interface
-  bool allow_extended_lang = true;
-  Language plus_one = UNKNOWN_LANGUAGE;
-
+  // Read entire file
   int n = fread(buffer, 1, 10000000, fin);
 
-  bool ignore_7bit = false;
 
-
-  // Detect language
+  // Detect languages in entire file
   Language summary_lang = UNKNOWN_LANGUAGE;
 
   Language language3[3];

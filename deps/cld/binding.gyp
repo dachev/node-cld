@@ -29,8 +29,13 @@
         "internal/generated_distinct_bi_0.cc",
         "internal/cld2_generated_quad0122.cc",
         "internal/cld2_generated_deltaocta0122.cc",
+        "internal/cld2_generated_deltaoctachrome.cc",
         "internal/cld2_generated_distinctocta0122.cc",
-        "internal/cld_generated_score_quad_octa_0122.cc"
+        "internal/cld2_generated_distinctoctachrome.cc",
+        "internal/cld2_generated_quadchrome_16.cc",
+        "internal/cld2_generated_quadchrome_2.cc",
+        "internal/cld_generated_score_quad_octa_0122.cc",
+        "internal/cld_generated_score_quad_octa_2.cc"
       ],
       "defines": [],
       "cflags_cc": ["-w", "-std=gnu++98"],

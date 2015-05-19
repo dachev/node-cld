@@ -17,6 +17,7 @@
 // Updated 2014.01 for dual table lookup
 //
 
+#include <stdint.h>
 #include <stdio.h>
 #include <string.h>
 #include <string>
@@ -26,6 +27,7 @@
 #include "debug.h"
 #include "integral_types.h"
 #include "lang_script.h"
+#include "utf8acceptinterchange.h"
 #include "utf8statetable.h"
 
 #ifdef CLD2_DYNAMIC_MODE
@@ -67,6 +69,16 @@ extern const CLD2TableSummary kDeltaOcta_obj;
 extern const CLD2TableSummary kDistinctOcta_obj;
 extern const short kAvgDeltaOctaScore[];
 
+// Returns the length in bytes of the prefix of src that is all
+//  interchange valid UTF-8
+int SpanInterchangeValid(const char* src, int byte_length) {
+  int bytes_consumed;
+  const UTF8ReplaceObj* st = &utf8acceptinterchange_obj;
+  StringPiece str(src, byte_length);
+  UTF8GenericScan(st, str, &bytes_consumed);
+  return bytes_consumed;
+}
+
 #ifdef CLD2_DYNAMIC_MODE
   // CLD2_DYNAMIC_MODE is defined:
   // Data will be read from an mmap opened at runtime.
@@ -88,25 +100,36 @@ extern const short kAvgDeltaOctaScore[];
   static bool dataSourceIsFile = false;
   static ScoringTables* dynamicTables = NULL;
   static void* mmapAddress = NULL;
-  static int mmapLength = 0;
+  static uint32_t mmapLength = 0;
 
   bool isDataLoaded() { return dynamicDataLoaded; }
+  bool isDataDynamic() { return true; } // Because CLD2_DYNAMIC_MODE is defined
 
   void loadDataFromFile(const char* fileName) {
     if (isDataLoaded()) {
       unloadData();
     }
-    dynamicTables = CLD2DynamicDataLoader::loadDataFile(fileName, &mmapAddress, &mmapLength);
+    ScoringTables* result = CLD2DynamicDataLoader::loadDataFile(fileName, &mmapAddress, &mmapLength);
+    if (result == NULL) {
+      fprintf(stderr, "WARNING: Dynamic data loading failed.\n");
+      return;
+    }
+    dynamicTables = result;
     kScoringtables = *dynamicTables;
     dataSourceIsFile = true;
     dynamicDataLoaded = true;
   };
 
-  void loadDataFromRawAddress(const void* rawAddress, const int length) {
+  void loadDataFromRawAddress(const void* rawAddress, const uint32_t length) {
     if (isDataLoaded()) {
       unloadData();
     }
-    dynamicTables = CLD2DynamicDataLoader::loadDataRaw(rawAddress, length);
+    ScoringTables* result = CLD2DynamicDataLoader::loadDataRaw(rawAddress, length);
+    if (result == NULL) {
+      fprintf(stderr, "WARNING: Dynamic data loading failed.\n");
+      return;
+    }
+    dynamicTables = result;
     kScoringtables = *dynamicTables;
     dataSourceIsFile = false;
     dynamicDataLoaded = true;
@@ -123,7 +146,7 @@ extern const short kAvgDeltaOctaScore[];
     dataSourceIsFile = false; // vacuous
     kScoringtables = NULL_TABLES; // Housekeeping: null all pointers
   }
-#else
+#else // !CLD2_DYNAMIC_MODE
   // This initializes kScoringtables.quadgram_obj etc.
   static const ScoringTables kScoringtables = {
     &cld_generated_CjkUni_obj,
@@ -138,6 +161,27 @@ extern const short kAvgDeltaOctaScore[];
 
     kAvgDeltaOctaScore,
   };
+
+  // Method implementations below are provided so that callers aren't *forced*
+  // to depend upon the CLD2_DYNAMIC_MODE flag, but can use runtime checks
+  // instead. For more information, refer to CLD2 issue 16:
+  // https://code.google.com/p/cld2/issues/detail?id=16
+  bool isDataLoaded() { return true; } // Data is statically linked
+  bool isDataDynamic() { return false; } // Because CLD2_DYNAMIC_MODE is not defined
+
+  void loadDataFromFile(const char* fileName) {
+    // This is a bug in the calling code.
+    fprintf(stderr, "WARNING: Dynamic mode not active, loadDataFromFile has no effect!\n");
+  }
+  void loadDataFromRawAddress(const void* rawAddress, const uint32_t length) {
+    // This is a bug in the calling code.
+    fprintf(stderr, "WARNING: Dynamic mode not active, loadDataFromRawAddress has no effect!\n");
+  }
+  void unloadData() {
+    // This is a bug in the calling code.
+    fprintf(stderr, "WARNING: Dynamic mode not active, unloadData has no effect!\n");
+  }
+
 #endif // #ifdef CLD2_DYNAMIC_MODE
 
 
@@ -393,6 +437,9 @@ inline bool FlagTop40(int flags) {return (flags & kCLDFlagTop40) != 0;}
 inline bool FlagShort(int flags) {return (flags & kCLDFlagShort) != 0;}
 inline bool FlagHint(int flags) {return (flags & kCLDFlagHint) != 0;}
 inline bool FlagUseWords(int flags) {return (flags & kCLDFlagUseWords) != 0;}
+inline bool FlagBestEffort(int flags) {
+  return (flags & kCLDFlagBestEffort) != 0;
+}
 
 
   // Defines Top40 packed languages
@@ -646,7 +693,7 @@ int CheapRepWordsInplace(char* isrc, int src_len, int* hash, int* tbl) {
 
 
 // This alternate form overwrites redundant words, thus avoiding corrupting the
-// backmap for generate a vector of original-text ranges.
+// backmap for generating a vector of original-text ranges.
 int CheapRepWordsInplaceOverwrite(char* isrc, int src_len, int* hash, int* tbl) {
   const uint8* src = reinterpret_cast<const uint8*>(isrc);
   const uint8* srclimit = src + src_len;
@@ -818,7 +865,7 @@ int CheapSqueezeInplace(char* isrc,
 }
 
 // This alternate form overwrites redundant words, thus avoiding corrupting the
-// backmap for generate a vector of original-text ranges.
+// backmap for generating a vector of original-text ranges.
 int CheapSqueezeInplaceOverwrite(char* isrc,
                                             int src_len,
                                             int ichunksize) {
@@ -1369,7 +1416,8 @@ void CalcSummaryLang(DocTote* doc_tote, int total_text_bytes,
                      const Language* language3,
                      const int* percent3,
                      Language* summary_lang, bool* is_reliable,
-                     bool FLAGS_cld2_html, bool FLAGS_cld2_quiet) {
+                     bool FLAGS_cld2_html, bool FLAGS_cld2_quiet,
+                     int flags) {
   // Vector of active languages; changes if we delete some
   int slot_count = 3;
   int active_slot[3] = {0, 1, 2};
@@ -1384,7 +1432,7 @@ void CalcSummaryLang(DocTote* doc_tote, int total_text_bytes,
   for (int i = 0; i < 3; ++i) {
     if (language3[i] == TG_UNKNOWN_LANGUAGE) {
       ignore_percent += percent3[i];
-      // Move the rest up, levaing input vectors unchanged
+      // Move the rest up, leaving input vectors unchanged
       for (int j=i+1; j < 3; ++j) {
         active_slot[j - 1] = active_slot[j];
       }
@@ -1442,7 +1490,7 @@ void CalcSummaryLang(DocTote* doc_tote, int total_text_bytes,
   }
 
   // If return percent is too small (too many languages), return UNKNOWN
-  if ((return_percent < kGoodFirstMinPercent)) {
+  if ((return_percent < kGoodFirstMinPercent) && !FlagBestEffort(flags)) {
     if (FLAGS_cld2_html && !FLAGS_cld2_quiet) {
       fprintf(stderr, "{Unreli %s %d%% percent too small} ",
               LanguageCode(*summary_lang), return_percent);
@@ -1633,14 +1681,26 @@ void ApplyHints(const char* buffer,
       }
     }
   }
-
-
-
-
-
-
 }
 
+
+// Extend results to fully cover the [lo..hi) range
+void FinishResultVector(int lo, int hi, ResultChunkVector* vec) {
+  if (vec == NULL) {return;}
+  if (vec->size() == 0) {return;}
+  ResultChunk* rc = &(*vec)[0];
+  if (rc->offset > lo) {
+    int diff = rc->offset - lo;
+    rc->offset -= diff;
+    rc->bytes += diff;
+  }
+  ResultChunk* rc2 = &(*vec)[vec->size() - 1];
+  int rc2hi = rc2->offset + rc2->bytes;
+  if (rc2hi < hi) {
+    int diff = hi - rc2hi;
+    rc2->bytes += diff;
+  }
+}
 
 
 // Results language3/percent3/text_bytes must be exactly three items
@@ -1935,7 +1995,9 @@ Language DetectLanguageSummaryV2(
     // This is the real, non-recursive return
 
     // Move bytes for unreliable langs to another lang or UNKNOWN
-    RemoveUnreliableLanguages(&doc_tote, FLAGS_cld2_html, FLAGS_cld2_quiet);
+    if (!FlagBestEffort(flags)) {
+      RemoveUnreliableLanguages(&doc_tote, FLAGS_cld2_html, FLAGS_cld2_quiet);
+    }
 
     // Redo the result extraction after the removal above
     doc_tote.Sort(3);
@@ -1943,13 +2005,11 @@ Language DetectLanguageSummaryV2(
                    reliable_percent3, language3, percent3, normalized_score3,
                    text_bytes, is_reliable);
 
-
-
     Language summary_lang;
     CalcSummaryLang(&doc_tote, total_text_bytes,
                     reliable_percent3, language3, percent3,
                     &summary_lang, is_reliable,
-                    FLAGS_cld2_html, FLAGS_cld2_quiet);
+                    FLAGS_cld2_html, FLAGS_cld2_quiet, flags);
 
     if (FLAGS_cld2_html && !FLAGS_cld2_quiet) {
       for (int i = 0; i < 3; ++i) {
@@ -1981,6 +2041,9 @@ Language DetectLanguageSummaryV2(
               LanguageName(summary_lang), *is_reliable ? ' ' : '*');
       fprintf(stderr, "<br>\n");
     }
+
+    // Extend results to fully cover the input buffer
+    FinishResultVector(0, buffer_length, resultchunkvector);
 
     return summary_lang;
   }

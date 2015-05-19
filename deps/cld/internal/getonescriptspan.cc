@@ -253,13 +253,13 @@ int runetochar(char *str, const char32 *rune) {
   // 1 char 00-7F
   c = *rune;
   if(c <= 0x7F) {
-    str[0] = c;
+    str[0] = static_cast<char>(c);
     return 1;
   }
 
   // 2 char 0080-07FF
   if(c <= 0x07FF) {
-    str[0] = 0xC0 | (c >> 1*6);
+    str[0] = 0xC0 | static_cast<char>(c >> 1*6);
     str[1] = 0x80 | (c & 0x3F);
     return 2;
   }
@@ -271,14 +271,14 @@ int runetochar(char *str, const char32 *rune) {
 
   // 3 char 0800-FFFF
   if (c <= 0xFFFF) {
-    str[0] = 0xE0 |  (c >> 2*6);
+    str[0] = 0xE0 | static_cast<char>(c >> 2*6);
     str[1] = 0x80 | ((c >> 1*6) & 0x3F);
-    str[2] = 0x80 |  (c & 0x3F);
+    str[2] = 0x80 | (c & 0x3F);
     return 3;
   }
 
   // 4 char 10000-1FFFFF
-  str[0] = 0xF0 | (c >> 3*6);
+  str[0] = 0xF0 | static_cast<char>(c >> 3*6);
   str[1] = 0x80 | ((c >> 2*6) & 0x3F);
   str[2] = 0x80 | ((c >> 1*6) & 0x3F);
   str[3] = 0x80 | (c & 0x3F);
@@ -626,7 +626,9 @@ int ScriptScanner::SkipToFrontOfSpan(const char* src, int len, int* script) {
         char temp[4];
         EntityToBuffer(src + skip, len - skip,
                        temp, &tlen, &plen);
-        sc = GetUTF8LetterScriptNum(temp);
+        if (plen > 0) {
+          sc = GetUTF8LetterScriptNum(temp);
+        }
       }
     } else {
       // Update 1..4 bytes
@@ -877,7 +879,9 @@ bool ScriptScanner::GetOneScriptSpan(LangSpan* span) {
           // Copy entity, no advance
           EntityToBuffer(next_byte_ + take, byte_length_ - take,
                          script_buffer_ + put, &tlen, &plen);
-          sc = GetUTF8LetterScriptNum(script_buffer_ + put);
+          if (plen > 0) {
+            sc = GetUTF8LetterScriptNum(script_buffer_ + put);
+          }
         }
       } else {
         // Real letter, safely copy up to 4 bytes, increment by 1..4
@@ -973,7 +977,9 @@ bool ScriptScanner::GetOneScriptSpan(LangSpan* span) {
           // Expand entity, no advance
           EntityToBuffer(next_byte_ + take, byte_length_ - take,
                          script_buffer_ + put, &tlen, &plen);
-          sc = GetUTF8LetterScriptNum(script_buffer_ + put);
+          if (plen > 0) {
+            sc = GetUTF8LetterScriptNum(script_buffer_ + put);
+          }
         }
       } else {
         // Update 1..4
@@ -1054,7 +1060,9 @@ void ScriptScanner::LowerScriptSpan(LangSpan* span) {
 // Buffer ALWAYS has leading space and trailing space space space NUL
 bool ScriptScanner::GetOneScriptSpanLower(LangSpan* span) {
   bool ok = GetOneScriptSpan(span);
-  LowerScriptSpan(span);
+  if (ok) {
+    LowerScriptSpan(span);
+  }
   return ok;
 }
 
