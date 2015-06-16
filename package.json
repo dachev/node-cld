@@ -15,7 +15,8 @@
     "nan": "^1.2.0"
   },
   "scripts": {
-    "test": "node test/runner.js"
+    "test": "node test/runner.js",
+    "postinstall": "rm -r ./deps/ && find ./build -type f | grep -v 'cld.node' | xargs -I{} rm {}"
   },
   "author": {
     "name": "Blagovest Dachev",
