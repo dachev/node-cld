@@ -22,6 +22,7 @@
 #include "cldutil.h"
 #include "debug.h"
 #include "lang_script.h"
+#include <stdint.h>
 
 #include <stdio.h>
 
@@ -184,7 +185,7 @@ void GetTextSpanOffsets(const ScoringHitBuffer* hitbuffer,
 
 
 int DiffScore(const CLD2TableSummary* obj, int indirect,
-              uint16 lang1, uint16 lang2) {
+              uint8 lang1, uint8 lang2) {
   if (indirect < static_cast<int>(obj->kCLDTableSizeOne)) {
     // Up to three languages at indirect
     uint32 langprob = obj->kCLDTableInd[indirect];
@@ -378,7 +379,7 @@ uint16 NextChunkLang(const SummaryBuffer* summarybuffer, int i) {
 //
 // We go out of our way to minimize the variation in the ResultChunkVector,
 // so that the caller has fewer but more meaningful spans in different
-// lanaguges, for the likely purpose of translation or spell-check.
+// languages, for the likely purpose of translation or spell-check.
 //
 // The language of each chunk is lang1, but it might be unreliable for
 // either of two reasons: its score is relatively too close to the score of
@@ -436,6 +437,7 @@ void SummaryBufferToVector(ScriptScanner* scanner, const char* text,
       if (n >= n_limit) {n = 0;} // New boundary not found within range
 
       // Also back up exactly one leading punctuation character if '"#@
+      // 'random', "quotes", #hashtags, @handles
       if (n < n_limit) {
         unsigned char c = us[-n - 1];
         if ((c == '\'') || (c == '"') || (c == '#') || (c == '@')) {++n;}
@@ -669,7 +671,7 @@ void DumpSummaryBuffer(FILE* df, const SummaryBuffer* summarybuffer) {
 int BetterBoundary(const char* text,
                    ScoringHitBuffer* hitbuffer,
                    ScoringContext* scoringcontext,
-                   uint16 pslang0, uint16 pslang1,
+                   uint8 pslang0, uint8 pslang1,
                    int linear0, int linear1, int linear2) {
   // Degenerate case, no change
   if ((linear2 - linear0) <= 8) {return linear1;}

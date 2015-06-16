@@ -1,4 +1,3 @@
-// Copyright 2014 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,14 +12,14 @@
 // limitations under the License.
 
 #include <assert.h>
+#include <stdint.h>
 #include <stdio.h>
-#include <iostream>
 #include <fstream>
 #include <fcntl.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/mman.h>
 
+#include "cld2_dynamic_compat.h" // for win32/posix compatibility
 #include "cld2_dynamic_data.h"
 #include "cld2_dynamic_data_loader.h"
 #include "integral_types.h"
@@ -40,7 +39,7 @@ CLD2DynamicData::FileHeader* loadHeaderFromFile(const char* fileName) {
 }
 
 CLD2DynamicData::FileHeader* loadHeaderFromRaw(const void* basePointer,
-                                               const int length) {
+                                               const uint32_t length) {
   return loadInternal(NULL, basePointer, length);
 }
 
@@ -52,7 +51,7 @@ CLD2DynamicData::FileHeader* loadHeaderFromRaw(const void* basePointer,
     memcpy(&(header->field), (((char*)(basePointer)) + bytesRead), 4);\
     bytesRead += 4;\
   }
-CLD2DynamicData::FileHeader* loadInternal(FILE* inFile, const void* basePointer, const int length) {
+CLD2DynamicData::FileHeader* loadInternal(FILE* inFile, const void* basePointer, const uint32_t length) {
   const bool sourceIsFile = (inFile != NULL);
   int bytesRead = 0;
   CLD2DynamicData::FileHeader* header = new CLD2DynamicData::FileHeader;
@@ -69,7 +68,7 @@ CLD2DynamicData::FileHeader* loadInternal(FILE* inFile, const void* basePointer,
                                     header->sanityString,
                                     CLD2DynamicData::DATA_FILE_MARKER,
                                     CLD2DynamicData::DATA_FILE_MARKER_LENGTH)) {
-    std::cerr << "Malformed header: bad file marker!" << std::endl;
+    fprintf(stderr, "Malformed header: bad file marker!\n");
     delete header;
     return NULL;
   }
@@ -97,7 +96,7 @@ CLD2DynamicData::FileHeader* loadInternal(FILE* inFile, const void* basePointer,
 
   CLD2DynamicData::TableHeader* tableHeaders = new CLD2DynamicData::TableHeader[header->numTablesEncoded];
   header->tableHeaders = tableHeaders;
-  for (int x=0; x<header->numTablesEncoded; x++) {
+  for (int x=0; x < (int) header->numTablesEncoded; x++) {
     CLD2DynamicData::TableHeader *header = &(tableHeaders[x]);
     CLD2_READINT(kCLDTableSizeOne);
     CLD2_READINT(kCLDTableSize);
@@ -114,9 +113,9 @@ CLD2DynamicData::FileHeader* loadInternal(FILE* inFile, const void* basePointer,
   // Confirm header size is correct.
   int expectedHeaderSize = CLD2DynamicData::calculateHeaderSize(header->numTablesEncoded);
   if (expectedHeaderSize != bytesRead) {
-    std::cerr << "Header size mismatch! Expected " << expectedHeaderSize << ", but read " << bytesRead << std::endl;
+    fprintf(stderr, "Header size mismatch! Expected %d, but read %d\n", expectedHeaderSize, bytesRead);
     delete header;
-    delete tableHeaders;
+    delete[] tableHeaders;
     return NULL;
   }
 
@@ -131,20 +130,26 @@ CLD2DynamicData::FileHeader* loadInternal(FILE* inFile, const void* basePointer,
   }
 
   if (actualSize != header->totalFileSizeBytes) {
-    std::cerr << "File size mismatch! Expected " << header->totalFileSizeBytes << ", but found " << actualSize << std::endl;
+    fprintf(stderr, "File size mismatch! Expected %d, but found %d\n", header->totalFileSizeBytes, actualSize);
     delete header;
-    delete tableHeaders;
+    delete[] tableHeaders;
     return NULL;
   }
   return header;
 }
 
 void unloadDataFile(CLD2::ScoringTables** scoringTables,
-                    void** mmapAddress, int* mmapLength) {
+                    void** mmapAddress, uint32_t* mmapLength) {
+#ifdef _WIN32
+  // See https://code.google.com/p/cld2/issues/detail?id=20
+  fprintf(stderr, "dynamic data unloading from file is not currently supported on win32, use raw mode instead.");
+  return;
+#else // i.e., is POSIX (no support for Mac prior to OSX)
   CLD2DynamicDataLoader::unloadDataRaw(scoringTables);
   munmap(*mmapAddress, *mmapLength);
   *mmapAddress = NULL;
   *mmapLength = 0;
+#endif // ifdef _WIN32
 }
 
 void unloadDataRaw(CLD2::ScoringTables** scoringTables) {
@@ -157,30 +162,37 @@ void unloadDataRaw(CLD2::ScoringTables** scoringTables) {
 }
 
 CLD2::ScoringTables* loadDataFile(const char* fileName,
-                                  void** mmapAddressOut, int* mmapLengthOut) {
+                                  void** mmapAddressOut, uint32_t* mmapLengthOut) {
+
+#ifdef _WIN32
+  // See https://code.google.com/p/cld2/issues/detail?id=20
+  fprintf(stderr, "dynamic data loading from file is not currently supported on win32, use raw mode instead.");
+  return NULL;
+#else // i.e., is POSIX (no support for Mac prior to OSX)
   CLD2DynamicData::FileHeader* header = loadHeaderFromFile(fileName);
   if (header == NULL) {
     return NULL;
   }
 
   // Initialize the memory map
-  int inFileHandle = open(fileName, O_RDONLY);
+  int inFileHandle = OPEN(fileName, O_RDONLY);
   void* mapped = mmap(NULL, header->totalFileSizeBytes,
     PROT_READ, MAP_PRIVATE, inFileHandle, 0);
   // Record the map address. This allows callers to unmap 
   *mmapAddressOut=mapped;
   *mmapLengthOut=header->totalFileSizeBytes;
-  close(inFileHandle);
+  CLOSE(inFileHandle);
 
   return loadDataInternal(header, mapped, header->totalFileSizeBytes);
+#endif // ifdef _WIN32
 }
 
-CLD2::ScoringTables* loadDataRaw(const void* basePointer, const int length) {
+CLD2::ScoringTables* loadDataRaw(const void* basePointer, const uint32_t length) {
   CLD2DynamicData::FileHeader* header = loadHeaderFromRaw(basePointer, length);
   return loadDataInternal(header, basePointer, length);
 }
 
-CLD2::ScoringTables* loadDataInternal(CLD2DynamicData::FileHeader* header, const void* basePointer, const int length) {
+CLD2::ScoringTables* loadDataInternal(CLD2DynamicData::FileHeader* header, const void* basePointer, const uint32_t length) {
   // 1. UTF8 Object
   const CLD2::uint8* state_table = static_cast<const CLD2::uint8*>(basePointer) +
     header->startOf_utf8PropObj_state_table;
@@ -220,7 +232,7 @@ CLD2::ScoringTables* loadDataInternal(CLD2DynamicData::FileHeader* header, const
 
   // 3. Each table
   CLD2::CLD2TableSummary* tableSummaries = new CLD2::CLD2TableSummary[header->numTablesEncoded];
-  for (int x=0; x<header->numTablesEncoded; x++) {
+  for (int x=0; x < (int) header->numTablesEncoded; x++) {
     CLD2::CLD2TableSummary &summary = tableSummaries[x];
     CLD2DynamicData::TableHeader& tHeader = header->tableHeaders[x];
     const CLD2::IndirectProbBucket4* kCLDTable =
@@ -252,7 +264,7 @@ CLD2::ScoringTables* loadDataInternal(CLD2DynamicData::FileHeader* header, const
   result->deltaocta_obj = &tableSummaries[5];
   result->distinctocta_obj = &tableSummaries[6];
   result->kExpectedScore = read_kAvgDeltaOctaScore;
-  delete header->tableHeaders;
+  delete[] header->tableHeaders;
   delete header;
   return result;
 }
