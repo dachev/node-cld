@@ -8,7 +8,7 @@
     "cld",
     "cld2"
   ],
-  "version": "2.4.1",
+  "version": "2.4.2",
   "main": "./index",
   "dependencies": {
     "glob": "^5.0.10",
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "node test/runner.js",
-    "postinstall": "node scripts/postinstall.js"
+    "postinstall": "node bin/postinstall.js"
   },
   "author": {
     "name": "Blagovest Dachev",
