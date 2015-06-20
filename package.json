@@ -8,15 +8,17 @@
     "cld",
     "cld2"
   ],
-  "version": "2.4.0",
+  "version": "2.4.1",
   "main": "./index",
   "dependencies": {
-    "underscore": "^1.6.0",
-    "nan": "^1.2.0"
+    "glob": "^5.0.10",
+    "nan": "^1.2.0",
+    "rimraf": "^2.4.0",
+    "underscore": "^1.6.0"
   },
   "scripts": {
     "test": "node test/runner.js",
-    "postinstall": "rm -r ./deps/ && find ./build -type f | grep -v 'cld.node' | xargs -I{} rm {}"
+    "postinstall": "node scripts/postinstall.js"
   },
   "author": {
     "name": "Blagovest Dachev",
