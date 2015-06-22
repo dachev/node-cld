@@ -39,7 +39,7 @@
       ],
       "defines": [],
       "cflags_cc": ["-w", "-std=gnu++98"],
-      "cflags_cc!": ["-std=gnu++0x"],,
+      "cflags_cc!": ["-std=gnu++0x"],
       "link_settings" : {
         "ldflags": ["-z", "muldefs"]
       }
