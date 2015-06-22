@@ -42,7 +42,7 @@
       "cflags_cc!": ["-std=gnu++0x"],
       "link_settings" : {
         "ldflags": ["-z", "muldefs"]
-      }
+      },
       "xcode_settings": {
         "OTHER_CFLAGS": ["-w"],
         'CLANG_CXX_LANGUAGE_STANDARD': 'c++98'
