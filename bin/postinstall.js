@@ -4,15 +4,8 @@ var rimraf = require('rimraf');
 var glob   = require('glob');
 var _      = require('underscore');
 
-deleteDepSources(function(err) {
-  deleteBuildFiles(function(err) {
-  });
+deleteBuildFiles(function(err) {
 });
-
-function deleteDepSources(cb) {
-  var dirPath = path.resolve(__dirname, '..', 'deps');
-  rimraf(dirPath, cb);
-}
 
 function deleteBuildFiles(cb) {
   var pattern = path.resolve(__dirname, '..', 'build', '**', '*');
