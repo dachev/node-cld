@@ -40,25 +40,28 @@ require('cld').detect(text, options, function(err, result) {
 
 ## Options
 
-### isHTML
+#### isHTML
 
 Set to true if the string contains HTML tags
 
-### languageHint
+#### languageHint
 
 Pass a LANGUAGES key or value as a hint
 
-### encodingHint
+#### encodingHint
 
 Pass an ENCODINGS value as a hint
 
-### tldHint
+#### tldHint
 
 Pass top level domain as a hint
 
-### httpHint
+#### httpHint
 
 Pass an HTTP "Content-Encoding" value as a hint
+
+## Warning
+Once the module has been installed, the underlying C source will remain in the ```deps/cld``` folder and continue to occupy considerable space. If you are under severe constraints you can delete this folder and reclam >100M
 
 ## Copyright
 Copyright 2011-2015, Blagovest Dachev.
