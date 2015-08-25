@@ -6,14 +6,12 @@
 namespace NodeCld {
 
   NAN_METHOD(Detect) {
-    NanScope();
-    
-    v8::Local<v8::Object> results = NanNew<v8::Object>();
-    v8::String::Utf8Value text(args[0]->ToString());
+    v8::Local<v8::Object> results = Nan::New<v8::Object>();
+    v8::String::Utf8Value text(info[0]->ToString());
 
     char *bytes      = *text;
     int numBytes     = text.length();
-    bool isPlainText = args[1]->ToBoolean()->Value();
+    bool isPlainText = info[1]->ToBoolean()->Value();
 
     CLD2::CLDHints hints;
     hints.tld_hint = 0;
@@ -21,10 +19,10 @@ namespace NodeCld {
     hints.language_hint = CLD2::UNKNOWN_LANGUAGE;
     hints.encoding_hint = CLD2::UNKNOWN_ENCODING;
 
-    v8::String::Utf8Value languageHint(args[2]->ToString());
-    v8::String::Utf8Value encodingHint(args[3]->ToString());
-    v8::String::Utf8Value tldHint(args[4]->ToString());
-    v8::String::Utf8Value httpHint(args[5]->ToString());
+    v8::String::Utf8Value languageHint(info[2]->ToString());
+    v8::String::Utf8Value encodingHint(info[3]->ToString());
+    v8::String::Utf8Value tldHint(info[4]->ToString());
+    v8::String::Utf8Value httpHint(info[5]->ToString());
 
     if (tldHint.length() > 0) {
       hints.tld_hint = *tldHint;
@@ -60,25 +58,29 @@ namespace NodeCld {
       &isReliable
     );
 
-    v8::Local<v8::Array> languages = v8::Local<v8::Array>(NanNew<v8::Array>());
+    v8::Local<v8::Array> languages = v8::Local<v8::Array>(Nan::New<v8::Array>());
     for(int idx = 0; idx < 3; idx++) {
       CLD2::Language lang = language3[idx];
-      
+
       if (lang == CLD2::UNKNOWN_LANGUAGE) {
         continue;
       }
-      
-      v8::Local<v8::Object> item = NanNew<v8::Object>();
-      item->Set(NanNew<v8::String>("name"), NanNew<v8::String>(Constants::getInstance().getLanguageName(lang)));
-      item->Set(NanNew<v8::String>("code"), NanNew<v8::String>(Constants::getInstance().getLanguageCode(lang)));
-      item->Set(NanNew<v8::String>("percent"), NanNew<v8::Number>(percent3[idx]));
-      item->Set(NanNew<v8::String>("score"), NanNew<v8::Number>(normalized_score3[idx]));
-      
-      languages->Set(NanNew<v8::Integer>(idx), item);
+
+      v8::Local<v8::Object> item = Nan::New<v8::Object>();
+      Nan::Set(item, Nan::New<v8::String>("name").ToLocalChecked(),
+          Nan::New<v8::String>(Constants::getInstance().getLanguageName(lang)).ToLocalChecked());
+      Nan::Set(item, Nan::New<v8::String>("code").ToLocalChecked(),
+          Nan::New<v8::String>(Constants::getInstance().getLanguageCode(lang)).ToLocalChecked());
+      Nan::Set(item, Nan::New<v8::String>("percent").ToLocalChecked(),
+          Nan::New<v8::Number>(percent3[idx]));
+      Nan::Set(item, Nan::New<v8::String>("score").ToLocalChecked(),
+          Nan::New<v8::Number>(normalized_score3[idx]));
+
+      Nan::Set(languages, static_cast<uint32_t>(idx), item);
     }
 
     unsigned int chunkIdx = 0;
-    v8::Local<v8::Array> chunks = v8::Local<v8::Array>(NanNew<v8::Array>());
+    v8::Local<v8::Array> chunks = v8::Local<v8::Array>(Nan::New<v8::Array>());
     for(unsigned int resultIdx = 0; resultIdx < resultChunkVector.size(); resultIdx++) {
       CLD2::ResultChunk chunk = resultChunkVector.at(resultIdx);
       CLD2::Language lang = static_cast<CLD2::Language>(chunk.lang1);
@@ -87,55 +89,64 @@ namespace NodeCld {
         continue;
       }
 
-      v8::Local<v8::Object> item = NanNew<v8::Object>();
-      item->Set(NanNew<v8::String>("name"), NanNew<v8::String>(Constants::getInstance().getLanguageName(lang)));
-      item->Set(NanNew<v8::String>("code"), NanNew<v8::String>(Constants::getInstance().getLanguageCode(lang)));
-      item->Set(NanNew<v8::String>("offset"), NanNew<v8::Number>(chunk.offset));
-      item->Set(NanNew<v8::String>("bytes"), NanNew<v8::Number>(chunk.bytes));
+      v8::Local<v8::Object> item = Nan::New<v8::Object>();
+      Nan::Set(item, Nan::New<v8::String>("name").ToLocalChecked(),
+          Nan::New<v8::String>(Constants::getInstance().getLanguageName(lang)).ToLocalChecked());
+      Nan::Set(item, Nan::New<v8::String>("code").ToLocalChecked(),
+          Nan::New<v8::String>(Constants::getInstance().getLanguageCode(lang)).ToLocalChecked());
+      Nan::Set(item, Nan::New<v8::String>("offset").ToLocalChecked(),
+          Nan::New<v8::Number>(chunk.offset));
+      Nan::Set(item, Nan::New<v8::String>("bytes").ToLocalChecked(),
+          Nan::New<v8::Number>(chunk.bytes));
 
-      chunks->Set(NanNew<v8::Integer>(chunkIdx), item);
+      Nan::Set(chunks, Nan::New<v8::Integer>(chunkIdx), item);
       chunkIdx++;
     }
 
-    results->Set(NanNew<v8::String>("reliable"), NanNew<v8::Boolean>(isReliable));
-    results->Set(NanNew<v8::String>("textBytes"), NanNew<v8::Number>(textBytesFound));
-    results->Set(NanNew<v8::String>("languages"), languages);
-    results->Set(NanNew<v8::String>("chunks"), chunks);
-    
-    NanReturnValue(results);
+    Nan::Set(results, Nan::New<v8::String>("reliable").ToLocalChecked(),
+        Nan::New<v8::Boolean>(isReliable));
+    Nan::Set(results, Nan::New<v8::String>("textBytes").ToLocalChecked(),
+        Nan::New<v8::Number>(textBytesFound));
+    Nan::Set(results, Nan::New<v8::String>("languages").ToLocalChecked(),
+        languages);
+    Nan::Set(results, Nan::New<v8::String>("chunks").ToLocalChecked(),
+        chunks);
+
+    info.GetReturnValue().Set(results);
   }
 
   extern "C" void init (v8::Handle<v8::Object> target) {
-    NanScope();
-
     // set detected languages
-    v8::Local<v8::Array> detected = NanNew<v8::Array>();
+    v8::Local<v8::Array> detected = Nan::New<v8::Array>();
     vector<NodeCldDetected>* rawDetected = Constants::getInstance().getDetected();
     for(vector<NodeCldDetected>::size_type i = 0; i < rawDetected->size(); i++) {
       NodeCldDetected rawLanguage = rawDetected->at(i);
-      detected->Set(static_cast<uint32_t>(i), NanNew<v8::String>(rawLanguage.name));
+      Nan::Set(detected, static_cast<uint32_t>(i),
+          Nan::New<v8::String>(rawLanguage.name).ToLocalChecked());
     }
-    target->Set(NanNew<v8::String>("DETECTED_LANGUAGES"), detected);
+    Nan::Set(target, Nan::New<v8::String>("DETECTED_LANGUAGES").ToLocalChecked(), detected);
 
     // set all languages
-    v8::Local<v8::Object> languages = NanNew<v8::Object>();
+    v8::Local<v8::Object> languages = Nan::New<v8::Object>();
     vector<NodeCldLanguage>* rawLanguages = Constants::getInstance().getLanguages();
     for(vector<NodeCldLanguage>::size_type i = 0; i < rawLanguages->size(); i++) {
       NodeCldLanguage rawLanguage = rawLanguages->at(i);
-      languages->Set(NanNew<v8::String>(rawLanguage.name), NanNew<v8::String>(rawLanguage.code));
+      Nan::Set(languages, Nan::New<v8::String>(rawLanguage.name).ToLocalChecked(),
+          Nan::New<v8::String>(rawLanguage.code).ToLocalChecked());
     }
-    target->Set(NanNew<v8::String>("LANGUAGES"), languages);
+    Nan::Set(target, Nan::New<v8::String>("LANGUAGES").ToLocalChecked(), languages);
 
     // set encodings
-    v8::Local<v8::Array> encodings = NanNew<v8::Array>();
+    v8::Local<v8::Array> encodings = Nan::New<v8::Array>();
     vector<NodeCldEncoding>* rawEncodings = Constants::getInstance().getEncodings();
     for(vector<NodeCldEncoding>::size_type i = 0; i < rawEncodings->size(); i++) {
       NodeCldEncoding rawEncoding = rawEncodings->at(i);
-      encodings->Set(static_cast<uint32_t>(i), NanNew<v8::String>(rawEncoding.name));
+      Nan::Set(encodings, static_cast<uint32_t>(i),
+          Nan::New<v8::String>(rawEncoding.name).ToLocalChecked());
     }
-    target->Set(NanNew<v8::String>("ENCODINGS"), encodings);
+    Nan::Set(target, Nan::New<v8::String>("ENCODINGS").ToLocalChecked(), encodings);
 
-    NODE_SET_METHOD(target, "detect", Detect);
+    Nan::SetMethod(target, "detect", Detect);
   }
 
   NODE_MODULE(cld, init);
