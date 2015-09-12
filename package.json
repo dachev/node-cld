@@ -8,11 +8,11 @@
     "cld",
     "cld2"
   ],
-  "version": "2.4.4",
+  "version": "2.4.5",
   "main": "./index",
   "dependencies": {
     "glob": "^5.0.10",
-    "nan": "^1.2.0",
+    "nan": "^2.0.5",
     "rimraf": "^2.4.0",
     "underscore": "^1.6.0"
   },
