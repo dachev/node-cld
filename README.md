@@ -13,6 +13,8 @@ Highly optimized for space and speed. Runs about 10x faster than other libraries
 $ npm install cld
 ```
 
+Linux users, make sure your g++ version is >= 4.8
+
 ## Examples
 ### Simple
 ```js
