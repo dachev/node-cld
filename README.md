@@ -13,7 +13,7 @@ Highly optimized for space and speed. Runs about 10x faster than other libraries
 $ npm install cld
 ```
 
-Linux users, make sure your g++ version is >= 4.8. If this is not an option, you should be able to install node-cld 2.4.4 even with an older g++ build.
+Linux users, make sure you gave g++ >= 4.8. If this is not an option, you should be able to install node-cld 2.4.4 even with an older g++ build.
 
 ## Examples
 ### Simple
