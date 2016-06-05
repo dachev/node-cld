@@ -58,9 +58,10 @@ namespace NodeCld {
       &isReliable
     );
 
+    unsigned int languageIdx = 0;
     v8::Local<v8::Array> languages = v8::Local<v8::Array>(Nan::New<v8::Array>());
-    for(int idx = 0; idx < 3; idx++) {
-      CLD2::Language lang = language3[idx];
+    for(int resultIdx = 0; resultIdx < 3; resultIdx++) {
+      CLD2::Language lang = language3[resultIdx];
 
       if (lang == CLD2::UNKNOWN_LANGUAGE) {
         continue;
@@ -72,11 +73,12 @@ namespace NodeCld {
       Nan::Set(item, Nan::New<v8::String>("code").ToLocalChecked(),
           Nan::New<v8::String>(Constants::getInstance().getLanguageCode(lang)).ToLocalChecked());
       Nan::Set(item, Nan::New<v8::String>("percent").ToLocalChecked(),
-          Nan::New<v8::Number>(percent3[idx]));
+          Nan::New<v8::Number>(percent3[resultIdx]));
       Nan::Set(item, Nan::New<v8::String>("score").ToLocalChecked(),
-          Nan::New<v8::Number>(normalized_score3[idx]));
+          Nan::New<v8::Number>(normalized_score3[resultIdx]));
 
-      Nan::Set(languages, static_cast<uint32_t>(idx), item);
+      Nan::Set(languages, Nan::New<v8::Integer>(languageIdx), item);
+      languageIdx++;
     }
 
     unsigned int chunkIdx = 0;
