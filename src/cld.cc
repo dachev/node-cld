@@ -1,6 +1,10 @@
 #include "compact_lang_det.h"
 #include "encodings.h"
 #include "constants.h"
+
+using std::terminate_handler;
+using std::unexpected_handler;
+
 #include "nan.h"
 
 namespace NodeCld {
