@@ -18,9 +18,12 @@ Linux users, make sure you have g++ >= 4.8. If this is not an option, you should
 ## Examples
 ### Simple
 ```js
-require('cld').detect('This is a language recognition example', function(err, result) {
+try {
+  const result = require('cld').detect('This is a language recognition example');
   console.log(result);
-});
+} catch (err) {
+  console.error(err);
+}
 ```
 
 ### Advanced
@@ -34,9 +37,12 @@ var options = {
   httpHint     : 'bg'
 };
 
-require('cld').detect(text, options, function(err, result) {
+try {
+  const result = require('cld').detect(text, options);
   console.log(result);
-});
+} catch (err) {
+  console.error(err);
+}
 ```
 
 
