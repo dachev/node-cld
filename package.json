@@ -12,7 +12,7 @@
   "main": "./index",
   "dependencies": {
     "glob": "^5.0.10",
-    "nan": "^2.0.5",
+    "nan": "^2.9.2",
     "rimraf": "^2.4.0",
     "underscore": "^1.6.0"
   },
