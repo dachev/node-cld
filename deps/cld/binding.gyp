@@ -41,7 +41,7 @@
       "cflags_cc": ["-w", "-std=gnu++98"],
       "cflags_cc!": ["-std=gnu++0x"],
       "link_settings" : {
-        "ldflags": ["-z", "muldefs"]
+        "ldflags": ["-z", "muldefs", "-static-libstdc++"]
       },
       "xcode_settings": {
         "OTHER_CFLAGS": ["-w"],
