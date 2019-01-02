@@ -23,6 +23,12 @@ require('cld').detect('This is a language recognition example', function(err, re
 });
 ```
 
+### Synchronous mode
+```js
+var result = require('cld').detectSync('This is a language recognition example');
+console.log(result.lang);
+```
+
 ### Advanced
 ```js
 var text    = 'Това е пример за разпознаване на Български език';
