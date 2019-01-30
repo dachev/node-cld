@@ -121,7 +121,7 @@ namespace NodeCld {
     info.GetReturnValue().Set(results);
   }
 
-  extern "C" void init (v8::Handle<v8::Object> target) {
+  extern "C" void init (v8::Local<v8::Object> target) {
     // set detected languages
     v8::Local<v8::Array> detected = Nan::New<v8::Array>();
     vector<NodeCldDetected>* rawDetected = Constants::getInstance().getDetected();
