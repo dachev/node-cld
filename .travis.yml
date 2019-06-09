@@ -4,13 +4,7 @@ env:
   - CXX=g++-4.8
 
 node_js:
-  - 0.10
-  - 0.12
-  - iojs-2
-  - 4
-  - 6
-  - 8
-  - 10
+  - 12
 
 addons:
   apt:
