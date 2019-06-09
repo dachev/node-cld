@@ -15,7 +15,7 @@ function deleteBuildFiles(cb) {
     }
 
     files = _.reject(files, function(val, key) {
-      return /cld\.node$/.test(val)
+      return /cld\.(node|pdb)$/.test(val)
     });
 
     for (var i = 0; i < files.length; i++) {
