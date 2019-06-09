@@ -8,6 +8,9 @@ node_js:
   - 0.12
   - iojs-2
   - 4
+  - 6
+  - 8
+  - 10
 
 addons:
   apt:
