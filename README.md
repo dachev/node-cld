@@ -1,5 +1,5 @@
 # node-cld
-[![*NIX Build Status](https://secure.travis-ci.org/dachev/node-cld.png)](http://travis-ci.org/#!/dachev/node-cld)
+[![*NIX Build Status](https://secure.travis-ci.org/dachev/node-cld.png)](https://travis-ci.org/dachev/node-cld)
 [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/dachev/node-cld?svg=true&retina=true)](https://ci.appveyor.com/project/dachev/node-cld)
 [![Dependencies](https://david-dm.org/dachev/node-cld.png)](https://david-dm.org/dachev/node-cld)
 [![NPM version](https://badge.fury.io/js/cld.svg)](http://badge.fury.io/js/cld)
