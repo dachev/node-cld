@@ -11,11 +11,11 @@ namespace NodeCld {
 
   NAN_METHOD(Detect) {
     v8::Local<v8::Object> results = Nan::New<v8::Object>();
-    v8::String::Utf8Value text(info[0]->ToString());
+    v8::String::Utf8Value text(v8::Isolate::GetCurrent(), Nan::To<v8::String>(info[0]).ToLocalChecked());
 
     char *bytes      = *text;
     int numBytes     = text.length();
-    bool isPlainText = info[1]->ToBoolean()->Value();
+    bool isPlainText = Nan::To<bool>(info[1]).FromJust();
 
     CLD2::CLDHints hints;
     hints.tld_hint = 0;
@@ -23,10 +23,10 @@ namespace NodeCld {
     hints.language_hint = CLD2::UNKNOWN_LANGUAGE;
     hints.encoding_hint = CLD2::UNKNOWN_ENCODING;
 
-    v8::String::Utf8Value languageHint(info[2]->ToString());
-    v8::String::Utf8Value encodingHint(info[3]->ToString());
-    v8::String::Utf8Value tldHint(info[4]->ToString());
-    v8::String::Utf8Value httpHint(info[5]->ToString());
+    v8::String::Utf8Value languageHint(v8::Isolate::GetCurrent(), Nan::To<v8::String>(info[2]).ToLocalChecked());
+    v8::String::Utf8Value encodingHint(v8::Isolate::GetCurrent(), Nan::To<v8::String>(info[3]).ToLocalChecked());
+    v8::String::Utf8Value tldHint(v8::Isolate::GetCurrent(), Nan::To<v8::String>(info[4]).ToLocalChecked());
+    v8::String::Utf8Value httpHint(v8::Isolate::GetCurrent(), Nan::To<v8::String>(info[5]).ToLocalChecked());
 
     if (tldHint.length() > 0) {
       hints.tld_hint = *tldHint;
@@ -121,7 +121,7 @@ namespace NodeCld {
     info.GetReturnValue().Set(results);
   }
 
-  extern "C" void init (v8::Handle<v8::Object> target) {
+  extern "C" void init (v8::Local<v8::Object> target) {
     // set detected languages
     v8::Local<v8::Array> detected = Nan::New<v8::Array>();
     vector<NodeCldDetected>* rawDetected = Constants::getInstance().getDetected();
