@@ -64,7 +64,7 @@ Pass top level domain as a hint
 Pass an HTTP "Content-Encoding" value as a hint
 
 ## Warning
-Once the module has been installed, the underlying C source will remain in the ```deps/cld``` folder and continue to occupy considerable space. If you are under severe constraints you can delete this folder and reclam >100M
+Once the module has been installed, the underlying C sources will remain in the ```deps/cld``` folder and continue to occupy considerable space. This is because they will be required if you ever need to run `npm rebuild`. If you are under severe constraints you can delete this folder and reclam >100M
 
 ## Copyright
 Copyright 2011-2015, Blagovest Dachev.
