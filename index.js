@@ -1,5 +1,5 @@
 var _    = require('underscore');
-var cld2 = require('./build/Release/cld');
+var cld2 = require('./build/Release/cld.node');
 
 module.exports = {
   LANGUAGES          : cld2.LANGUAGES,
