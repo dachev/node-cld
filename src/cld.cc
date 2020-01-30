@@ -5,6 +5,7 @@
 using std::terminate_handler;
 using std::unexpected_handler;
 
+#define NAPI_VERSION 4
 #include <napi.h>
 
 namespace NodeCld {
