@@ -7,6 +7,10 @@ var _      = require('underscore');
 
 function runCoreTests(detected) {
   _.each(data.all, function(val, key) {
+    if (!val.testOnWindows) {
+      return;
+    }
+
     cld.detect(val.sample, function(err, result) {
       assert.equal(err, null);
       assert.equal(_.isArray(result.languages), true);
@@ -20,6 +24,10 @@ function runCoreTests(detected) {
 
 function runChunkTests() {
   _.each(data.all, function(val, key) {
+    if (!val.testOnWindows) {
+      return;
+    }
+
     cld.detect(val.sample, function(err, result) {
       assert.equal(result.textBytes > 0, true);
       if (val.sample == data.frEnLatn) {
@@ -35,6 +43,10 @@ function runChunkTests() {
 
 function runEncodingHintTests() {
   _.each(data.all, function(item, idx) {
+    if (!item.testOnWindows) {
+      return;
+    }
+
     _.each(cld.ENCODINGS, function(encoding, idx) {
       cld.detect(item.sample, {encodingHint:encoding}, function(err, result) {
         assert.equal(err, null);
@@ -51,6 +63,10 @@ function runEncodingHintTests() {
 
 function runLanguageHintTests() {
   _.each(data.all, function(item, idx) {
+    if (!item.testOnWindows) {
+      return;
+    }
+
     _.each(_.keys(cld.LANGUAGES), function(name, idx) {
       cld.detect(item.sample, {languageHint:name}, function(err, result) {
       if (err) {
@@ -82,6 +98,10 @@ function runLanguageHintTests() {
 
 function runTldHintTests() {
   _.each(data.all, function(item, idx) {
+    if (!item.testOnWindows) {
+      return;
+    }
+
     cld.detect(item.sample, {tldHint:'edu'}, function(err, result) {
       assert.equal(err, null);
       assert.equal(_.isArray(result.languages), true);
@@ -102,6 +122,10 @@ function runTldHintTests() {
 
 function runHttpHintTests() {
   _.each(data.all, function(item, idx) {
+    if (!item.testOnWindows) {
+      return;
+    }
+
     cld.detect(item.sample, {httpHint:'mi,en'}, function(err, result) {
       if (err) {
         assert.equal(err.message, 'Failed to identify language');
@@ -140,5 +164,3 @@ runTldHintTests();
 runHttpHintTests();
 runUnreliableTests();
 runCrossCheckTests(detected);
-
-
