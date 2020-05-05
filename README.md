@@ -19,15 +19,25 @@ Linux users, make sure you have g++ >= 4.8. If this is not an option, you should
 ## Examples
 ### Simple
 ```js
-require('cld').detect('This is a language recognition example', function(err, result) {
+const cld = require('cld');
+
+// As a promise
+cld.detect('This is a language recognition example').then((result) => {
   console.log(result);
 });
+
+// In an async function
+async function testCld() {
+  const result = await cld.detect('This is a language recognition example');
+  console.log(result);
+}
 ```
 
 ### Advanced
 ```js
-var text    = 'Това е пример за разпознаване на Български език';
-var options = {
+const cld = require('cld');
+const text     = 'Това е пример за разпознаване на Български език';
+const options  = {
   isHTML       : false,
   languageHint : 'BULGARIAN',
   encodingHint : 'ISO_8859_5',
@@ -35,11 +45,27 @@ var options = {
   httpHint     : 'bg'
 };
 
-require('cld').detect(text, options, function(err, result) {
+// As a promise
+cld.detect(text, options).then((result) => {
+  console.log(result);
+});
+
+// In an async function
+async function testCld() {
+  const result = await cld.detect(text, options);
+  console.log(result);
+}
+```
+
+### Legacy
+Detect can be called leveraging the node callback pattern. If options are provided, the third parameter should be the callback.
+```javascript
+const cld = require('cld');
+
+cld.detect('This is a language recognition example', (err, result) => {
   console.log(result);
 });
 ```
-
 
 ## Options
 
