@@ -17,6 +17,7 @@
     "underscore": "^1.6.0"
   },
   "scripts": {
+    "build": "node-gyp rebuild",
     "test": "node test/runner.js",
     "postinstall": "node bin/postinstall.js"
   },
