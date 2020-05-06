@@ -5,63 +5,61 @@ var data   = require('./data');
 var assert = require('assert');
 var _      = require('underscore');
 
-function runCoreTests(detected) {
-  _.each(data.all, function(val, key) {
+async function runCoreTests(detected) {
+  for (const val of data.all) {
     if (!val.testOnWindows) {
       return;
     }
 
-    cld.detect(val.sample, function(err, result) {
-      assert.equal(err, null);
-      assert.equal(_.isArray(result.languages), true);
-      assert.equal(result.languages.length > 0, true);
-      assert.equal(val.name, result.languages[0].name);
+    const result = await cld.detct(val.sample);
+    assert.equal(_.isArray(result.languages), true);
+    assert.equal(result.languages.length > 0, true);
+    assert.equal(val.name, result.languages[0].name);
 
-      detected[val.name] = true;
-    });
-  });
+    detected[val.name] = true;
+  }
 }
 
-function runChunkTests() {
-  _.each(data.all, function(val, key) {
+async function runChunkTests() {
+  for (const val of data.all) {
     if (!val.testOnWindows) {
       return;
     }
 
-    cld.detect(val.sample, function(err, result) {
-      assert.equal(result.textBytes > 0, true);
-      if (val.sample == data.frEnLatn) {
-        assert.equal(_.isArray(result.chunks), true);
-        assert.equal(result.chunks.length, 3);
+    const result = await cld.detect(val.sample);
+    assert.equal(result.textBytes > 0, true);
+    if (val.sample == data.frEnLatn) {
+      assert.equal(_.isArray(result.chunks), true);
+      assert.equal(result.chunks.length, 3);
 
-        var chunkCodes = _.pluck(result.chunks, 'code');
-        assert.deepEqual(chunkCodes, ['en', 'fr', 'en'])
-      }
-    });
-  });
+      var chunkCodes = _.pluck(result.chunks, 'code');
+      assert.deepEqual(chunkCodes, ['en', 'fr', 'en'])
+    }
+  }
 }
 
-function runEncodingHintTests() {
-  _.each(data.all, function(item, idx) {
+async function runEncodingHintTests() {
+  for (const item of data.all) {
     if (!item.testOnWindows) {
       return;
     }
 
-    _.each(cld.ENCODINGS, function(encoding, idx) {
-      cld.detect(item.sample, {encodingHint:encoding}, function(err, result) {
-        assert.equal(err, null);
-        assert.equal(_.isArray(result.languages), true);
-        assert.equal(result.languages.length > 0, true);
-      });
-    });
-  });
+    for (const encodingHint of cld.ENCODINGS) {
+      const result = await cld.detect(item.sample, { encodingHint });
+      assert.equal(_.isArray(result.languages), true);
+      assert.equal(result.languages.length > 0, true);
+    }
+  }
 
-  cld.detect(data.all[0].sample, {encodingHint:'p'}, function(err, result) {
+  try {
+    await cld.detect(data.all[0].sample, { encodingHint: 'p' });
+    assert.ok(false, 'Should not have detected');
+  } catch (err) {
     assert.equal(err.message, 'Invalid encodingHint, see ENCODINGS');
-  });
+  }
 }
 
-function runLanguageHintTests() {
+async function runLanguageHintTests() {
   _.each(data.all, function(item, idx) {
     if (!item.testOnWindows) {
       return;
@@ -96,52 +94,50 @@ function runLanguageHintTests() {
   });
 }
 
-function runTldHintTests() {
-  _.each(data.all, function(item, idx) {
+async function runTldHintTests() {
+  for (const item of data.all) {
     if (!item.testOnWindows) {
       return;
     }
 
-    cld.detect(item.sample, {tldHint:'edu'}, function(err, result) {
-      assert.equal(err, null);
-      assert.equal(_.isArray(result.languages), true);
-      assert.equal(result.languages.length > 0, true);
-    });
-    cld.detect(item.sample, {tldHint:'com'}, function(err, result) {
-      assert.equal(err, null);
-      assert.equal(_.isArray(result.languages), true);
-      assert.equal(result.languages.length > 0, true);
-    });
-    cld.detect(item.sample, {tldHint:'id'}, function(err, result) {
-      assert.equal(err, null);
-      assert.equal(_.isArray(result.languages), true);
-      assert.equal(result.languages.length > 0, true);
-    });
-  });
+    let result = await cld.detect(item.sample, { tldHint: 'edu' });
+    assert.equal(_.isArray(result.languages), true);
+    assert.equal(result.languages.length > 0, true);
+
+    result = await cld.detect(item.sample, { tldHint: 'com' });
+    assert.equal(_.isArray(result.languages), true);
+    assert.equal(result.languages.length > 0, true);
+
+    result = await cld.detect(item.sample, { tldHint: 'id' });
+    assert.equal(_.isArray(result.languages), true);
+    assert.equal(result.languages.length > 0, true);
+  }
 }
 
-function runHttpHintTests() {
-  _.each(data.all, function(item, idx) {
+async function runHttpHintTests() {
+  for (const item of data.all) {
     if (!item.testOnWindows) {
       return;
     }
 
-    cld.detect(item.sample, {httpHint:'mi,en'}, function(err, result) {
-      if (err) {
-        assert.equal(err.message, 'Failed to identify language');
-      }
-      else {
-        assert.equal(err, null);
-        assert.equal(_.isArray(result.languages), true);
-      }
-    });
-  });
+    let result;
+    try {
+      result = await cld.detect(item.sample, { httpHint: 'mi,en' });
+    } catch (err) {
+      assert.equal(err.message, 'Failed to identify language');
+      return;
+    }
+
+    assert.equal(_.isArray(result.languages), true);
+  }
 }
 
-function runUnreliableTests() {
-  cld.detect('interaktive infografik \xc3\xbcber videospielkonsolen', function(err, result) {
+async function runUnreliableTests() {
+  try {
+    await cld.detect('interaktive infografik \xc3\xbcber videospielkonsolen');
+  } catch (err) {
     assert.equal(err.message, 'Failed to identify language');
-  });
+  }
 }
 
 function runCrossCheckTests(detected) {
@@ -153,14 +149,15 @@ function runCrossCheckTests(detected) {
   assert.equal(_.keys(detected), 0);
 }
 
+(async () => {
+  let detected = {};
 
-var detected = {};
-
-runCoreTests(detected);
-runChunkTests();
-runEncodingHintTests();
-runLanguageHintTests();
-runTldHintTests();
-runHttpHintTests();
-runUnreliableTests();
-runCrossCheckTests(detected);
+  await runCoreTests(detected);
+  await runChunkTests();
+  await runEncodingHintTests();
+  await runLanguageHintTests();
+  await runTldHintTests();
+  await runHttpHintTests();
+  await runUnreliableTests();
+  runCrossCheckTests(detected);
+})();

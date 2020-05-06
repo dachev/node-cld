@@ -1,76 +1,87 @@
-var _    = require('underscore');
-var cld2 = require('./build/Release/cld');
+const _    = require('underscore');
+const cld2 = require('./build/Release/cld');
 
 module.exports = {
   LANGUAGES          : cld2.LANGUAGES,
   DETECTED_LANGUAGES : cld2.DETECTED_LANGUAGES,
   ENCODINGS          : cld2.ENCODINGS,
 
-  detect : function (text, options, cb) {
-    if (arguments.length < 2) {
-      return;
-    }
-    if (arguments.length < 3) {
+  async detect(text, options) {
+    let cb = arguments[2];
+    if (typeof cb !== 'function' && typeof options === 'function') {
       cb = options;
       options = {};
     }
-    if (!_.isFunction(cb)) {
-      return;
-    }
 
-    if (!_.isString(text) || text.length < 1) {
-      return cb({message:'Empty or invalid text'});
-    }
+    try {
+      if (arguments.length < 1) {
+        throw new Error('Not enough arguments provided');
+      }
 
-    var defaults = {
-      isHTML       : false,
-      languageHint : '',
-      encodingHint : '',
-      tldHint      : '',
-      httpHint     : ''
-    };
-    options = _.defaults(options, defaults);
+      if (!_.isString(text) || text.length < 1) {
+        throw new Error('Empty or invalid text');
+      }
 
-    if (!_.isBoolean(options.isHTML)) {
-      return cb({message:'Invalid isHTML value'});
-    }
-    if (!_.isString(options.languageHint)) {
-      return cb({message:'Invalid languageHint'});
-    }
-    if (!_.isString(options.encodingHint)) {
-      return cb({message:'Invalid encodingHint'});
-    }
-    if (!_.isString(options.tldHint)) {
-      return cb({message:'Invalid tldHint'});
-    }
-    if (!_.isString(options.httpHint)) {
-      return cb({message:'Invalid httpHint'});
-    }
-    if (options.encodingHint.length > 0 &&
-      !~cld2.ENCODINGS.indexOf(options.encodingHint)) {
+      const defaults = {
+        isHTML       : false,
+        languageHint : '',
+        encodingHint : '',
+        tldHint      : '',
+        httpHint     : ''
+      };
+      options = _.defaults(options, defaults);
 
-      return cb({message:'Invalid encodingHint, see ENCODINGS'});
+      if (!_.isBoolean(options.isHTML)) {
+        throw new Error('Invalid isHTML value');
+      }
+      if (!_.isString(options.languageHint)) {
+        throw new Error('Invalid languageHint');
+      }
+      if (!_.isString(options.encodingHint)) {
+        throw new Error('Invalid encodingHint');
+      }
+      if (!_.isString(options.tldHint)) {
+        throw new Error('Invalid tldHint');
+      }
+      if (!_.isString(options.httpHint)) {
+        throw new Error('Invalid httpHint');
+      }
+      if (options.encodingHint.length > 0 &&
+        !~cld2.ENCODINGS.indexOf(options.encodingHint)) {
+
+        throw new Error('Invalid encodingHint, see ENCODINGS');
+      }
+      if (options.languageHint.length > 0 &&
+        !~_.keys(cld2.LANGUAGES).indexOf(options.languageHint) &&
+        !~_.values(cld2.LANGUAGES).indexOf(options.languageHint)) {
+
+        throw new Error('Invalid languageHint, see LANGUAGES');
+      }
+
+      const result = await cld2.detectAsync(
+        text,
+        !options.isHTML,
+        options.languageHint,
+        options.encodingHint,
+        options.tldHint,
+        options.httpHint
+      );
+
+      if (result.languages.length < 1) {
+        throw new Error('Failed to identify language');
+      }
+
+      if (cb) {
+        return cb(null, result);
+      } else {
+        return result;
+      }
+    } catch (error) {
+      if (cb) {
+        cb(error);
+      } else {
+        throw error;
+      }
     }
-    if (options.languageHint.length > 0 &&
-      !~_.keys(cld2.LANGUAGES).indexOf(options.languageHint) &&
-      !~_.values(cld2.LANGUAGES).indexOf(options.languageHint)) {
-
-      return cb({message:'Invalid languageHint, see LANGUAGES'});
-    }
-
-    var result = cld2.detect(
-      text,
-      !options.isHTML,
-      options.languageHint,
-      options.encodingHint,
-      options.tldHint,
-      options.httpHint
-    );
-
-    if (result.languages.length < 1) {
-      return cb({message:'Failed to identify language'});
-    }
-
-    return cb(null, result);
   }
 };
