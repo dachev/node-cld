@@ -54,7 +54,8 @@ async function runEncodingHintTests() {
   try {
     await cld.detect(data.all[0].sample, { encodingHint: 'p' });
     assert.ok(false, 'Should not have detected');
-  } catch (err) {
+  }
+  catch (err) {
     assert.equal(err.message, 'Invalid encodingHint, see ENCODINGS');
   }
 }
@@ -123,7 +124,8 @@ async function runHttpHintTests() {
     let result;
     try {
       result = await cld.detect(item.sample, { httpHint: 'mi,en' });
-    } catch (err) {
+    }
+    catch (err) {
       assert.equal(err.message, 'Failed to identify language');
       return;
     }
@@ -135,9 +137,19 @@ async function runHttpHintTests() {
 async function runUnreliableTests() {
   try {
     await cld.detect('interaktive infografik \xc3\xbcber videospielkonsolen');
-  } catch (err) {
+  }
+  catch (err) {
     assert.equal(err.message, 'Failed to identify language');
   }
+}
+
+function runCallbackTests() {
+  cld.detect('This is a language recognition example', (err, result) => {
+    assert.equal(result.languages.length > 0, true);
+  });
+  cld.detect('This is a language recognition example', {isHTML:false}, (err, result) => {
+    assert.equal(result.languages.length > 0, true);
+  });
 }
 
 function runCrossCheckTests(detected) {
@@ -159,5 +171,7 @@ function runCrossCheckTests(detected) {
   await runTldHintTests();
   await runHttpHintTests();
   await runUnreliableTests();
+
+  runCallbackTests();
   runCrossCheckTests(detected);
 })();

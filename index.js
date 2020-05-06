@@ -29,7 +29,7 @@ module.exports = {
         tldHint      : '',
         httpHint     : ''
       };
-      options = _.defaults(options, defaults);
+      options = _.defaults({}, options, defaults);
 
       if (!_.isBoolean(options.isHTML)) {
         throw new Error('Invalid isHTML value');
