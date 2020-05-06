@@ -11,9 +11,8 @@
   "version": "2.7.0",
   "main": "./index",
   "dependencies": {
-    "glob": "^5.0.10",
+    "glob": "7",
     "node-addon-api": "*",
-    "rimraf": "^2.4.0",
     "underscore": "^1.6.0"
   },
   "scripts": {

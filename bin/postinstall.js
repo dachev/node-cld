@@ -1,8 +1,7 @@
-var path   = require('path');
-var fs     = require('fs');
-var rimraf = require('rimraf');
-var glob   = require('glob');
-var _      = require('underscore');
+var path = require('path');
+var fs   = require('fs');
+var glob = require('glob');
+var _    = require('underscore');
 
 deleteBuildFiles(function(err) {
 });
