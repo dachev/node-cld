@@ -13,7 +13,7 @@
   "dependencies": {
     "glob": "7",
     "node-addon-api": "*",
-    "underscore": "^1.6.0"
+    "underscore": "^1.12.1"
   },
   "scripts": {
     "build": "node-gyp rebuild",
