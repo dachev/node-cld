@@ -9,7 +9,8 @@
     "cld2"
   ],
   "version": "2.7.1",
-  "main": "./index",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "dependencies": {
     "glob": "7",
     "node-addon-api": "*",
