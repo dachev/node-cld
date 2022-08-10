@@ -11,11 +11,11 @@ interface Chunk {
   readonly bytes: number;
 }
 interface Options {
-  readonly isHTML: boolean;
-  readonly languageHint: string;
-  readonly encodingHint: string;
-  readonly tldHint: string;
-  readonly httpHint: string;
+  readonly isHTML?: boolean;
+  readonly languageHint?: string;
+  readonly encodingHint?: string;
+  readonly tldHint?: string;
+  readonly httpHint?: string;
 }
 interface DetectLanguage {
   readonly reliable: boolean;
