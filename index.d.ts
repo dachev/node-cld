@@ -11,7 +11,7 @@ interface Chunk {
   readonly bytes: number;
 }
 interface Options {
-  readonly isHTML: false;
+  readonly isHTML: boolean;
   readonly languageHint: string;
   readonly encodingHint: string;
   readonly tldHint: string;
