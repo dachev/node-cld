@@ -11,7 +11,7 @@ interface Chunk {
   readonly bytes: number;
 }
 interface Options {
-  readonly isHTML: false;
+  readonly isHTML: boolean;
   readonly languageHint: string;
   readonly encodingHint: string;
   readonly tldHint: string;
@@ -27,4 +27,5 @@ export declare module 'cld' {
   declare function detect(text: string, options: Options, callback: (err: string, result: DetectLanguage) => void): void;
   declare function detect(text: string, callback: (err: string, result: DetectLanguage) => void): void;
   declare function detect(text: string, options: Options): Promise<DetectLanguage>;
+  declare function detect(text: string): Promise<DetectLanguage>;
 }
