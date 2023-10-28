@@ -23,13 +23,12 @@ interface DetectLanguage {
   readonly languages: Language[];
   readonly chunks: Chunk[];
 }
-export declare module 'cld' {
-  const LANGUAGES: {[name: string]: string};
-  const DETECTED_LANGUAGES: string[];
-  const ENCODINGS: string[];
-  
-  declare function detect(text: string, options: Options, callback: (err: string, result: DetectLanguage) => void): void;
-  declare function detect(text: string, callback: (err: string, result: DetectLanguage) => void): void;
-  declare function detect(text: string, options: Options): Promise<DetectLanguage>;
-  declare function detect(text: string): Promise<DetectLanguage>;
-}
+
+export const LANGUAGES: {[name: string]: string};
+export const DETECTED_LANGUAGES: string[];
+export const ENCODINGS: string[];
+
+export declare function detect(text: string, options: Options, callback: (err: string, result: DetectLanguage) => void): void;
+export declare function detect(text: string, callback: (err: string, result: DetectLanguage) => void): void;
+export declare function detect(text: string, options: Options): Promise<DetectLanguage>;
+export declare function detect(text: string): Promise<DetectLanguage>;
