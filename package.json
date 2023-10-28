@@ -8,7 +8,7 @@
     "cld",
     "cld2"
   ],
-  "version": "2.9.0",
+  "version": "2.9.1",
   "main": "./index.js",
   "types": "./index.d.ts",
   "dependencies": {
