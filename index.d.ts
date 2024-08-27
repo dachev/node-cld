@@ -16,6 +16,7 @@ interface Options {
   readonly encodingHint?: string;
   readonly tldHint?: string;
   readonly httpHint?: string;
+  readonly bestEffort?: boolean;
 }
 interface DetectLanguage {
   readonly reliable: boolean;

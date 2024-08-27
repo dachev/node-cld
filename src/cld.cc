@@ -19,6 +19,7 @@ namespace NodeCld {
       httpHint;
     int numBytes;
     bool isPlainText;
+    bool bestEffort;
   };
 
   struct CLDOutput {
@@ -52,6 +53,7 @@ namespace NodeCld {
     if (info[5].IsString()) {
       input->httpHint = info[5].ToString().Utf8Value();
     }
+    input->bestEffort = info[6].ToBoolean();
 
     return input;
   }
@@ -79,13 +81,17 @@ namespace NodeCld {
     if (input->httpHint.length() > 0) {
       hints.content_language_hint = input->httpHint.c_str();
     }
+    int flags = 0;
+    if (input->bestEffort) {
+      flags |= CLD2::kCLDFlagBestEffort;
+    }
 
     CLD2::ExtDetectLanguageSummary(
       input->bytes.c_str(),
       input->numBytes,
       input->isPlainText,
       &hints,
-      0,
+      flags,
       output->language3,
       output->percent3,
       output->normalized_score3,
