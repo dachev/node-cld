@@ -27,12 +27,16 @@ module.exports = {
         languageHint : '',
         encodingHint : '',
         tldHint      : '',
-        httpHint     : ''
+        httpHint     : '',
+        bestEffort   : false
       };
       options = _.defaults({}, options, defaults);
 
       if (!_.isBoolean(options.isHTML)) {
         throw new Error('Invalid isHTML value');
+      }
+      if (!_.isBoolean(options.bestEffort)) {
+        throw new Error('Invalid bestEffort value');
       }
       if (!_.isString(options.languageHint)) {
         throw new Error('Invalid languageHint');
@@ -64,7 +68,8 @@ module.exports = {
         options.languageHint,
         options.encodingHint,
         options.tldHint,
-        options.httpHint
+        options.httpHint,
+        options.bestEffort
       );
 
       if (result.languages.length < 1) {

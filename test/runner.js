@@ -11,7 +11,7 @@ async function runCoreTests(detected) {
       return;
     }
 
-    const result = await cld.detct(val.sample);
+    const result = await cld.detect(val.sample);
     assert.equal(_.isArray(result.languages), true);
     assert.equal(result.languages.length > 0, true);
     assert.equal(val.name, result.languages[0].name);
@@ -19,6 +19,20 @@ async function runCoreTests(detected) {
     detected[val.name] = true;
   }
 }
+
+async function runBestEffortTests() {
+  for (const val of data.all) {
+    if (!val.testOnWindows) {
+      return;
+    }
+
+    const result = await cld.detect(val.sample, {bestEffort: true});
+    assert.equal(_.isArray(result.languages), true);
+    assert.equal(result.languages.length > 0, true);
+    assert.equal(val.name, result.languages[0].name);
+  }
+}
+
 
 async function runChunkTests() {
   for (const val of data.all) {
@@ -165,6 +179,7 @@ function runCrossCheckTests(detected) {
   let detected = {};
 
   await runCoreTests(detected);
+  await runBestEffortTests();
   await runChunkTests();
   await runEncodingHintTests();
   await runLanguageHintTests();

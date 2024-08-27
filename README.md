@@ -91,6 +91,11 @@ Pass top level domain as a hint
 
 Pass an HTTP "Content-Encoding" value as a hint
 
+#### bestEffort
+
+Set to true to give best-effort answer, instead of UNKNOWN_LANGUAGE. May be useful for
+short text if the caller prefers an approximate answer over none.
+
 ## Warning
 Once the module has been installed, the underlying C sources will remain in the ```deps/cld``` folder and continue to occupy considerable space. This is because they will be required if you ever need to run `npm rebuild`. If you are under severe constraints you can delete this folder and reclam >100M
 
