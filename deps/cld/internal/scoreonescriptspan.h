@@ -114,7 +114,7 @@ typedef struct {
 } ScoringTables;
 
 // Context for boosting several languages
-typedef struct {
+typedef struct LangBoosts_ {
    int32 n;
    uint32 langprob[kMaxBoosts];
    int wrap(int32 n) {return n & (kMaxBoosts - 1);}
@@ -129,7 +129,7 @@ typedef struct {
 
 // ScoringContext carries state across scriptspans
 // ScoringContext also has read-only scoring tables mapping grams to qprobs
-typedef struct {
+typedef struct ScoringContext_ {
   FILE* debug_file;                   // Non-NULL if debug output wanted
   bool flags_cld2_score_as_quads;
   bool flags_cld2_html;
@@ -183,7 +183,7 @@ typedef struct {
 } LangprobHit;
 
 // Holds arrays of scoring-table lookup hits for (part of) a scriptspan
-typedef struct {
+typedef struct ScoringHitBuffer_ {
   ULScript ulscript;        // langprobs below are with respect to this script
   int maxscoringhits;       // determines size of arrays below
   int next_base;            // First unused entry in each array
