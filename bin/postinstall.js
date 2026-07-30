@@ -8,7 +8,7 @@ deleteBuildFiles(function(err) {
 
 function deleteBuildFiles(cb) {
   var pattern = path.resolve(__dirname, '..', 'build', '**', '*');
-  glob(pattern, {nodir:true}, function(err, files) {
+  glob.globSync(pattern, {nodir:true}, function(err, files) {
     if (err) {
       return cb(err);
     }

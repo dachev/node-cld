@@ -8,13 +8,13 @@
     "cld",
     "cld2"
   ],
-  "version": "2.10.1",
+  "version": "2.10.2",
   "main": "./index.js",
   "types": "./index.d.ts",
   "dependencies": {
-    "glob": "7",
+    "glob": "^12",
     "node-addon-api": "*",
-    "underscore": "^1.12.1"
+    "underscore": "^1.13.7"
   },
   "scripts": {
     "build": "node-gyp rebuild",
