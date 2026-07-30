@@ -13,7 +13,7 @@
   "types": "./index.d.ts",
   "dependencies": {
     "glob": "^12",
-    "node-addon-api": "*",
+    "node-addon-api": "^2.0.0",
     "underscore": "^1.13.7"
   },
   "scripts": {
