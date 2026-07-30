@@ -218,6 +218,7 @@ namespace NodeCld {
     exports["detectAsync"] = Napi::Function::New(env, DetectAsync);
     return exports;
   }
-
-  NODE_API_MODULE(cld, Init);
 }
+
+using NodeCld::Init;
+NODE_API_MODULE(cld, Init);
