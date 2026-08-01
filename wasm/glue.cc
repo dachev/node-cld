@@ -37,6 +37,11 @@ namespace {
 
   std::string serialize(const NodeCld::CLDOutput &output) {
     std::ostringstream out;
+    // default ostream precision is 6 significant digits, which would
+    // silently truncate score (a double) for any value with more digits
+    // than that; 17 is enough to round-trip any double exactly, matching
+    // what Napi::Number::New does natively on the native addon side.
+    out.precision(17);
     out << "{\"reliable\":" << (output.isReliable ? "true" : "false")
         << ",\"textBytes\":" << output.textBytesFound
         << ",\"languages\":[";
