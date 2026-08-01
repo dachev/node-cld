@@ -1,56 +1,39 @@
 #!/usr/bin/env node
-// Confirms the WASM backend produces results identical to the native
-// backend for the same inputs -- expected since it's the same algorithm
-// and compiled-in tables, just a different compile target. Requires both
-// a native build (`npm run build`) and a WASM build
-// (`npm run build:wasm`) to exist.
+// Confirms the WASM backend reproduces the reference CLD2 behavior,
+// captured once as test/wasm-fixtures.json (see
+// scripts/generate-wasm-fixtures.js for why this compares against a fixed
+// snapshot rather than a live native build: native builds on different
+// platforms/compilers -- verified: MSVC vs GCC/Clang -- can produce
+// different results for the same CLD2 source and the same input, a
+// pre-existing quirk in CLD2's own algorithm unrelated to the WASM port.
+// Comparing against a fixed snapshot makes this test give the same answer
+// on every platform, rather than depending on whatever native build a
+// given CI runner happens to produce.
 
 const assert = require('assert');
-const data   = require('./data');
-const meta   = require('../lib/metadata.json');
+const data     = require('./data');
+const fixtures = require('./wasm-fixtures.json');
+const meta     = require('../lib/metadata.json');
 
 const { createDetect } = require('../lib/detect-shape');
 const { loadWasmBackend } = require('../lib/backend');
 
-const native = require('../build/Release/cld');
-const detectNative = createDetect(async () => native, meta);
-
 const wasmBackendPromise = loadWasmBackend(); // instantiate once, reuse for every fixture
 const detectWasm = createDetect(() => wasmBackendPromise, meta);
 
-// `score` is excluded from the strict comparison below: it's the one field
-// observed to differ between native builds compiled with different
-// compilers (MSVC vs GCC/Clang) for the *same* CLD2 source -- verified on
-// Linux, native (gcc/clang) and this WASM build (also clang, via emcc)
-// match byte-for-byte including score across all fixtures; on Windows,
-// native (MSVC) disagrees with both. That's a pre-existing MSVC-vs-Clang
-// numerical quirk in CLD2's own scoring code, not something introduced by
-// the WASM port, so it shouldn't fail this parity check. name/code/percent
-// (the fields the public API and docs treat as meaningful) and chunks are
-// still compared exactly.
-function withoutScore(result) {
-  return {
-    ...result,
-    languages: result.languages.map(({ score, ...rest }) => rest)
-  };
-}
-
 (async () => {
-  for (const item of data.all) {
-    const nativeResult = await detectNative(item.sample);
-    const wasmResult = await detectWasm(item.sample);
-    assert.deepStrictEqual(
-      withoutScore(wasmResult), withoutScore(nativeResult),
-      `WASM/native mismatch for ${item.name} (default options)`
-    );
+  assert.equal(fixtures.length, data.all.length, 'test/wasm-fixtures.json is out of sync with test/data.js -- re-run scripts/generate-wasm-fixtures.js');
 
-    const nativeBestEffort = await detectNative(item.sample, { bestEffort: true });
+  for (let i = 0; i < data.all.length; i++) {
+    const item = data.all[i];
+    const expected = fixtures[i];
+
+    const wasmResult = await detectWasm(item.sample);
+    assert.deepStrictEqual(wasmResult, expected.default, `WASM mismatch for ${item.name} (default options)`);
+
     const wasmBestEffort = await detectWasm(item.sample, { bestEffort: true });
-    assert.deepStrictEqual(
-      withoutScore(wasmBestEffort), withoutScore(nativeBestEffort),
-      `WASM/native mismatch for ${item.name} (bestEffort)`
-    );
+    assert.deepStrictEqual(wasmBestEffort, expected.bestEffort, `WASM mismatch for ${item.name} (bestEffort)`);
   }
 
-  console.log(`WASM/native parity verified across ${data.all.length} fixtures`);
+  console.log(`WASM backend verified against ${data.all.length} reference fixtures`);
 })();
