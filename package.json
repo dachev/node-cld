@@ -18,6 +18,19 @@
       "default": "./index.js"
     }
   },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "lib",
+    "wasm/dist",
+    "wasm/browser-entry.js",
+    "src",
+    "deps/cld/public",
+    "deps/cld/internal",
+    "deps/cld/binding.gyp",
+    "binding.gyp",
+    "bin"
+  ],
   "dependencies": {
     "glob": "^12",
     "node-addon-api": "^2.0.0",
