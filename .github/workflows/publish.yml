@@ -22,6 +22,12 @@ jobs:
           node-version: 24
           registry-url: https://registry.npmjs.org
 
+      # Pinned to the version this repo's scripts/build-wasm.sh was built
+      # and verified against -- see that file's header comment.
+      - uses: mymindstorm/setup-emsdk@v14
+        with:
+          version: 6.0.5
+
       - name: Install dependencies
         run: npm ci
 
