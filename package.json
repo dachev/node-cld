@@ -1,14 +1,16 @@
 {
-  "name": "cld",
-  "description": "Language detection for Javascript. Based on the CLD2 (Compact Language Detector) library from Google. Highly optimized for space and speed. Runs about 10x faster than other libraries. Detects over 160 languages. Full test coverage. Runs on Linux, OS X, and Windows.",
+  "name": "cld-universal",
+  "description": "Language detection for Javascript. Based on the CLD2 (Compact Language Detector) library from Google. Highly optimized for space and speed. Runs about 10x faster than other libraries. Detects over 160 languages. Full test coverage. Runs on Linux, OS X, and Windows, and in the browser via a WASM fallback when the native addon is unavailable.",
   "keywords": [
     "language",
     "detect",
     "language detection",
     "cld",
-    "cld2"
+    "cld2",
+    "wasm",
+    "webassembly"
   ],
-  "version": "2.10.2",
+  "version": "2.11.0",
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {
@@ -29,7 +31,8 @@
     "deps/cld/internal",
     "deps/cld/binding.gyp",
     "binding.gyp",
-    "bin"
+    "bin",
+    "README.md"
   ],
   "dependencies": {
     "glob": "^12",
@@ -49,12 +52,17 @@
     "url": "http://www.dachev.com"
   },
   "contributors": [
-    "Lovell Fuller <npm@lovell.info>"
+    "Lovell Fuller <npm@lovell.info>",
+    "Figulus Project <npm@figulus.net>"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/dachev/cld.git"
+    "url": "git+https://github.com/figulusproject/cld-universal.git"
   },
+  "bugs": {
+    "url": "https://github.com/figulusproject/cld-universal/issues"
+  },
+  "homepage": "https://github.com/figulusproject/cld-universal#readme",
   "licenses": [
     {
       "type": "Apache",

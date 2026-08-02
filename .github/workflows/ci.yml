@@ -6,16 +6,42 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
         node-version: [20, 22]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+
+      # npm install already builds the native addon via the "install"
+      # script (bin/build-native.js) -- no separate build step needed.
+      - name: Install dependencies
+        run: npm install
+
+      # Exercises both backends: the native addon just built above, and
+      # the WASM backend against the checked-in wasm/dist/* artifacts.
+      - name: Test
+        run: npm test
+
+  verify-wasm-build:
+    # Confirms wasm/glue.cc + deps/cld still compile to something that
+    # matches the checked-in wasm/dist/* artifacts and test/wasm-fixtures.json.
+    # Runs once on Linux only -- the WASM output isn't OS/Node-version
+    # dependent, and scripts/build-wasm.sh is a bash script that doesn't
+    # port cleanly to the Windows runner's default shell.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
 
       # Pinned to the version this repo's scripts/build-wasm.sh was built
       # and verified against -- see that file's header comment.
@@ -26,10 +52,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build native addon
-        run: npm run build
-
-      - name: Build WASM backend
+      - name: Build WASM backend from source
         run: npm run build:wasm
 
       - name: Test
