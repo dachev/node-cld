@@ -1,0 +1,29 @@
+name: Security
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  schedule:
+    # Weekly, to catch newly disclosed CVEs even when nothing in the repo
+    # has changed. CodeQL has its own schedule in codeql.yml.
+    - cron: '0 6 * * 1'
+
+jobs:
+  npm-audit:
+    name: npm audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Reads package-lock.json directly -- no install needed. Only covers
+      # the 3 real npm deps (glob, node-addon-api, underscore); the vendored
+      # deps/cld C++ has no package manager and is covered by codeql.yml
+      # instead.
+      - name: Audit npm dependencies
+        run: npm audit --audit-level=high
