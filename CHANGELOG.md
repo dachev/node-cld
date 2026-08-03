@@ -21,6 +21,16 @@ point.
 - Browser entry point's `metadata.json` import now uses the `with { type: 'json' }` attribute
   required by Node's ESM loader.
 
+### Security
+
+- Added a CodeQL Advanced workflow (`codeql.yml`) analyzing the `actions`, `c-cpp`, and
+  `javascript-typescript` languages on push/PR to `main` and weekly on a schedule.
+- Added a `security.yml` workflow running `npm audit --audit-level=high` against the package's
+  npm dependencies on push/PR to `main` and weekly on a schedule, separate from the CodeQL
+  workflow above.
+- Restricted the default `GITHUB_TOKEN` permissions to `contents: read` on the `ci.yml` and
+  `security.yml` workflows.
+
 ## [2.11.0] - 2026-08-02
 
 ### Added
