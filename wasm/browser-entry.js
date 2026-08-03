@@ -6,16 +6,26 @@
 // the native path at all -- it goes straight to the WASM backend.
 
 import createCldModule from './dist/cld.web.mjs';
-import meta from '../lib/metadata.json';
+import meta from '../lib/metadata.json' with { type: 'json' };
 import { createDetect } from '../lib/detect-shape.js';
 import { wrapWasmModule } from '../lib/wasm-wrap.js';
 
+let moduleOptions = null;
 let modulePromise = null;
 function loadBackend() {
   if (!modulePromise) {
-    modulePromise = createCldModule().then(wrapWasmModule);
+    modulePromise = createCldModule(moduleOptions ?? {}).then(wrapWasmModule);
   }
   return modulePromise;
+}
+
+// Lets consumers override where cld.web.wasm is fetched from (e.g. when a
+// bundler moves wasm assets to a different path/CDN than the JS glue
+// expects by default). Must be called before the first detect() call --
+// loadBackend() only reads moduleOptions the first time it instantiates
+// the module.
+export function setWasmModuleOptions(options) {
+  moduleOptions = options;
 }
 
 export const LANGUAGES = meta.LANGUAGES;
