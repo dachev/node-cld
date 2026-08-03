@@ -43,7 +43,7 @@
     "install": "node bin/build-native.js",
     "build": "node-gyp rebuild",
     "build:wasm": "scripts/build-wasm.sh",
-    "test": "node test/runner.js && node test/runner-wasm.js",
+    "test": "node test/runner.js && node test/runner-wasm.js && node test/runner-wasm-browser.js",
     "postinstall": "node bin/postinstall.js"
   },
   "author": {
