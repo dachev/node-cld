@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-// Proves wasm/browser-entry.js's setWasmModuleOptions({ locateFile }) hook
+// Proves wasm/browser-entry.mjs's setWasmModuleOptions({ locateFile }) hook
 // actually controls where the WASM backend fetches cld.web.wasm from --
 // not just that the option is accepted, but that redirecting it to a
 // custom URL is what makes detection succeed.
 //
-// Each case runs in its own child process: browser-entry.js caches
+// Each case runs in its own child process: browser-entry.mjs caches
 // moduleOptions/modulePromise at module scope on first use, so "no
 // override" and "with override" can't share one process/import.
 //
-// With no override, browser-entry.js's default WASM URL resolves against
+// With no override, browser-entry.mjs's default WASM URL resolves against
 // import.meta.url, which is a file:// URL here -- and Node's fetch()
 // doesn't support file://, so detect() is expected to reject. That's not a
 // Node quirk being worked around, it's exactly the gap the override exists
@@ -39,7 +39,7 @@ function runChild(script) {
 
 (async () => {
   const withoutOverride = `
-    import('../wasm/browser-entry.js')
+    import('../wasm/browser-entry.mjs')
       .then(m => m.detect(${JSON.stringify(SAMPLE.sample)}))
       .then(() => { console.log('UNEXPECTED_SUCCESS'); process.exit(0); })
       .catch(() => { console.log('EXPECTED_FAILURE'); process.exit(0); });
@@ -58,7 +58,7 @@ function runChild(script) {
 
   try {
     const withOverride = `
-      import('../wasm/browser-entry.js').then(async m => {
+      import('../wasm/browser-entry.mjs').then(async m => {
         m.setWasmModuleOptions({ locateFile: () => 'http://127.0.0.1:${port}/custom-path/cld.web.wasm' });
         const result = await m.detect(${JSON.stringify(SAMPLE.sample)});
         console.log(JSON.stringify(result.languages[0]));

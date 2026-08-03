@@ -14,7 +14,7 @@
   "exports": {
     ".": {
       "types": "./index.d.ts",
-      "browser": "./wasm/browser-entry.js",
+      "browser": "./wasm/browser-entry.mjs",
       "default": "./index.js"
     }
   },
@@ -23,7 +23,7 @@
     "index.d.ts",
     "lib",
     "wasm/dist",
-    "wasm/browser-entry.js",
+    "wasm/browser-entry.mjs",
     "src",
     "deps/cld/public",
     "deps/cld/internal",
