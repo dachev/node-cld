@@ -1,0 +1,77 @@
+name: Security
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  schedule:
+    # Weekly, to catch newly disclosed CVEs and CodeQL query updates even
+    # when nothing in the repo has changed.
+    - cron: '0 6 * * 1'
+
+jobs:
+  codeql:
+    name: CodeQL (${{ matrix.language }})
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # JS/TS is interpreted -- no build needed, CodeQL scans the source directly.
+          - language: javascript-typescript
+            build-mode: none
+          # deps/cld + src/ are compiled -- CodeQL needs to observe a real
+          # build to trace through the C++, so this one builds the native
+          # addon directly rather than going through `npm install`.
+          - language: c-cpp
+            build-mode: manual
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
+
+      # bin/build-native.js (the npm "install" script) always exits 0 even
+      # when the native build fails, so a plain `npm install` here could
+      # silently give CodeQL nothing to analyze. Install deps without
+      # scripts, then build directly so a real failure fails this step.
+      - name: Install dependencies
+        if: matrix.build-mode == 'manual'
+        run: npm install --ignore-scripts
+
+      - name: Build native addon
+        if: matrix.build-mode == 'manual'
+        run: npx node-gyp rebuild
+
+      - name: Perform CodeQL analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{ matrix.language }}"
+
+  npm-audit:
+    name: npm audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Reads package-lock.json directly -- no install needed. Only covers
+      # the 3 real npm deps (glob, node-addon-api, underscore); the vendored
+      # deps/cld C++ has no package manager and is covered by the codeql job
+      # above instead.
+      - name: Audit npm dependencies
+        run: npm audit --audit-level=high
