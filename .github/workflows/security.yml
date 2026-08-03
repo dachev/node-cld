@@ -2,13 +2,16 @@ name: Security
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
   schedule:
     # Weekly, to catch newly disclosed CVEs even when nothing in the repo
     # has changed. CodeQL has its own schedule in codeql.yml.
     - cron: '0 6 * * 1'
+
+permissions:
+  contents: read
 
 jobs:
   npm-audit:
