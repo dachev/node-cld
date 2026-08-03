@@ -96,6 +96,17 @@ const result = await detect('This is a language recognition example');
 console.log(result);
 ```
 
+If your bundler serves the WASM binary from a non-default path (a CDN, a renamed/hashed asset, etc.), call `setWasmModuleOptions({ locateFile })` before the first `detect()` call to override where `cld.web.wasm` is fetched from:
+```js
+import { detect, setWasmModuleOptions } from 'cld-universal';
+
+setWasmModuleOptions({
+  locateFile: (path) => `/assets/${path}`,
+});
+
+const result = await detect('This is a language recognition example');
+```
+
 ## Result shape
 
 `detect()` resolves to (or, in callback form, passes as the second argument) an object of the following shape:
