@@ -9,7 +9,7 @@
         "deps/cld/public",
         "<!@(node -p \"require('node-addon-api').include\")"
       ],
-      "sources": ["src/constants.cc", "src/cld.cc"],
+      "sources": ["src/constants.cc", "src/cld_core.cc", "src/cld.cc"],
       "cflags!": ["-fno-exceptions"],
       "cflags_cc!": ["-Wall", "-fno-exceptions"],
       "xcode_settings": {

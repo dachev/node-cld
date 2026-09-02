@@ -4,6 +4,7 @@
 #include "compact_lang_det.h"
 #include "encodings.h"
 #include "constants.h"
+#include "cld_core.h"
 
 using std::terminate_handler;
 
@@ -11,26 +12,6 @@ using std::terminate_handler;
 #include <napi.h>
 
 namespace NodeCld {
-  struct CLDInput {
-    std::string bytes,
-      languageHint,
-      encodingHint,
-      tldHint,
-      httpHint;
-    int numBytes;
-    bool isPlainText;
-    bool bestEffort;
-  };
-
-  struct CLDOutput {
-    CLD2::Language language3[3];
-    int percent3[3];
-    double normalized_score3[3];
-    CLD2::ResultChunkVector resultChunkVector;
-    int textBytesFound;
-    bool isReliable;
-  };
-
   std::unique_ptr<CLDInput> UnpackInputFromJSArgs(const Napi::CallbackInfo &info) {
     std::unique_ptr<CLDInput> input(new CLDInput);
 
@@ -56,51 +37,6 @@ namespace NodeCld {
     input->bestEffort = info[6].ToBoolean();
 
     return input;
-  }
-
-  std::unique_ptr<CLDOutput> DetectLanguage(std::unique_ptr<CLDInput> input) {
-    std::unique_ptr<CLDOutput> output(new CLDOutput);
-    CLD2::CLDHints hints;
-    hints.tld_hint = 0;
-    hints.content_language_hint = 0;
-    hints.language_hint = CLD2::UNKNOWN_LANGUAGE;
-    hints.encoding_hint = CLD2::UNKNOWN_ENCODING;
-
-    if (input->languageHint.length() > 0) {
-      hints.language_hint = Constants::getInstance().getLanguageFromName(input->languageHint.c_str());
-    }
-
-    if (input->encodingHint.length() > 0) {
-      hints.encoding_hint = Constants::getInstance().getEncodingFromName(input->encodingHint.c_str());
-    }
-
-    if (input->tldHint.length() > 0) {
-      hints.tld_hint = input->tldHint.c_str();
-    }
-
-    if (input->httpHint.length() > 0) {
-      hints.content_language_hint = input->httpHint.c_str();
-    }
-    int flags = 0;
-    if (input->bestEffort) {
-      flags |= CLD2::kCLDFlagBestEffort;
-    }
-
-    CLD2::ExtDetectLanguageSummary(
-      input->bytes.c_str(),
-      input->numBytes,
-      input->isPlainText,
-      &hints,
-      flags,
-      output->language3,
-      output->percent3,
-      output->normalized_score3,
-      &output->resultChunkVector,
-      &output->textBytesFound,
-      &output->isReliable
-    );
-
-    return output;
   }
 
   Napi::Object UnpackOutputToJS(const Napi::Env env, std::unique_ptr<CLDOutput> output) {
@@ -159,7 +95,7 @@ namespace NodeCld {
       {}
 
       void Execute() {
-        mOutput = DetectLanguage(std::move(mInput));
+        mOutput = DetectLanguage(*mInput);
       }
 
       void OnOK() {
@@ -179,7 +115,7 @@ namespace NodeCld {
 
   Napi::Object Detect(const Napi::CallbackInfo &info) {
     auto input = UnpackInputFromJSArgs(info);
-    auto output = DetectLanguage(std::move(input));
+    auto output = DetectLanguage(*input);
     return UnpackOutputToJS(info.Env(), std::move(output));
   }
 
@@ -218,6 +154,7 @@ namespace NodeCld {
     exports["detectAsync"] = Napi::Function::New(env, DetectAsync);
     return exports;
   }
-
-  NODE_API_MODULE(cld, Init);
 }
+
+using NodeCld::Init;
+NODE_API_MODULE(cld, Init);

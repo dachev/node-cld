@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # Pinned to the version this repo's scripts/build-wasm.sh was built
+      # and verified against -- see that file's header comment.
+      - uses: mymindstorm/setup-emsdk@v14
+        with:
+          version: 6.0.5
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build native addon
+        run: npm run build
+
+      - name: Build WASM backend
+        run: npm run build:wasm
+
+      - name: Test
+        run: npm test

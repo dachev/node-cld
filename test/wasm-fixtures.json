@@ -1,0 +1,7870 @@
+[
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "percent": 99,
+          "score": 1311
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "percent": 99,
+          "score": 1311
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "ARMENIAN",
+          "code": "hy",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ARMENIAN",
+          "code": "hy",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "ARMENIAN",
+          "code": "hy",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ARMENIAN",
+          "code": "hy",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 75,
+      "languages": [
+        {
+          "name": "CHEROKEE",
+          "code": "chr",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "CHEROKEE",
+          "code": "chr",
+          "offset": 0,
+          "bytes": 73
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 75,
+      "languages": [
+        {
+          "name": "CHEROKEE",
+          "code": "chr",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "CHEROKEE",
+          "code": "chr",
+          "offset": 0,
+          "bytes": 73
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 249,
+      "languages": [
+        {
+          "name": "DHIVEHI",
+          "code": "dv",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "DHIVEHI",
+          "code": "dv",
+          "offset": 0,
+          "bytes": 248
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 249,
+      "languages": [
+        {
+          "name": "DHIVEHI",
+          "code": "dv",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "DHIVEHI",
+          "code": "dv",
+          "offset": 0,
+          "bytes": 248
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 233,
+      "languages": [
+        {
+          "name": "GEORGIAN",
+          "code": "ka",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GEORGIAN",
+          "code": "ka",
+          "offset": 0,
+          "bytes": 232
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 233,
+      "languages": [
+        {
+          "name": "GEORGIAN",
+          "code": "ka",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GEORGIAN",
+          "code": "ka",
+          "offset": 0,
+          "bytes": 232
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 242,
+      "languages": [
+        {
+          "name": "GREEK",
+          "code": "el",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GREEK",
+          "code": "el",
+          "offset": 0,
+          "bytes": 241
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 242,
+      "languages": [
+        {
+          "name": "GREEK",
+          "code": "el",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GREEK",
+          "code": "el",
+          "offset": 0,
+          "bytes": 241
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "GUJARATI",
+          "code": "gu",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GUJARATI",
+          "code": "gu",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "GUJARATI",
+          "code": "gu",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GUJARATI",
+          "code": "gu",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "INUKTITUT",
+          "code": "iu",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "INUKTITUT",
+          "code": "iu",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "INUKTITUT",
+          "code": "iu",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "INUKTITUT",
+          "code": "iu",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "KANNADA",
+          "code": "kn",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KANNADA",
+          "code": "kn",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "KANNADA",
+          "code": "kn",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KANNADA",
+          "code": "kn",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 187,
+      "languages": [
+        {
+          "name": "KHMER",
+          "code": "km",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KHMER",
+          "code": "km",
+          "offset": 0,
+          "bytes": 186
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 187,
+      "languages": [
+        {
+          "name": "KHMER",
+          "code": "km",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KHMER",
+          "code": "km",
+          "offset": 0,
+          "bytes": 186
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "LAOTHIAN",
+          "code": "lo",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "LAOTHIAN",
+          "code": "lo",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "LAOTHIAN",
+          "code": "lo",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "LAOTHIAN",
+          "code": "lo",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 580,
+      "languages": [
+        {
+          "name": "LIMBU",
+          "code": "lif",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "LIMBU",
+          "code": "lif",
+          "offset": 0,
+          "bytes": 615
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 580,
+      "languages": [
+        {
+          "name": "LIMBU",
+          "code": "lif",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "LIMBU",
+          "code": "lif",
+          "offset": 0,
+          "bytes": 615
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 247,
+      "languages": [
+        {
+          "name": "MALAYALAM",
+          "code": "ml",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MALAYALAM",
+          "code": "ml",
+          "offset": 0,
+          "bytes": 246
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 247,
+      "languages": [
+        {
+          "name": "MALAYALAM",
+          "code": "ml",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MALAYALAM",
+          "code": "ml",
+          "offset": 0,
+          "bytes": 246
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 48,
+      "languages": [
+        {
+          "name": "ORIYA",
+          "code": "or",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ORIYA",
+          "code": "or",
+          "offset": 0,
+          "bytes": 46
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 48,
+      "languages": [
+        {
+          "name": "ORIYA",
+          "code": "or",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ORIYA",
+          "code": "or",
+          "offset": 0,
+          "bytes": 46
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 247,
+      "languages": [
+        {
+          "name": "PUNJABI",
+          "code": "pa",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "PUNJABI",
+          "code": "pa",
+          "offset": 0,
+          "bytes": 246
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 247,
+      "languages": [
+        {
+          "name": "PUNJABI",
+          "code": "pa",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "PUNJABI",
+          "code": "pa",
+          "offset": 0,
+          "bytes": 246
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 243,
+      "languages": [
+        {
+          "name": "SINHALESE",
+          "code": "si",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SINHALESE",
+          "code": "si",
+          "offset": 0,
+          "bytes": 242
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 243,
+      "languages": [
+        {
+          "name": "SINHALESE",
+          "code": "si",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SINHALESE",
+          "code": "si",
+          "offset": 0,
+          "bytes": 242
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 143,
+      "languages": [
+        {
+          "name": "SYRIAC",
+          "code": "syr",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SYRIAC",
+          "code": "syr",
+          "offset": 0,
+          "bytes": 141
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 143,
+      "languages": [
+        {
+          "name": "SYRIAC",
+          "code": "syr",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SYRIAC",
+          "code": "syr",
+          "offset": 0,
+          "bytes": 141
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 228,
+      "languages": [
+        {
+          "name": "TAGALOG",
+          "code": "tl",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TAGALOG",
+          "code": "tl",
+          "offset": 0,
+          "bytes": 227
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 228,
+      "languages": [
+        {
+          "name": "TAGALOG",
+          "code": "tl",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TAGALOG",
+          "code": "tl",
+          "offset": 0,
+          "bytes": 227
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 227,
+      "languages": [
+        {
+          "name": "TAMIL",
+          "code": "ta",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TAMIL",
+          "code": "ta",
+          "offset": 0,
+          "bytes": 226
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 227,
+      "languages": [
+        {
+          "name": "TAMIL",
+          "code": "ta",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TAMIL",
+          "code": "ta",
+          "offset": 0,
+          "bytes": 226
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 253,
+      "languages": [
+        {
+          "name": "TELUGU",
+          "code": "te",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TELUGU",
+          "code": "te",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 253,
+      "languages": [
+        {
+          "name": "TELUGU",
+          "code": "te",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TELUGU",
+          "code": "te",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "THAI",
+          "code": "th",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "THAI",
+          "code": "th",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "THAI",
+          "code": "th",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "THAI",
+          "code": "th",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "Chinese",
+          "code": "zh",
+          "percent": 99,
+          "score": 2031
+        }
+      ],
+      "chunks": [
+        {
+          "name": "Chinese",
+          "code": "zh",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "Chinese",
+          "code": "zh",
+          "percent": 99,
+          "score": 2031
+        }
+      ],
+      "chunks": [
+        {
+          "name": "Chinese",
+          "code": "zh",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 185,
+      "languages": [
+        {
+          "name": "ChineseT",
+          "code": "zh-Hant",
+          "percent": 99,
+          "score": 1908
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ChineseT",
+          "code": "zh-Hant",
+          "offset": 0,
+          "bytes": 184
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 185,
+      "languages": [
+        {
+          "name": "ChineseT",
+          "code": "zh-Hant",
+          "percent": 99,
+          "score": 1908
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ChineseT",
+          "code": "zh-Hant",
+          "offset": 0,
+          "bytes": 184
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 239,
+      "languages": [
+        {
+          "name": "Japanese",
+          "code": "ja",
+          "percent": 99,
+          "score": 3295
+        }
+      ],
+      "chunks": [
+        {
+          "name": "Japanese",
+          "code": "ja",
+          "offset": 0,
+          "bytes": 238
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 239,
+      "languages": [
+        {
+          "name": "Japanese",
+          "code": "ja",
+          "percent": 99,
+          "score": 3295
+        }
+      ],
+      "chunks": [
+        {
+          "name": "Japanese",
+          "code": "ja",
+          "offset": 0,
+          "bytes": 238
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "Korean",
+          "code": "ko",
+          "percent": 99,
+          "score": 3710
+        }
+      ],
+      "chunks": [
+        {
+          "name": "Korean",
+          "code": "ko",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "Korean",
+          "code": "ko",
+          "percent": 99,
+          "score": 3710
+        }
+      ],
+      "chunks": [
+        {
+          "name": "Korean",
+          "code": "ko",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "AFRIKAANS",
+          "code": "af",
+          "percent": 99,
+          "score": 886
+        }
+      ],
+      "chunks": [
+        {
+          "name": "AFRIKAANS",
+          "code": "af",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "AFRIKAANS",
+          "code": "af",
+          "percent": 99,
+          "score": 886
+        }
+      ],
+      "chunks": [
+        {
+          "name": "AFRIKAANS",
+          "code": "af",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "ALBANIAN",
+          "code": "sq",
+          "percent": 99,
+          "score": 1614
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ALBANIAN",
+          "code": "sq",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "ALBANIAN",
+          "code": "sq",
+          "percent": 99,
+          "score": 1614
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ALBANIAN",
+          "code": "sq",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 39,
+      "languages": [
+        {
+          "name": "ARABIC",
+          "code": "ar",
+          "percent": 97,
+          "score": 889
+        }
+      ],
+      "chunks": []
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 39,
+      "languages": [
+        {
+          "name": "ARABIC",
+          "code": "ar",
+          "percent": 97,
+          "score": 889
+        }
+      ],
+      "chunks": []
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "AZERBAIJANI",
+          "code": "az",
+          "percent": 99,
+          "score": 1336
+        }
+      ],
+      "chunks": [
+        {
+          "name": "AZERBAIJANI",
+          "code": "az",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "AZERBAIJANI",
+          "code": "az",
+          "percent": 99,
+          "score": 1336
+        }
+      ],
+      "chunks": [
+        {
+          "name": "AZERBAIJANI",
+          "code": "az",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "BASQUE",
+          "code": "eu",
+          "percent": 99,
+          "score": 1488
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BASQUE",
+          "code": "eu",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "BASQUE",
+          "code": "eu",
+          "percent": 99,
+          "score": 1488
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BASQUE",
+          "code": "eu",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 249,
+      "languages": [
+        {
+          "name": "BELARUSIAN",
+          "code": "be",
+          "percent": 99,
+          "score": 1040
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BELARUSIAN",
+          "code": "be",
+          "offset": 0,
+          "bytes": 248
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 249,
+      "languages": [
+        {
+          "name": "BELARUSIAN",
+          "code": "be",
+          "percent": 99,
+          "score": 1040
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BELARUSIAN",
+          "code": "be",
+          "offset": 0,
+          "bytes": 248
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 1965,
+      "languages": [
+        {
+          "name": "BENGALI",
+          "code": "bn",
+          "percent": 99,
+          "score": 614
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BENGALI",
+          "code": "bn",
+          "offset": 0,
+          "bytes": 2015
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 1965,
+      "languages": [
+        {
+          "name": "BENGALI",
+          "code": "bn",
+          "percent": 99,
+          "score": 614
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BENGALI",
+          "code": "bn",
+          "offset": 0,
+          "bytes": 2015
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 1999,
+      "languages": [
+        {
+          "name": "BIHARI",
+          "code": "bh",
+          "percent": 99,
+          "score": 973
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BIHARI",
+          "code": "bh",
+          "offset": 0,
+          "bytes": 2017
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 1999,
+      "languages": [
+        {
+          "name": "BIHARI",
+          "code": "bh",
+          "percent": 99,
+          "score": 973
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BIHARI",
+          "code": "bh",
+          "offset": 0,
+          "bytes": 2017
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 217,
+      "languages": [
+        {
+          "name": "BULGARIAN",
+          "code": "bg",
+          "percent": 99,
+          "score": 692
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BULGARIAN",
+          "code": "bg",
+          "offset": 0,
+          "bytes": 216
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 217,
+      "languages": [
+        {
+          "name": "BULGARIAN",
+          "code": "bg",
+          "percent": 99,
+          "score": 692
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BULGARIAN",
+          "code": "bg",
+          "offset": 0,
+          "bytes": 216
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "CATALAN",
+          "code": "ca",
+          "percent": 99,
+          "score": 795
+        }
+      ],
+      "chunks": [
+        {
+          "name": "CATALAN",
+          "code": "ca",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "CATALAN",
+          "code": "ca",
+          "percent": 99,
+          "score": 795
+        }
+      ],
+      "chunks": [
+        {
+          "name": "CATALAN",
+          "code": "ca",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 309,
+      "languages": [
+        {
+          "name": "CEBUANO",
+          "code": "ceb",
+          "percent": 99,
+          "score": 721
+        }
+      ],
+      "chunks": [
+        {
+          "name": "CEBUANO",
+          "code": "ceb",
+          "offset": 87,
+          "bytes": 225
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 309,
+      "languages": [
+        {
+          "name": "CEBUANO",
+          "code": "ceb",
+          "percent": 99,
+          "score": 721
+        }
+      ],
+      "chunks": [
+        {
+          "name": "CEBUANO",
+          "code": "ceb",
+          "offset": 87,
+          "bytes": 225
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 494,
+      "languages": [
+        {
+          "name": "CROATIAN",
+          "code": "hr",
+          "percent": 95,
+          "score": 406
+        },
+        {
+          "name": "GREEK",
+          "code": "el",
+          "percent": 4,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "CROATIAN",
+          "code": "hr",
+          "offset": 0,
+          "bytes": 35
+        },
+        {
+          "name": "GREEK",
+          "code": "el",
+          "offset": 35,
+          "bytes": 26
+        },
+        {
+          "name": "CROATIAN",
+          "code": "hr",
+          "offset": 61,
+          "bytes": 453
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 494,
+      "languages": [
+        {
+          "name": "CROATIAN",
+          "code": "hr",
+          "percent": 95,
+          "score": 406
+        },
+        {
+          "name": "GREEK",
+          "code": "el",
+          "percent": 4,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "CROATIAN",
+          "code": "hr",
+          "offset": 0,
+          "bytes": 35
+        },
+        {
+          "name": "GREEK",
+          "code": "el",
+          "offset": 35,
+          "bytes": 26
+        },
+        {
+          "name": "CROATIAN",
+          "code": "hr",
+          "offset": 61,
+          "bytes": 453
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "CZECH",
+          "code": "cs",
+          "percent": 99,
+          "score": 1357
+        }
+      ],
+      "chunks": [
+        {
+          "name": "CZECH",
+          "code": "cs",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "CZECH",
+          "code": "cs",
+          "percent": 99,
+          "score": 1357
+        }
+      ],
+      "chunks": [
+        {
+          "name": "CZECH",
+          "code": "cs",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "DANISH",
+          "code": "da",
+          "percent": 99,
+          "score": 930
+        }
+      ],
+      "chunks": [
+        {
+          "name": "DANISH",
+          "code": "da",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "DANISH",
+          "code": "da",
+          "percent": 99,
+          "score": 930
+        }
+      ],
+      "chunks": [
+        {
+          "name": "DANISH",
+          "code": "da",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 249,
+      "languages": [
+        {
+          "name": "DUTCH",
+          "code": "nl",
+          "percent": 99,
+          "score": 970
+        }
+      ],
+      "chunks": [
+        {
+          "name": "DUTCH",
+          "code": "nl",
+          "offset": 0,
+          "bytes": 248
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 249,
+      "languages": [
+        {
+          "name": "DUTCH",
+          "code": "nl",
+          "percent": 99,
+          "score": 970
+        }
+      ],
+      "chunks": [
+        {
+          "name": "DUTCH",
+          "code": "nl",
+          "offset": 0,
+          "bytes": 248
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "percent": 99,
+          "score": 962
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "percent": 99,
+          "score": 962
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 124,
+      "languages": [
+        {
+          "name": "ESTONIAN",
+          "code": "et",
+          "percent": 99,
+          "score": 1048
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ESTONIAN",
+          "code": "et",
+          "offset": 0,
+          "bytes": 123
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 124,
+      "languages": [
+        {
+          "name": "ESTONIAN",
+          "code": "et",
+          "percent": 99,
+          "score": 1048
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ESTONIAN",
+          "code": "et",
+          "offset": 0,
+          "bytes": 123
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "FINNISH",
+          "code": "fi",
+          "percent": 99,
+          "score": 1249
+        }
+      ],
+      "chunks": [
+        {
+          "name": "FINNISH",
+          "code": "fi",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "FINNISH",
+          "code": "fi",
+          "percent": 99,
+          "score": 1249
+        }
+      ],
+      "chunks": [
+        {
+          "name": "FINNISH",
+          "code": "fi",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "FRENCH",
+          "code": "fr",
+          "percent": 99,
+          "score": 983
+        }
+      ],
+      "chunks": [
+        {
+          "name": "FRENCH",
+          "code": "fr",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "FRENCH",
+          "code": "fr",
+          "percent": 99,
+          "score": 983
+        }
+      ],
+      "chunks": [
+        {
+          "name": "FRENCH",
+          "code": "fr",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 214,
+      "languages": [
+        {
+          "name": "GALICIAN",
+          "code": "gl",
+          "percent": 99,
+          "score": 841
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GALICIAN",
+          "code": "gl",
+          "offset": 0,
+          "bytes": 214
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 214,
+      "languages": [
+        {
+          "name": "GALICIAN",
+          "code": "gl",
+          "percent": 99,
+          "score": 841
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GALICIAN",
+          "code": "gl",
+          "offset": 0,
+          "bytes": 214
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "GANDA",
+          "code": "lg",
+          "percent": 99,
+          "score": 738
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GANDA",
+          "code": "lg",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "GANDA",
+          "code": "lg",
+          "percent": 99,
+          "score": 738
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GANDA",
+          "code": "lg",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 253,
+      "languages": [
+        {
+          "name": "GERMAN",
+          "code": "de",
+          "percent": 99,
+          "score": 987
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GERMAN",
+          "code": "de",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 253,
+      "languages": [
+        {
+          "name": "GERMAN",
+          "code": "de",
+          "percent": 99,
+          "score": 987
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GERMAN",
+          "code": "de",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "HAITIAN_CREOLE",
+          "code": "ht",
+          "percent": 99,
+          "score": 1344
+        }
+      ],
+      "chunks": [
+        {
+          "name": "HAITIAN_CREOLE",
+          "code": "ht",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "HAITIAN_CREOLE",
+          "code": "ht",
+          "percent": 99,
+          "score": 1344
+        }
+      ],
+      "chunks": [
+        {
+          "name": "HAITIAN_CREOLE",
+          "code": "ht",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 136,
+      "languages": [
+        {
+          "name": "HEBREW",
+          "code": "iw",
+          "percent": 99,
+          "score": 834
+        }
+      ],
+      "chunks": [
+        {
+          "name": "HEBREW",
+          "code": "iw",
+          "offset": 0,
+          "bytes": 135
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 136,
+      "languages": [
+        {
+          "name": "HEBREW",
+          "code": "iw",
+          "percent": 99,
+          "score": 834
+        }
+      ],
+      "chunks": [
+        {
+          "name": "HEBREW",
+          "code": "iw",
+          "offset": 0,
+          "bytes": 135
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "HINDI",
+          "code": "hi",
+          "percent": 99,
+          "score": 814
+        }
+      ],
+      "chunks": [
+        {
+          "name": "HINDI",
+          "code": "hi",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "HINDI",
+          "code": "hi",
+          "percent": 99,
+          "score": 814
+        }
+      ],
+      "chunks": [
+        {
+          "name": "HINDI",
+          "code": "hi",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 171,
+      "languages": [
+        {
+          "name": "HMONG",
+          "code": "hmn",
+          "percent": 99,
+          "score": 2132
+        }
+      ],
+      "chunks": [
+        {
+          "name": "HMONG",
+          "code": "hmn",
+          "offset": 0,
+          "bytes": 170
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 171,
+      "languages": [
+        {
+          "name": "HMONG",
+          "code": "hmn",
+          "percent": 99,
+          "score": 2132
+        }
+      ],
+      "chunks": [
+        {
+          "name": "HMONG",
+          "code": "hmn",
+          "offset": 0,
+          "bytes": 170
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 247,
+      "languages": [
+        {
+          "name": "HUNGARIAN",
+          "code": "hu",
+          "percent": 99,
+          "score": 1436
+        }
+      ],
+      "chunks": [
+        {
+          "name": "HUNGARIAN",
+          "code": "hu",
+          "offset": 0,
+          "bytes": 246
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 247,
+      "languages": [
+        {
+          "name": "HUNGARIAN",
+          "code": "hu",
+          "percent": 99,
+          "score": 1436
+        }
+      ],
+      "chunks": [
+        {
+          "name": "HUNGARIAN",
+          "code": "hu",
+          "offset": 0,
+          "bytes": 246
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "ICELANDIC",
+          "code": "is",
+          "percent": 99,
+          "score": 1160
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ICELANDIC",
+          "code": "is",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "ICELANDIC",
+          "code": "is",
+          "percent": 99,
+          "score": 1160
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ICELANDIC",
+          "code": "is",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 855,
+      "languages": [
+        {
+          "name": "INDONESIAN",
+          "code": "id",
+          "percent": 99,
+          "score": 1123
+        }
+      ],
+      "chunks": [
+        {
+          "name": "INDONESIAN",
+          "code": "id",
+          "offset": 0,
+          "bytes": 873
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 855,
+      "languages": [
+        {
+          "name": "INDONESIAN",
+          "code": "id",
+          "percent": 99,
+          "score": 1123
+        }
+      ],
+      "chunks": [
+        {
+          "name": "INDONESIAN",
+          "code": "id",
+          "offset": 0,
+          "bytes": 873
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "IRISH",
+          "code": "ga",
+          "percent": 99,
+          "score": 1397
+        }
+      ],
+      "chunks": [
+        {
+          "name": "IRISH",
+          "code": "ga",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "IRISH",
+          "code": "ga",
+          "percent": 99,
+          "score": 1397
+        }
+      ],
+      "chunks": [
+        {
+          "name": "IRISH",
+          "code": "ga",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "ITALIAN",
+          "code": "it",
+          "percent": 99,
+          "score": 489
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ITALIAN",
+          "code": "it",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "ITALIAN",
+          "code": "it",
+          "percent": 99,
+          "score": 489
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ITALIAN",
+          "code": "it",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "JAVANESE",
+          "code": "jw",
+          "percent": 99,
+          "score": 636
+        }
+      ],
+      "chunks": [
+        {
+          "name": "JAVANESE",
+          "code": "jw",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "JAVANESE",
+          "code": "jw",
+          "percent": 99,
+          "score": 636
+        }
+      ],
+      "chunks": [
+        {
+          "name": "JAVANESE",
+          "code": "jw",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 249,
+      "languages": [
+        {
+          "name": "KINYARWANDA",
+          "code": "rw",
+          "percent": 99,
+          "score": 809
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KINYARWANDA",
+          "code": "rw",
+          "offset": 0,
+          "bytes": 98
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 249,
+      "languages": [
+        {
+          "name": "KINYARWANDA",
+          "code": "rw",
+          "percent": 99,
+          "score": 809
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KINYARWANDA",
+          "code": "rw",
+          "offset": 0,
+          "bytes": 98
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "LATVIAN",
+          "code": "lv",
+          "percent": 99,
+          "score": 1397
+        }
+      ],
+      "chunks": [
+        {
+          "name": "LATVIAN",
+          "code": "lv",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "LATVIAN",
+          "code": "lv",
+          "percent": 99,
+          "score": 1397
+        }
+      ],
+      "chunks": [
+        {
+          "name": "LATVIAN",
+          "code": "lv",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "LITHUANIAN",
+          "code": "lt",
+          "percent": 99,
+          "score": 1064
+        }
+      ],
+      "chunks": [
+        {
+          "name": "LITHUANIAN",
+          "code": "lt",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "LITHUANIAN",
+          "code": "lt",
+          "percent": 99,
+          "score": 1064
+        }
+      ],
+      "chunks": [
+        {
+          "name": "LITHUANIAN",
+          "code": "lt",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 248,
+      "languages": [
+        {
+          "name": "MACEDONIAN",
+          "code": "mk",
+          "percent": 99,
+          "score": 1015
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MACEDONIAN",
+          "code": "mk",
+          "offset": 0,
+          "bytes": 247
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 248,
+      "languages": [
+        {
+          "name": "MACEDONIAN",
+          "code": "mk",
+          "percent": 99,
+          "score": 1015
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MACEDONIAN",
+          "code": "mk",
+          "offset": 0,
+          "bytes": 247
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 867,
+      "languages": [
+        {
+          "name": "MALAY",
+          "code": "ms",
+          "percent": 99,
+          "score": 1372
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MALAY",
+          "code": "ms",
+          "offset": 0,
+          "bytes": 883
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 867,
+      "languages": [
+        {
+          "name": "MALAY",
+          "code": "ms",
+          "percent": 99,
+          "score": 1372
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MALAY",
+          "code": "ms",
+          "offset": 0,
+          "bytes": 883
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "MALTESE",
+          "code": "mt",
+          "percent": 99,
+          "score": 1073
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MALTESE",
+          "code": "mt",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "MALTESE",
+          "code": "mt",
+          "percent": 99,
+          "score": 1073
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MALTESE",
+          "code": "mt",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 1256,
+      "languages": [
+        {
+          "name": "MARATHI",
+          "code": "mr",
+          "percent": 95,
+          "score": 656
+        },
+        {
+          "name": "TELUGU",
+          "code": "te",
+          "percent": 3,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MARATHI",
+          "code": "mr",
+          "offset": 0,
+          "bytes": 113
+        },
+        {
+          "name": "TELUGU",
+          "code": "te",
+          "offset": 113,
+          "bytes": 30
+        },
+        {
+          "name": "MARATHI",
+          "code": "mr",
+          "offset": 143,
+          "bytes": 17
+        },
+        {
+          "name": "MARATHI",
+          "code": "mr",
+          "offset": 178,
+          "bytes": 1120
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 1256,
+      "languages": [
+        {
+          "name": "MARATHI",
+          "code": "mr",
+          "percent": 95,
+          "score": 656
+        },
+        {
+          "name": "TELUGU",
+          "code": "te",
+          "percent": 3,
+          "score": 1024
+        },
+        {
+          "name": "URDU",
+          "code": "ur",
+          "percent": 1,
+          "score": 682
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MARATHI",
+          "code": "mr",
+          "offset": 0,
+          "bytes": 113
+        },
+        {
+          "name": "TELUGU",
+          "code": "te",
+          "offset": 113,
+          "bytes": 30
+        },
+        {
+          "name": "MARATHI",
+          "code": "mr",
+          "offset": 143,
+          "bytes": 17
+        },
+        {
+          "name": "MARATHI",
+          "code": "mr",
+          "offset": 178,
+          "bytes": 1120
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 187,
+      "languages": [
+        {
+          "name": "NEPALI",
+          "code": "ne",
+          "percent": 99,
+          "score": 374
+        }
+      ],
+      "chunks": [
+        {
+          "name": "NEPALI",
+          "code": "ne",
+          "offset": 0,
+          "bytes": 185
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 187,
+      "languages": [
+        {
+          "name": "NEPALI",
+          "code": "ne",
+          "percent": 99,
+          "score": 374
+        }
+      ],
+      "chunks": [
+        {
+          "name": "NEPALI",
+          "code": "ne",
+          "offset": 0,
+          "bytes": 185
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "NORWEGIAN",
+          "code": "no",
+          "percent": 99,
+          "score": 552
+        }
+      ],
+      "chunks": [
+        {
+          "name": "NORWEGIAN",
+          "code": "no",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "NORWEGIAN",
+          "code": "no",
+          "percent": 99,
+          "score": 552
+        }
+      ],
+      "chunks": [
+        {
+          "name": "NORWEGIAN",
+          "code": "no",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "PERSIAN",
+          "code": "fa",
+          "percent": 99,
+          "score": 695
+        }
+      ],
+      "chunks": [
+        {
+          "name": "PERSIAN",
+          "code": "fa",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "PERSIAN",
+          "code": "fa",
+          "percent": 99,
+          "score": 695
+        }
+      ],
+      "chunks": [
+        {
+          "name": "PERSIAN",
+          "code": "fa",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "POLISH",
+          "code": "pl",
+          "percent": 99,
+          "score": 1784
+        }
+      ],
+      "chunks": [
+        {
+          "name": "POLISH",
+          "code": "pl",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "POLISH",
+          "code": "pl",
+          "percent": 99,
+          "score": 1784
+        }
+      ],
+      "chunks": [
+        {
+          "name": "POLISH",
+          "code": "pl",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "PORTUGUESE",
+          "code": "pt",
+          "percent": 99,
+          "score": 860
+        }
+      ],
+      "chunks": [
+        {
+          "name": "PORTUGUESE",
+          "code": "pt",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "PORTUGUESE",
+          "code": "pt",
+          "percent": 99,
+          "score": 860
+        }
+      ],
+      "chunks": [
+        {
+          "name": "PORTUGUESE",
+          "code": "pt",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "ROMANIAN",
+          "code": "ro",
+          "percent": 99,
+          "score": 1118
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ROMANIAN",
+          "code": "ro",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "ROMANIAN",
+          "code": "ro",
+          "percent": 99,
+          "score": 1118
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ROMANIAN",
+          "code": "ro",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 247,
+      "languages": [
+        {
+          "name": "ROMANIAN",
+          "code": "ro",
+          "percent": 99,
+          "score": 949
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ROMANIAN",
+          "code": "ro",
+          "offset": 0,
+          "bytes": 245
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 247,
+      "languages": [
+        {
+          "name": "ROMANIAN",
+          "code": "ro",
+          "percent": 99,
+          "score": 949
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ROMANIAN",
+          "code": "ro",
+          "offset": 0,
+          "bytes": 245
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 87,
+      "languages": [
+        {
+          "name": "RUSSIAN",
+          "code": "ru",
+          "percent": 98,
+          "score": 404
+        }
+      ],
+      "chunks": [
+        {
+          "name": "RUSSIAN",
+          "code": "ru",
+          "offset": 0,
+          "bytes": 86
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 87,
+      "languages": [
+        {
+          "name": "RUSSIAN",
+          "code": "ru",
+          "percent": 98,
+          "score": 404
+        }
+      ],
+      "chunks": [
+        {
+          "name": "RUSSIAN",
+          "code": "ru",
+          "offset": 0,
+          "bytes": 86
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "SCOTS_GAELIC",
+          "code": "gd",
+          "percent": 99,
+          "score": 1370
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SCOTS_GAELIC",
+          "code": "gd",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "SCOTS_GAELIC",
+          "code": "gd",
+          "percent": 99,
+          "score": 1370
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SCOTS_GAELIC",
+          "code": "gd",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "SERBIAN",
+          "code": "sr",
+          "percent": 99,
+          "score": 836
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SERBIAN",
+          "code": "sr",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "SERBIAN",
+          "code": "sr",
+          "percent": 99,
+          "score": 836
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SERBIAN",
+          "code": "sr",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 209,
+      "languages": [
+        {
+          "name": "SERBIAN",
+          "code": "sr",
+          "percent": 99,
+          "score": 551
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SERBIAN",
+          "code": "sr",
+          "offset": 0,
+          "bytes": 241
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 209,
+      "languages": [
+        {
+          "name": "SERBIAN",
+          "code": "sr",
+          "percent": 99,
+          "score": 551
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SERBIAN",
+          "code": "sr",
+          "offset": 0,
+          "bytes": 241
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "SLOVAK",
+          "code": "sk",
+          "percent": 99,
+          "score": 1282
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SLOVAK",
+          "code": "sk",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "SLOVAK",
+          "code": "sk",
+          "percent": 99,
+          "score": 1282
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SLOVAK",
+          "code": "sk",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "SLOVENIAN",
+          "code": "sl",
+          "percent": 99,
+          "score": 377
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SLOVENIAN",
+          "code": "sl",
+          "offset": 130,
+          "bytes": 125
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "SLOVENIAN",
+          "code": "sl",
+          "percent": 99,
+          "score": 377
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SLOVENIAN",
+          "code": "sl",
+          "offset": 130,
+          "bytes": 125
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "SPANISH",
+          "code": "es",
+          "percent": 99,
+          "score": 738
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SPANISH",
+          "code": "es",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "SPANISH",
+          "code": "es",
+          "percent": 99,
+          "score": 738
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SPANISH",
+          "code": "es",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "SWAHILI",
+          "code": "sw",
+          "percent": 99,
+          "score": 1158
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SWAHILI",
+          "code": "sw",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "SWAHILI",
+          "code": "sw",
+          "percent": 99,
+          "score": 1158
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SWAHILI",
+          "code": "sw",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "SWEDISH",
+          "code": "sv",
+          "percent": 99,
+          "score": 688
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SWEDISH",
+          "code": "sv",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "SWEDISH",
+          "code": "sv",
+          "percent": 99,
+          "score": 688
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SWEDISH",
+          "code": "sv",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "TAGALOG",
+          "code": "tl",
+          "percent": 99,
+          "score": 798
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TAGALOG",
+          "code": "tl",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "TAGALOG",
+          "code": "tl",
+          "percent": 99,
+          "score": 798
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TAGALOG",
+          "code": "tl",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "TURKISH",
+          "code": "tr",
+          "percent": 99,
+          "score": 1359
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TURKISH",
+          "code": "tr",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "TURKISH",
+          "code": "tr",
+          "percent": 99,
+          "score": 1359
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TURKISH",
+          "code": "tr",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 245,
+      "languages": [
+        {
+          "name": "UKRAINIAN",
+          "code": "uk",
+          "percent": 99,
+          "score": 919
+        }
+      ],
+      "chunks": [
+        {
+          "name": "UKRAINIAN",
+          "code": "uk",
+          "offset": 0,
+          "bytes": 244
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 245,
+      "languages": [
+        {
+          "name": "UKRAINIAN",
+          "code": "uk",
+          "percent": 99,
+          "score": 919
+        }
+      ],
+      "chunks": [
+        {
+          "name": "UKRAINIAN",
+          "code": "uk",
+          "offset": 0,
+          "bytes": 244
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "URDU",
+          "code": "ur",
+          "percent": 99,
+          "score": 1100
+        }
+      ],
+      "chunks": [
+        {
+          "name": "URDU",
+          "code": "ur",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "URDU",
+          "code": "ur",
+          "percent": 99,
+          "score": 1100
+        }
+      ],
+      "chunks": [
+        {
+          "name": "URDU",
+          "code": "ur",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 253,
+      "languages": [
+        {
+          "name": "VIETNAMESE",
+          "code": "vi",
+          "percent": 99,
+          "score": 979
+        }
+      ],
+      "chunks": [
+        {
+          "name": "VIETNAMESE",
+          "code": "vi",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 253,
+      "languages": [
+        {
+          "name": "VIETNAMESE",
+          "code": "vi",
+          "percent": 99,
+          "score": 979
+        }
+      ],
+      "chunks": [
+        {
+          "name": "VIETNAMESE",
+          "code": "vi",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 249,
+      "languages": [
+        {
+          "name": "WELSH",
+          "code": "cy",
+          "percent": 99,
+          "score": 1569
+        }
+      ],
+      "chunks": [
+        {
+          "name": "WELSH",
+          "code": "cy",
+          "offset": 0,
+          "bytes": 248
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 249,
+      "languages": [
+        {
+          "name": "WELSH",
+          "code": "cy",
+          "percent": 99,
+          "score": 1569
+        }
+      ],
+      "chunks": [
+        {
+          "name": "WELSH",
+          "code": "cy",
+          "offset": 0,
+          "bytes": 248
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 246,
+      "languages": [
+        {
+          "name": "YIDDISH",
+          "code": "yi",
+          "percent": 99,
+          "score": 969
+        }
+      ],
+      "chunks": [
+        {
+          "name": "YIDDISH",
+          "code": "yi",
+          "offset": 0,
+          "bytes": 244
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 246,
+      "languages": [
+        {
+          "name": "YIDDISH",
+          "code": "yi",
+          "percent": 99,
+          "score": 969
+        }
+      ],
+      "chunks": [
+        {
+          "name": "YIDDISH",
+          "code": "yi",
+          "offset": 0,
+          "bytes": 244
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 242,
+      "languages": [
+        {
+          "name": "SOMALI",
+          "code": "so",
+          "percent": 99,
+          "score": 1474
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SOMALI",
+          "code": "so",
+          "offset": 0,
+          "bytes": 241
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 242,
+      "languages": [
+        {
+          "name": "SOMALI",
+          "code": "so",
+          "percent": 99,
+          "score": 1474
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SOMALI",
+          "code": "so",
+          "offset": 0,
+          "bytes": 241
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 540,
+      "languages": [
+        {
+          "name": "IGBO",
+          "code": "ig",
+          "percent": 99,
+          "score": 1259
+        }
+      ],
+      "chunks": [
+        {
+          "name": "IGBO",
+          "code": "ig",
+          "offset": 0,
+          "bytes": 560
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 540,
+      "languages": [
+        {
+          "name": "IGBO",
+          "code": "ig",
+          "percent": 99,
+          "score": 1259
+        }
+      ],
+      "chunks": [
+        {
+          "name": "IGBO",
+          "code": "ig",
+          "offset": 0,
+          "bytes": 560
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "HAUSA",
+          "code": "ha",
+          "percent": 99,
+          "score": 1163
+        }
+      ],
+      "chunks": [
+        {
+          "name": "HAUSA",
+          "code": "ha",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "HAUSA",
+          "code": "ha",
+          "percent": 99,
+          "score": 1163
+        }
+      ],
+      "chunks": [
+        {
+          "name": "HAUSA",
+          "code": "ha",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "YORUBA",
+          "code": "yo",
+          "percent": 99,
+          "score": 1011
+        }
+      ],
+      "chunks": [
+        {
+          "name": "YORUBA",
+          "code": "yo",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "YORUBA",
+          "code": "yo",
+          "percent": 99,
+          "score": 1011
+        }
+      ],
+      "chunks": [
+        {
+          "name": "YORUBA",
+          "code": "yo",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "ZULU",
+          "code": "zu",
+          "percent": 99,
+          "score": 1185
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ZULU",
+          "code": "zu",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "ZULU",
+          "code": "zu",
+          "percent": 99,
+          "score": 1185
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ZULU",
+          "code": "zu",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 834,
+      "languages": [
+        {
+          "name": "BOSNIAN",
+          "code": "bs",
+          "percent": 99,
+          "score": 685
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BOSNIAN",
+          "code": "bs",
+          "offset": 0,
+          "bytes": 847
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 834,
+      "languages": [
+        {
+          "name": "BOSNIAN",
+          "code": "bs",
+          "percent": 99,
+          "score": 685
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BOSNIAN",
+          "code": "bs",
+          "offset": 0,
+          "bytes": 847
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 312,
+      "languages": [
+        {
+          "name": "INDONESIAN",
+          "code": "id",
+          "percent": 99,
+          "score": 714
+        }
+      ],
+      "chunks": [
+        {
+          "name": "INDONESIAN",
+          "code": "id",
+          "offset": 84,
+          "bytes": 226
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 312,
+      "languages": [
+        {
+          "name": "INDONESIAN",
+          "code": "id",
+          "percent": 99,
+          "score": 714
+        }
+      ],
+      "chunks": [
+        {
+          "name": "INDONESIAN",
+          "code": "id",
+          "offset": 84,
+          "bytes": 226
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 310,
+      "languages": [
+        {
+          "name": "MALAY",
+          "code": "ms",
+          "percent": 99,
+          "score": 768
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MALAY",
+          "code": "ms",
+          "offset": 0,
+          "bytes": 309
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 310,
+      "languages": [
+        {
+          "name": "MALAY",
+          "code": "ms",
+          "percent": 99,
+          "score": 768
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MALAY",
+          "code": "ms",
+          "offset": 0,
+          "bytes": 309
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 553,
+      "languages": [
+        {
+          "name": "FRENCH",
+          "code": "fr",
+          "percent": 58,
+          "score": 883
+        },
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "percent": 41,
+          "score": 1148
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "offset": 0,
+          "bytes": 94
+        },
+        {
+          "name": "FRENCH",
+          "code": "fr",
+          "offset": 94,
+          "bytes": 329
+        },
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "offset": 423,
+          "bytes": 138
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 553,
+      "languages": [
+        {
+          "name": "FRENCH",
+          "code": "fr",
+          "percent": 58,
+          "score": 883
+        },
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "percent": 41,
+          "score": 1148
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "offset": 0,
+          "bytes": 94
+        },
+        {
+          "name": "FRENCH",
+          "code": "fr",
+          "offset": 94,
+          "bytes": 329
+        },
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "offset": 423,
+          "bytes": 138
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 83,
+      "languages": [
+        {
+          "name": "MONGOLIAN",
+          "code": "mn",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MONGOLIAN",
+          "code": "mn",
+          "offset": 0,
+          "bytes": 87
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 83,
+      "languages": [
+        {
+          "name": "MONGOLIAN",
+          "code": "mn",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MONGOLIAN",
+          "code": "mn",
+          "offset": 0,
+          "bytes": 87
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 91,
+      "languages": [
+        {
+          "name": "X_Buginese",
+          "code": "xx-Bugi",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "X_Buginese",
+          "code": "xx-Bugi",
+          "offset": 0,
+          "bytes": 89
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 91,
+      "languages": [
+        {
+          "name": "X_Buginese",
+          "code": "xx-Bugi",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "X_Buginese",
+          "code": "xx-Bugi",
+          "offset": 0,
+          "bytes": 89
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 142,
+      "languages": [
+        {
+          "name": "X_Gothic",
+          "code": "xx-Goth",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "X_Gothic",
+          "code": "xx-Goth",
+          "offset": 0,
+          "bytes": 140
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 142,
+      "languages": [
+        {
+          "name": "X_Gothic",
+          "code": "xx-Goth",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "X_Gothic",
+          "code": "xx-Goth",
+          "offset": 0,
+          "bytes": 140
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "ABKHAZIAN",
+          "code": "ab",
+          "percent": 99,
+          "score": 893
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ABKHAZIAN",
+          "code": "ab",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "ABKHAZIAN",
+          "code": "ab",
+          "percent": 99,
+          "score": 893
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ABKHAZIAN",
+          "code": "ab",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 253,
+      "languages": [
+        {
+          "name": "AFAR",
+          "code": "aa",
+          "percent": 99,
+          "score": 837
+        }
+      ],
+      "chunks": [
+        {
+          "name": "AFAR",
+          "code": "aa",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 253,
+      "languages": [
+        {
+          "name": "AFAR",
+          "code": "aa",
+          "percent": 99,
+          "score": 837
+        }
+      ],
+      "chunks": [
+        {
+          "name": "AFAR",
+          "code": "aa",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 365,
+      "languages": [
+        {
+          "name": "AKAN",
+          "code": "ak",
+          "percent": 99,
+          "score": 565
+        }
+      ],
+      "chunks": [
+        {
+          "name": "AKAN",
+          "code": "ak",
+          "offset": 0,
+          "bytes": 204
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 365,
+      "languages": [
+        {
+          "name": "AKAN",
+          "code": "ak",
+          "percent": 99,
+          "score": 565
+        }
+      ],
+      "chunks": [
+        {
+          "name": "AKAN",
+          "code": "ak",
+          "offset": 0,
+          "bytes": 204
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "AMHARIC",
+          "code": "am",
+          "percent": 99,
+          "score": 300
+        }
+      ],
+      "chunks": [
+        {
+          "name": "AMHARIC",
+          "code": "am",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "AMHARIC",
+          "code": "am",
+          "percent": 99,
+          "score": 300
+        }
+      ],
+      "chunks": [
+        {
+          "name": "AMHARIC",
+          "code": "am",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 258,
+      "languages": [
+        {
+          "name": "ASSAMESE",
+          "code": "as",
+          "percent": 99,
+          "score": 482
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ASSAMESE",
+          "code": "as",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 258,
+      "languages": [
+        {
+          "name": "ASSAMESE",
+          "code": "as",
+          "percent": 99,
+          "score": 482
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ASSAMESE",
+          "code": "as",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "AYMARA",
+          "code": "ay",
+          "percent": 99,
+          "score": 495
+        }
+      ],
+      "chunks": []
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "AYMARA",
+          "code": "ay",
+          "percent": 99,
+          "score": 495
+        }
+      ],
+      "chunks": []
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 243,
+      "languages": [
+        {
+          "name": "BASHKIR",
+          "code": "ba",
+          "percent": 99,
+          "score": 380
+        }
+      ],
+      "chunks": []
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 243,
+      "languages": [
+        {
+          "name": "BASHKIR",
+          "code": "ba",
+          "percent": 99,
+          "score": 380
+        }
+      ],
+      "chunks": []
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "BISLAMA",
+          "code": "bi",
+          "percent": 99,
+          "score": 1604
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BISLAMA",
+          "code": "bi",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "BISLAMA",
+          "code": "bi",
+          "percent": 99,
+          "score": 1604
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BISLAMA",
+          "code": "bi",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "BRETON",
+          "code": "br",
+          "percent": 99,
+          "score": 975
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BRETON",
+          "code": "br",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "BRETON",
+          "code": "br",
+          "percent": 99,
+          "score": 975
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BRETON",
+          "code": "br",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 242,
+      "languages": [
+        {
+          "name": "BURMESE",
+          "code": "my",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BURMESE",
+          "code": "my",
+          "offset": 0,
+          "bytes": 241
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 242,
+      "languages": [
+        {
+          "name": "BURMESE",
+          "code": "my",
+          "percent": 100,
+          "score": 1024
+        }
+      ],
+      "chunks": [
+        {
+          "name": "BURMESE",
+          "code": "my",
+          "offset": 0,
+          "bytes": 241
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "CORSICAN",
+          "code": "co",
+          "percent": 99,
+          "score": 706
+        }
+      ],
+      "chunks": [
+        {
+          "name": "CORSICAN",
+          "code": "co",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "CORSICAN",
+          "code": "co",
+          "percent": 99,
+          "score": 706
+        }
+      ],
+      "chunks": [
+        {
+          "name": "CORSICAN",
+          "code": "co",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 258,
+      "languages": [
+        {
+          "name": "DZONGKHA",
+          "code": "dz",
+          "percent": 99,
+          "score": 725
+        }
+      ],
+      "chunks": [
+        {
+          "name": "DZONGKHA",
+          "code": "dz",
+          "offset": 0,
+          "bytes": 257
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 258,
+      "languages": [
+        {
+          "name": "DZONGKHA",
+          "code": "dz",
+          "percent": 99,
+          "score": 725
+        }
+      ],
+      "chunks": [
+        {
+          "name": "DZONGKHA",
+          "code": "dz",
+          "offset": 0,
+          "bytes": 257
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "ESPERANTO",
+          "code": "eo",
+          "percent": 99,
+          "score": 784
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ESPERANTO",
+          "code": "eo",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "ESPERANTO",
+          "code": "eo",
+          "percent": 99,
+          "score": 784
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ESPERANTO",
+          "code": "eo",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "FAROESE",
+          "code": "fo",
+          "percent": 99,
+          "score": 932
+        }
+      ],
+      "chunks": [
+        {
+          "name": "FAROESE",
+          "code": "fo",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "FAROESE",
+          "code": "fo",
+          "percent": 99,
+          "score": 932
+        }
+      ],
+      "chunks": [
+        {
+          "name": "FAROESE",
+          "code": "fo",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "FIJIAN",
+          "code": "fj",
+          "percent": 99,
+          "score": 991
+        }
+      ],
+      "chunks": [
+        {
+          "name": "FIJIAN",
+          "code": "fj",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "FIJIAN",
+          "code": "fj",
+          "percent": 99,
+          "score": 991
+        }
+      ],
+      "chunks": [
+        {
+          "name": "FIJIAN",
+          "code": "fj",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "FRISIAN",
+          "code": "fy",
+          "percent": 99,
+          "score": 1019
+        }
+      ],
+      "chunks": [
+        {
+          "name": "FRISIAN",
+          "code": "fy",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "FRISIAN",
+          "code": "fy",
+          "percent": 99,
+          "score": 1019
+        }
+      ],
+      "chunks": [
+        {
+          "name": "FRISIAN",
+          "code": "fy",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "GREENLANDIC",
+          "code": "kl",
+          "percent": 99,
+          "score": 1777
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GREENLANDIC",
+          "code": "kl",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "GREENLANDIC",
+          "code": "kl",
+          "percent": 99,
+          "score": 1777
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GREENLANDIC",
+          "code": "kl",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "GUARANI",
+          "code": "gn",
+          "percent": 99,
+          "score": 1191
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GUARANI",
+          "code": "gn",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "GUARANI",
+          "code": "gn",
+          "percent": 99,
+          "score": 1191
+        }
+      ],
+      "chunks": [
+        {
+          "name": "GUARANI",
+          "code": "gn",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 458,
+      "languages": [
+        {
+          "name": "HAWAIIAN",
+          "code": "haw",
+          "percent": 99,
+          "score": 956
+        }
+      ],
+      "chunks": [
+        {
+          "name": "HAWAIIAN",
+          "code": "haw",
+          "offset": 0,
+          "bytes": 510
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 458,
+      "languages": [
+        {
+          "name": "HAWAIIAN",
+          "code": "haw",
+          "percent": 99,
+          "score": 956
+        }
+      ],
+      "chunks": [
+        {
+          "name": "HAWAIIAN",
+          "code": "haw",
+          "offset": 0,
+          "bytes": 510
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 540,
+      "languages": [
+        {
+          "name": "IGBO",
+          "code": "ig",
+          "percent": 99,
+          "score": 1259
+        }
+      ],
+      "chunks": [
+        {
+          "name": "IGBO",
+          "code": "ig",
+          "offset": 0,
+          "bytes": 560
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 540,
+      "languages": [
+        {
+          "name": "IGBO",
+          "code": "ig",
+          "percent": 99,
+          "score": 1259
+        }
+      ],
+      "chunks": [
+        {
+          "name": "IGBO",
+          "code": "ig",
+          "offset": 0,
+          "bytes": 560
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 224,
+      "languages": [
+        {
+          "name": "INTERLINGUA",
+          "code": "ia",
+          "percent": 99,
+          "score": 537
+        }
+      ],
+      "chunks": [
+        {
+          "name": "INTERLINGUA",
+          "code": "ia",
+          "offset": 0,
+          "bytes": 223
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 224,
+      "languages": [
+        {
+          "name": "INTERLINGUA",
+          "code": "ia",
+          "percent": 99,
+          "score": 537
+        }
+      ],
+      "chunks": [
+        {
+          "name": "INTERLINGUA",
+          "code": "ia",
+          "offset": 0,
+          "bytes": 223
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "INTERLINGUE",
+          "code": "ie",
+          "percent": 99,
+          "score": 444
+        }
+      ],
+      "chunks": []
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "INTERLINGUE",
+          "code": "ie",
+          "percent": 99,
+          "score": 444
+        }
+      ],
+      "chunks": []
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 310,
+      "languages": [
+        {
+          "name": "INUPIAK",
+          "code": "ik",
+          "percent": 99,
+          "score": 507
+        }
+      ],
+      "chunks": [
+        {
+          "name": "INUPIAK",
+          "code": "ik",
+          "offset": 0,
+          "bytes": 103
+        },
+        {
+          "name": "INUPIAK",
+          "code": "ik",
+          "offset": 222,
+          "bytes": 92
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 310,
+      "languages": [
+        {
+          "name": "INUPIAK",
+          "code": "ik",
+          "percent": 99,
+          "score": 507
+        }
+      ],
+      "chunks": [
+        {
+          "name": "INUPIAK",
+          "code": "ik",
+          "offset": 0,
+          "bytes": 103
+        },
+        {
+          "name": "INUPIAK",
+          "code": "ik",
+          "offset": 222,
+          "bytes": 92
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 1990,
+      "languages": [
+        {
+          "name": "KASHMIRI",
+          "code": "ks",
+          "percent": 99,
+          "score": 878
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KASHMIRI",
+          "code": "ks",
+          "offset": 0,
+          "bytes": 2036
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 1990,
+      "languages": [
+        {
+          "name": "KASHMIRI",
+          "code": "ks",
+          "percent": 99,
+          "score": 878
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KASHMIRI",
+          "code": "ks",
+          "offset": 0,
+          "bytes": 2036
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "KAZAKH",
+          "code": "kk",
+          "percent": 99,
+          "score": 372
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KAZAKH",
+          "code": "kk",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "KAZAKH",
+          "code": "kk",
+          "percent": 99,
+          "score": 372
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KAZAKH",
+          "code": "kk",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "KAZAKH",
+          "code": "kk",
+          "percent": 99,
+          "score": 950
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KAZAKH",
+          "code": "kk",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "KAZAKH",
+          "code": "kk",
+          "percent": 99,
+          "score": 950
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KAZAKH",
+          "code": "kk",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "KHASI",
+          "code": "kha",
+          "percent": 99,
+          "score": 1104
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KHASI",
+          "code": "kha",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "KHASI",
+          "code": "kha",
+          "percent": 99,
+          "score": 1104
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KHASI",
+          "code": "kha",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 210,
+      "languages": [
+        {
+          "name": "KURDISH",
+          "code": "ku",
+          "percent": 99,
+          "score": 975
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KURDISH",
+          "code": "ku",
+          "offset": 0,
+          "bytes": 209
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 210,
+      "languages": [
+        {
+          "name": "KURDISH",
+          "code": "ku",
+          "percent": 99,
+          "score": 975
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KURDISH",
+          "code": "ku",
+          "offset": 0,
+          "bytes": 209
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "KYRGYZ",
+          "code": "ky",
+          "percent": 99,
+          "score": 756
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KYRGYZ",
+          "code": "ky",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "KYRGYZ",
+          "code": "ky",
+          "percent": 99,
+          "score": 756
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KYRGYZ",
+          "code": "ky",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 247,
+      "languages": [
+        {
+          "name": "KYRGYZ",
+          "code": "ky",
+          "percent": 99,
+          "score": 882
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KYRGYZ",
+          "code": "ky",
+          "offset": 0,
+          "bytes": 246
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 247,
+      "languages": [
+        {
+          "name": "KYRGYZ",
+          "code": "ky",
+          "percent": 99,
+          "score": 882
+        }
+      ],
+      "chunks": [
+        {
+          "name": "KYRGYZ",
+          "code": "ky",
+          "offset": 0,
+          "bytes": 246
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "LATIN",
+          "code": "la",
+          "percent": 99,
+          "score": 996
+        }
+      ],
+      "chunks": [
+        {
+          "name": "LATIN",
+          "code": "la",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "LATIN",
+          "code": "la",
+          "percent": 99,
+          "score": 996
+        }
+      ],
+      "chunks": [
+        {
+          "name": "LATIN",
+          "code": "la",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "LINGALA",
+          "code": "ln",
+          "percent": 99,
+          "score": 1258
+        }
+      ],
+      "chunks": [
+        {
+          "name": "LINGALA",
+          "code": "ln",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "LINGALA",
+          "code": "ln",
+          "percent": 99,
+          "score": 1258
+        }
+      ],
+      "chunks": [
+        {
+          "name": "LINGALA",
+          "code": "ln",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 253,
+      "languages": [
+        {
+          "name": "LUXEMBOURGISH",
+          "code": "lb",
+          "percent": 99,
+          "score": 1007
+        }
+      ],
+      "chunks": [
+        {
+          "name": "LUXEMBOURGISH",
+          "code": "lb",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 253,
+      "languages": [
+        {
+          "name": "LUXEMBOURGISH",
+          "code": "lb",
+          "percent": 99,
+          "score": 1007
+        }
+      ],
+      "chunks": [
+        {
+          "name": "LUXEMBOURGISH",
+          "code": "lb",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "MALAGASY",
+          "code": "mg",
+          "percent": 99,
+          "score": 1339
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MALAGASY",
+          "code": "mg",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "MALAGASY",
+          "code": "mg",
+          "percent": 99,
+          "score": 1339
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MALAGASY",
+          "code": "mg",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "MALAY",
+          "code": "ms",
+          "percent": 99,
+          "score": 1342
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MALAY",
+          "code": "ms",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "MALAY",
+          "code": "ms",
+          "percent": 99,
+          "score": 1342
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MALAY",
+          "code": "ms",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "MANX",
+          "code": "gv",
+          "percent": 65,
+          "score": 1311
+        },
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "percent": 34,
+          "score": 870
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "offset": 0,
+          "bytes": 88
+        },
+        {
+          "name": "MANX",
+          "code": "gv",
+          "offset": 88,
+          "bytes": 163
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "MANX",
+          "code": "gv",
+          "percent": 65,
+          "score": 1311
+        },
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "percent": 34,
+          "score": 870
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "offset": 0,
+          "bytes": 88
+        },
+        {
+          "name": "MANX",
+          "code": "gv",
+          "offset": 88,
+          "bytes": 163
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "MAORI",
+          "code": "mi",
+          "percent": 99,
+          "score": 992
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MAORI",
+          "code": "mi",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "MAORI",
+          "code": "mi",
+          "percent": 99,
+          "score": 992
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MAORI",
+          "code": "mi",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 453,
+      "languages": [
+        {
+          "name": "MAURITIAN_CREOLE",
+          "code": "mfe",
+          "percent": 99,
+          "score": 926
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MAURITIAN_CREOLE",
+          "code": "mfe",
+          "offset": 0,
+          "bytes": 464
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 453,
+      "languages": [
+        {
+          "name": "MAURITIAN_CREOLE",
+          "code": "mfe",
+          "percent": 99,
+          "score": 926
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MAURITIAN_CREOLE",
+          "code": "mfe",
+          "offset": 0,
+          "bytes": 464
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 242,
+      "languages": [
+        {
+          "name": "MONGOLIAN",
+          "code": "mn",
+          "percent": 99,
+          "score": 1329
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MONGOLIAN",
+          "code": "mn",
+          "offset": 0,
+          "bytes": 241
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 242,
+      "languages": [
+        {
+          "name": "MONGOLIAN",
+          "code": "mn",
+          "percent": 99,
+          "score": 1329
+        }
+      ],
+      "chunks": [
+        {
+          "name": "MONGOLIAN",
+          "code": "mn",
+          "offset": 0,
+          "bytes": 241
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "NAURU",
+          "code": "na",
+          "percent": 99,
+          "score": 1056
+        }
+      ],
+      "chunks": [
+        {
+          "name": "NAURU",
+          "code": "na",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "NAURU",
+          "code": "na",
+          "percent": 99,
+          "score": 1056
+        }
+      ],
+      "chunks": [
+        {
+          "name": "NAURU",
+          "code": "na",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 170,
+      "languages": [
+        {
+          "name": "NDEBELE",
+          "code": "nr",
+          "percent": 99,
+          "score": 757
+        }
+      ],
+      "chunks": [
+        {
+          "name": "NDEBELE",
+          "code": "nr",
+          "offset": 0,
+          "bytes": 173
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 170,
+      "languages": [
+        {
+          "name": "NDEBELE",
+          "code": "nr",
+          "percent": 99,
+          "score": 757
+        }
+      ],
+      "chunks": [
+        {
+          "name": "NDEBELE",
+          "code": "nr",
+          "offset": 0,
+          "bytes": 173
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "NORWEGIAN_N",
+          "code": "nn",
+          "percent": 99,
+          "score": 1048
+        }
+      ],
+      "chunks": [
+        {
+          "name": "NORWEGIAN_N",
+          "code": "nn",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "NORWEGIAN_N",
+          "code": "nn",
+          "percent": 99,
+          "score": 1048
+        }
+      ],
+      "chunks": [
+        {
+          "name": "NORWEGIAN_N",
+          "code": "nn",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 163,
+      "languages": [
+        {
+          "name": "NYANJA",
+          "code": "ny",
+          "percent": 99,
+          "score": 973
+        }
+      ],
+      "chunks": [
+        {
+          "name": "NYANJA",
+          "code": "ny",
+          "offset": 0,
+          "bytes": 164
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 163,
+      "languages": [
+        {
+          "name": "NYANJA",
+          "code": "ny",
+          "percent": 99,
+          "score": 973
+        }
+      ],
+      "chunks": [
+        {
+          "name": "NYANJA",
+          "code": "ny",
+          "offset": 0,
+          "bytes": 164
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 166,
+      "languages": [
+        {
+          "name": "OCCITAN",
+          "code": "oc",
+          "percent": 99,
+          "score": 875
+        }
+      ],
+      "chunks": [
+        {
+          "name": "OCCITAN",
+          "code": "oc",
+          "offset": 0,
+          "bytes": 168
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 166,
+      "languages": [
+        {
+          "name": "OCCITAN",
+          "code": "oc",
+          "percent": 99,
+          "score": 875
+        }
+      ],
+      "chunks": [
+        {
+          "name": "OCCITAN",
+          "code": "oc",
+          "offset": 0,
+          "bytes": 168
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "OROMO",
+          "code": "om",
+          "percent": 99,
+          "score": 1108
+        }
+      ],
+      "chunks": [
+        {
+          "name": "OROMO",
+          "code": "om",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "OROMO",
+          "code": "om",
+          "percent": 99,
+          "score": 1108
+        }
+      ],
+      "chunks": [
+        {
+          "name": "OROMO",
+          "code": "om",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 253,
+      "languages": [
+        {
+          "name": "PASHTO",
+          "code": "ps",
+          "percent": 99,
+          "score": 893
+        }
+      ],
+      "chunks": [
+        {
+          "name": "PASHTO",
+          "code": "ps",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 253,
+      "languages": [
+        {
+          "name": "PASHTO",
+          "code": "ps",
+          "percent": 99,
+          "score": 893
+        }
+      ],
+      "chunks": [
+        {
+          "name": "PASHTO",
+          "code": "ps",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 353,
+      "languages": [
+        {
+          "name": "PEDI",
+          "code": "nso",
+          "percent": 99,
+          "score": 753
+        }
+      ],
+      "chunks": [
+        {
+          "name": "PEDI",
+          "code": "nso",
+          "offset": 0,
+          "bytes": 377
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 353,
+      "languages": [
+        {
+          "name": "PEDI",
+          "code": "nso",
+          "percent": 99,
+          "score": 753
+        }
+      ],
+      "chunks": [
+        {
+          "name": "PEDI",
+          "code": "nso",
+          "offset": 0,
+          "bytes": 377
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "QUECHUA",
+          "code": "qu",
+          "percent": 99,
+          "score": 1590
+        }
+      ],
+      "chunks": [
+        {
+          "name": "QUECHUA",
+          "code": "qu",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "QUECHUA",
+          "code": "qu",
+          "percent": 99,
+          "score": 1590
+        }
+      ],
+      "chunks": [
+        {
+          "name": "QUECHUA",
+          "code": "qu",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 407,
+      "languages": [
+        {
+          "name": "RHAETO_ROMANCE",
+          "code": "rm",
+          "percent": 99,
+          "score": 807
+        }
+      ],
+      "chunks": [
+        {
+          "name": "RHAETO_ROMANCE",
+          "code": "rm",
+          "offset": 0,
+          "bytes": 449
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 407,
+      "languages": [
+        {
+          "name": "RHAETO_ROMANCE",
+          "code": "rm",
+          "percent": 99,
+          "score": 807
+        }
+      ],
+      "chunks": [
+        {
+          "name": "RHAETO_ROMANCE",
+          "code": "rm",
+          "offset": 0,
+          "bytes": 449
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "RUNDI",
+          "code": "rn",
+          "percent": 99,
+          "score": 1089
+        }
+      ],
+      "chunks": [
+        {
+          "name": "RUNDI",
+          "code": "rn",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "RUNDI",
+          "code": "rn",
+          "percent": 99,
+          "score": 1089
+        }
+      ],
+      "chunks": [
+        {
+          "name": "RUNDI",
+          "code": "rn",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "SAMOAN",
+          "code": "sm",
+          "percent": 99,
+          "score": 988
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SAMOAN",
+          "code": "sm",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "SAMOAN",
+          "code": "sm",
+          "percent": 99,
+          "score": 988
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SAMOAN",
+          "code": "sm",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 248,
+      "languages": [
+        {
+          "name": "SANGO",
+          "code": "sg",
+          "percent": 99,
+          "score": 1600
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SANGO",
+          "code": "sg",
+          "offset": 0,
+          "bytes": 247
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 248,
+      "languages": [
+        {
+          "name": "SANGO",
+          "code": "sg",
+          "percent": 99,
+          "score": 1600
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SANGO",
+          "code": "sg",
+          "offset": 0,
+          "bytes": 247
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 246,
+      "languages": [
+        {
+          "name": "SANSKRIT",
+          "code": "sa",
+          "percent": 99,
+          "score": 188
+        }
+      ],
+      "chunks": []
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 246,
+      "languages": [
+        {
+          "name": "SANSKRIT",
+          "code": "sa",
+          "percent": 99,
+          "score": 188
+        }
+      ],
+      "chunks": []
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "SANSKRIT",
+          "code": "sa",
+          "percent": 99,
+          "score": 932
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SANSKRIT",
+          "code": "sa",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "SANSKRIT",
+          "code": "sa",
+          "percent": 99,
+          "score": 932
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SANSKRIT",
+          "code": "sa",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "SCOTS",
+          "code": "sco",
+          "percent": 90,
+          "score": 610
+        },
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "percent": 9,
+          "score": 2893
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SCOTS",
+          "code": "sco",
+          "offset": 0,
+          "bytes": 36
+        },
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "offset": 36,
+          "bytes": 26
+        },
+        {
+          "name": "SCOTS",
+          "code": "sco",
+          "offset": 62,
+          "bytes": 194
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "SCOTS",
+          "code": "sco",
+          "percent": 90,
+          "score": 610
+        },
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "percent": 9,
+          "score": 2893
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SCOTS",
+          "code": "sco",
+          "offset": 0,
+          "bytes": 36
+        },
+        {
+          "name": "ENGLISH",
+          "code": "en",
+          "offset": 36,
+          "bytes": 26
+        },
+        {
+          "name": "SCOTS",
+          "code": "sco",
+          "offset": 62,
+          "bytes": 194
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 268,
+      "languages": [
+        {
+          "name": "SESELWA",
+          "code": "crs",
+          "percent": 99,
+          "score": 1150
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SESELWA",
+          "code": "crs",
+          "offset": 0,
+          "bytes": 279
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 268,
+      "languages": [
+        {
+          "name": "SESELWA",
+          "code": "crs",
+          "percent": 99,
+          "score": 1150
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SESELWA",
+          "code": "crs",
+          "offset": 0,
+          "bytes": 279
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 249,
+      "languages": [
+        {
+          "name": "SESOTHO",
+          "code": "st",
+          "percent": 99,
+          "score": 916
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SESOTHO",
+          "code": "st",
+          "offset": 0,
+          "bytes": 248
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 249,
+      "languages": [
+        {
+          "name": "SESOTHO",
+          "code": "st",
+          "percent": 99,
+          "score": 916
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SESOTHO",
+          "code": "st",
+          "offset": 0,
+          "bytes": 248
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "SHONA",
+          "code": "sn",
+          "percent": 99,
+          "score": 1092
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SHONA",
+          "code": "sn",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "SHONA",
+          "code": "sn",
+          "percent": 99,
+          "score": 1092
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SHONA",
+          "code": "sn",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "SINDHI",
+          "code": "sd",
+          "percent": 99,
+          "score": 708
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SINDHI",
+          "code": "sd",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "SINDHI",
+          "code": "sd",
+          "percent": 99,
+          "score": 708
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SINDHI",
+          "code": "sd",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "SISWANT",
+          "code": "ss",
+          "percent": 99,
+          "score": 1188
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SISWANT",
+          "code": "ss",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 250,
+      "languages": [
+        {
+          "name": "SISWANT",
+          "code": "ss",
+          "percent": 99,
+          "score": 1188
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SISWANT",
+          "code": "ss",
+          "offset": 0,
+          "bytes": 249
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 329,
+      "languages": [
+        {
+          "name": "SUNDANESE",
+          "code": "su",
+          "percent": 99,
+          "score": 789
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SUNDANESE",
+          "code": "su",
+          "offset": 0,
+          "bytes": 333
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 329,
+      "languages": [
+        {
+          "name": "SUNDANESE",
+          "code": "su",
+          "percent": 99,
+          "score": 789
+        }
+      ],
+      "chunks": [
+        {
+          "name": "SUNDANESE",
+          "code": "su",
+          "offset": 0,
+          "bytes": 333
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 245,
+      "languages": [
+        {
+          "name": "TAJIK",
+          "code": "tg",
+          "percent": 99,
+          "score": 1019
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TAJIK",
+          "code": "tg",
+          "offset": 0,
+          "bytes": 244
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 245,
+      "languages": [
+        {
+          "name": "TAJIK",
+          "code": "tg",
+          "percent": 99,
+          "score": 1019
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TAJIK",
+          "code": "tg",
+          "offset": 0,
+          "bytes": 244
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 133,
+      "languages": [
+        {
+          "name": "TATAR",
+          "code": "tt",
+          "percent": 99,
+          "score": 768
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TATAR",
+          "code": "tt",
+          "offset": 0,
+          "bytes": 131
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 133,
+      "languages": [
+        {
+          "name": "TATAR",
+          "code": "tt",
+          "percent": 99,
+          "score": 768
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TATAR",
+          "code": "tt",
+          "offset": 0,
+          "bytes": 131
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 253,
+      "languages": [
+        {
+          "name": "TATAR",
+          "code": "tt",
+          "percent": 99,
+          "score": 1450
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TATAR",
+          "code": "tt",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 253,
+      "languages": [
+        {
+          "name": "TATAR",
+          "code": "tt",
+          "percent": 99,
+          "score": 1450
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TATAR",
+          "code": "tt",
+          "offset": 0,
+          "bytes": 252
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 1961,
+      "languages": [
+        {
+          "name": "TIBETAN",
+          "code": "bo",
+          "percent": 99,
+          "score": 695
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TIBETAN",
+          "code": "bo",
+          "offset": 0,
+          "bytes": 2384
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 1961,
+      "languages": [
+        {
+          "name": "TIBETAN",
+          "code": "bo",
+          "percent": 99,
+          "score": 695
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TIBETAN",
+          "code": "bo",
+          "offset": 0,
+          "bytes": 2384
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 249,
+      "languages": [
+        {
+          "name": "TIGRINYA",
+          "code": "ti",
+          "percent": 99,
+          "score": 478
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TIGRINYA",
+          "code": "ti",
+          "offset": 0,
+          "bytes": 248
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 249,
+      "languages": [
+        {
+          "name": "TIGRINYA",
+          "code": "ti",
+          "percent": 99,
+          "score": 478
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TIGRINYA",
+          "code": "ti",
+          "offset": 0,
+          "bytes": 248
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "TONGA",
+          "code": "to",
+          "percent": 99,
+          "score": 1142
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TONGA",
+          "code": "to",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "TONGA",
+          "code": "to",
+          "percent": 99,
+          "score": 1142
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TONGA",
+          "code": "to",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "TSONGA",
+          "code": "ts",
+          "percent": 99,
+          "score": 1180
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TSONGA",
+          "code": "ts",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "TSONGA",
+          "code": "ts",
+          "percent": 99,
+          "score": 1180
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TSONGA",
+          "code": "ts",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "TSWANA",
+          "code": "tn",
+          "percent": 99,
+          "score": 1068
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TSWANA",
+          "code": "tn",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "TSWANA",
+          "code": "tn",
+          "percent": 99,
+          "score": 1068
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TSWANA",
+          "code": "tn",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "TURKMEN",
+          "code": "tk",
+          "percent": 99,
+          "score": 636
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TURKMEN",
+          "code": "tk",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "TURKMEN",
+          "code": "tk",
+          "percent": 99,
+          "score": 636
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TURKMEN",
+          "code": "tk",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "TURKMEN",
+          "code": "tk",
+          "percent": 99,
+          "score": 1203
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TURKMEN",
+          "code": "tk",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "TURKMEN",
+          "code": "tk",
+          "percent": 99,
+          "score": 1203
+        }
+      ],
+      "chunks": [
+        {
+          "name": "TURKMEN",
+          "code": "tk",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 248,
+      "languages": [
+        {
+          "name": "AKAN",
+          "code": "ak",
+          "percent": 99,
+          "score": 1488
+        }
+      ],
+      "chunks": [
+        {
+          "name": "AKAN",
+          "code": "ak",
+          "offset": 0,
+          "bytes": 247
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 248,
+      "languages": [
+        {
+          "name": "AKAN",
+          "code": "ak",
+          "percent": 99,
+          "score": 1488
+        }
+      ],
+      "chunks": [
+        {
+          "name": "AKAN",
+          "code": "ak",
+          "offset": 0,
+          "bytes": 247
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "UIGHUR",
+          "code": "ug",
+          "percent": 99,
+          "score": 1298
+        }
+      ],
+      "chunks": [
+        {
+          "name": "UIGHUR",
+          "code": "ug",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "UIGHUR",
+          "code": "ug",
+          "percent": 99,
+          "score": 1298
+        }
+      ],
+      "chunks": [
+        {
+          "name": "UIGHUR",
+          "code": "ug",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 246,
+      "languages": [
+        {
+          "name": "UIGHUR",
+          "code": "ug",
+          "percent": 99,
+          "score": 1337
+        }
+      ],
+      "chunks": [
+        {
+          "name": "UIGHUR",
+          "code": "ug",
+          "offset": 0,
+          "bytes": 245
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 246,
+      "languages": [
+        {
+          "name": "UIGHUR",
+          "code": "ug",
+          "percent": 99,
+          "score": 1337
+        }
+      ],
+      "chunks": [
+        {
+          "name": "UIGHUR",
+          "code": "ug",
+          "offset": 0,
+          "bytes": 245
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "UZBEK",
+          "code": "uz",
+          "percent": 99,
+          "score": 837
+        }
+      ],
+      "chunks": [
+        {
+          "name": "UZBEK",
+          "code": "uz",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 254,
+      "languages": [
+        {
+          "name": "UZBEK",
+          "code": "uz",
+          "percent": 99,
+          "score": 837
+        }
+      ],
+      "chunks": [
+        {
+          "name": "UZBEK",
+          "code": "uz",
+          "offset": 0,
+          "bytes": 253
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "UZBEK",
+          "code": "uz",
+          "percent": 99,
+          "score": 905
+        }
+      ],
+      "chunks": [
+        {
+          "name": "UZBEK",
+          "code": "uz",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 251,
+      "languages": [
+        {
+          "name": "UZBEK",
+          "code": "uz",
+          "percent": 99,
+          "score": 905
+        }
+      ],
+      "chunks": [
+        {
+          "name": "UZBEK",
+          "code": "uz",
+          "offset": 0,
+          "bytes": 250
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "UZBEK",
+          "code": "uz",
+          "percent": 99,
+          "score": 1460
+        }
+      ],
+      "chunks": [
+        {
+          "name": "UZBEK",
+          "code": "uz",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "UZBEK",
+          "code": "uz",
+          "percent": 99,
+          "score": 1460
+        }
+      ],
+      "chunks": [
+        {
+          "name": "UZBEK",
+          "code": "uz",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 362,
+      "languages": [
+        {
+          "name": "VENDA",
+          "code": "ve",
+          "percent": 99,
+          "score": 1375
+        }
+      ],
+      "chunks": [
+        {
+          "name": "VENDA",
+          "code": "ve",
+          "offset": 0,
+          "bytes": 365
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 362,
+      "languages": [
+        {
+          "name": "VENDA",
+          "code": "ve",
+          "percent": 99,
+          "score": 1375
+        }
+      ],
+      "chunks": [
+        {
+          "name": "VENDA",
+          "code": "ve",
+          "offset": 0,
+          "bytes": 365
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "VOLAPUK",
+          "code": "vo",
+          "percent": 99,
+          "score": 1548
+        }
+      ],
+      "chunks": [
+        {
+          "name": "VOLAPUK",
+          "code": "vo",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "VOLAPUK",
+          "code": "vo",
+          "percent": 99,
+          "score": 1548
+        }
+      ],
+      "chunks": [
+        {
+          "name": "VOLAPUK",
+          "code": "vo",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 655,
+      "languages": [
+        {
+          "name": "WARAY_PHILIPPINES",
+          "code": "war",
+          "percent": 99,
+          "score": 677
+        }
+      ],
+      "chunks": [
+        {
+          "name": "WARAY_PHILIPPINES",
+          "code": "war",
+          "offset": 0,
+          "bytes": 520
+        },
+        {
+          "name": "WARAY_PHILIPPINES",
+          "code": "war",
+          "offset": 608,
+          "bytes": 98
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 655,
+      "languages": [
+        {
+          "name": "WARAY_PHILIPPINES",
+          "code": "war",
+          "percent": 99,
+          "score": 677
+        }
+      ],
+      "chunks": [
+        {
+          "name": "WARAY_PHILIPPINES",
+          "code": "war",
+          "offset": 0,
+          "bytes": 520
+        },
+        {
+          "name": "WARAY_PHILIPPINES",
+          "code": "war",
+          "offset": 608,
+          "bytes": 98
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "WOLOF",
+          "code": "wo",
+          "percent": 99,
+          "score": 1261
+        }
+      ],
+      "chunks": [
+        {
+          "name": "WOLOF",
+          "code": "wo",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 255,
+      "languages": [
+        {
+          "name": "WOLOF",
+          "code": "wo",
+          "percent": 99,
+          "score": 1261
+        }
+      ],
+      "chunks": [
+        {
+          "name": "WOLOF",
+          "code": "wo",
+          "offset": 0,
+          "bytes": 254
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "XHOSA",
+          "code": "xh",
+          "percent": 99,
+          "score": 1144
+        }
+      ],
+      "chunks": [
+        {
+          "name": "XHOSA",
+          "code": "xh",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 256,
+      "languages": [
+        {
+          "name": "XHOSA",
+          "code": "xh",
+          "percent": 99,
+          "score": 1144
+        }
+      ],
+      "chunks": [
+        {
+          "name": "XHOSA",
+          "code": "xh",
+          "offset": 0,
+          "bytes": 255
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "X_KLINGON",
+          "code": "tlh",
+          "percent": 99,
+          "score": 1536
+        }
+      ],
+      "chunks": [
+        {
+          "name": "X_KLINGON",
+          "code": "tlh",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 257,
+      "languages": [
+        {
+          "name": "X_KLINGON",
+          "code": "tlh",
+          "percent": 99,
+          "score": 1536
+        }
+      ],
+      "chunks": [
+        {
+          "name": "X_KLINGON",
+          "code": "tlh",
+          "offset": 0,
+          "bytes": 256
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 191,
+      "languages": [
+        {
+          "name": "X_PIG_LATIN",
+          "code": "zzp",
+          "percent": 99,
+          "score": 1654
+        }
+      ],
+      "chunks": [
+        {
+          "name": "X_PIG_LATIN",
+          "code": "zzp",
+          "offset": 0,
+          "bytes": 190
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 191,
+      "languages": [
+        {
+          "name": "X_PIG_LATIN",
+          "code": "zzp",
+          "percent": 99,
+          "score": 1654
+        }
+      ],
+      "chunks": [
+        {
+          "name": "X_PIG_LATIN",
+          "code": "zzp",
+          "offset": 0,
+          "bytes": 190
+        }
+      ]
+    }
+  },
+  {
+    "default": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "ZHUANG",
+          "code": "za",
+          "percent": 99,
+          "score": 2137
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ZHUANG",
+          "code": "za",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    },
+    "bestEffort": {
+      "reliable": true,
+      "textBytes": 252,
+      "languages": [
+        {
+          "name": "ZHUANG",
+          "code": "za",
+          "percent": 99,
+          "score": 2137
+        }
+      ],
+      "chunks": [
+        {
+          "name": "ZHUANG",
+          "code": "za",
+          "offset": 0,
+          "bytes": 251
+        }
+      ]
+    }
+  }
+]
